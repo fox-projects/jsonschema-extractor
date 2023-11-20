@@ -1,0 +1,12 @@
+[submodule "submodules/typescript-eslint"]
+	path = submodules/typescript-eslint
+	url = https://github.com/typescript-eslint/typescript-eslint
+[submodule "submodules/angular-eslint"]
+	path = submodules/angular-eslint
+	url = https://github.com/angular-eslint/angular-eslint
+[submodule "submodules/eslint-plugin-vue"]
+	path = submodules/eslint-plugin-vue
+	url = https://github.com/vuejs/eslint-plugin-vue
+[submodule "submodules/eslint-plugin-import"]
+	path = submodules/eslint-plugin-import
+	url = https://github.com/import-js/eslint-plugin-import
