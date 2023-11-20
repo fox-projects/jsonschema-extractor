@@ -10,3 +10,6 @@
 [submodule "submodules/eslint-plugin-import"]
 	path = submodules/eslint-plugin-import
 	url = https://github.com/import-js/eslint-plugin-import
+[submodule "submodules/eslint-plugin-unicorn"]
+	path = submodules/eslint-plugin-unicorn
+	url = https://github.com/sindresorhus/eslint-plugin-unicorn

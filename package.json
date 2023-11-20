@@ -22,6 +22,6 @@
     "prettier-plugin-pkg": "^0.18.0"
   },
   "dependencies": {
-    "resolve": "^1.22.8"
+    "stylelint": "^15.11.0"
   }
 }

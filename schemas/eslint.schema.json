@@ -917,6 +917,602 @@
 						"disable-absolute-first"
 					]
 				},
+				"eslint-plugin-unicorn/better-regex": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"sortCharacterClasses": {
+							"type": "boolean",
+							"default": true
+						}
+					}
+				},
+				"eslint-plugin-unicorn/catch-error-name": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"ignore": {
+							"type": "array",
+							"uniqueItems": true
+						}
+					}
+				},
+				"eslint-plugin-unicorn/consistent-destructuring": {},
+				"eslint-plugin-unicorn/consistent-function-scoping": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"checkArrowFunctions": {
+							"type": "boolean",
+							"default": true
+						}
+					}
+				},
+				"eslint-plugin-unicorn/custom-error-definition": {},
+				"eslint-plugin-unicorn/empty-brace-spaces": {},
+				"eslint-plugin-unicorn/error-message": {},
+				"eslint-plugin-unicorn/escape-case": {},
+				"eslint-plugin-unicorn/expiring-todo-comments": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"terms": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"ignore": {
+							"type": "array",
+							"uniqueItems": true
+						},
+						"ignoreDatesOnPullRequests": {
+							"type": "boolean",
+							"default": true
+						},
+						"allowWarningComments": {
+							"type": "boolean",
+							"default": false
+						},
+						"date": {
+							"type": "string",
+							"format": "date"
+						}
+					}
+				},
+				"eslint-plugin-unicorn/explicit-length-check": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"non-zero": {
+							"enum": [
+								"greater-than",
+								"not-equal"
+							],
+							"default": "greater-than"
+						}
+					}
+				},
+				"eslint-plugin-unicorn/filename-case": {
+					"oneOf": [
+						{
+							"properties": {
+								"case": {
+									"enum": [
+										"camelCase",
+										"snakeCase",
+										"kebabCase",
+										"pascalCase"
+									]
+								},
+								"ignore": {
+									"type": "array",
+									"uniqueItems": true
+								}
+							},
+							"additionalProperties": false
+						},
+						{
+							"properties": {
+								"cases": {
+									"properties": {
+										"camelCase": {
+											"type": "boolean"
+										},
+										"snakeCase": {
+											"type": "boolean"
+										},
+										"kebabCase": {
+											"type": "boolean"
+										},
+										"pascalCase": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"ignore": {
+									"type": "array",
+									"uniqueItems": true
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"eslint-plugin-unicorn/import-style": {},
+				"eslint-plugin-unicorn/new-for-builtins": {},
+				"eslint-plugin-unicorn/no-abusive-eslint-disable": {},
+				"eslint-plugin-unicorn/no-array-callback-reference": {},
+				"eslint-plugin-unicorn/no-array-for-each": {},
+				"eslint-plugin-unicorn/no-array-method-this-argument": {},
+				"eslint-plugin-unicorn/no-array-push-push": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"ignore": {
+							"type": "array",
+							"uniqueItems": true
+						}
+					}
+				},
+				"eslint-plugin-unicorn/no-array-reduce": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"allowSimpleOperations": {
+							"type": "boolean",
+							"default": true
+						}
+					}
+				},
+				"eslint-plugin-unicorn/no-await-expression-member": {},
+				"eslint-plugin-unicorn/no-console-spaces": {},
+				"eslint-plugin-unicorn/no-document-cookie": {},
+				"eslint-plugin-unicorn/no-empty-file": {},
+				"eslint-plugin-unicorn/no-for-loop": {},
+				"eslint-plugin-unicorn/no-hex-escape": {},
+				"eslint-plugin-unicorn/no-instanceof-array": {},
+				"eslint-plugin-unicorn/no-invalid-remove-event-listener": {},
+				"eslint-plugin-unicorn/no-keyword-prefix": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"disallowedPrefixes": {
+							"type": "array",
+							"items": [
+								{
+									"type": "string"
+								}
+							],
+							"minItems": 0,
+							"uniqueItems": true
+						},
+						"checkProperties": {
+							"type": "boolean"
+						},
+						"onlyCamelCase": {
+							"type": "boolean"
+						}
+					}
+				},
+				"eslint-plugin-unicorn/no-lonely-if": {},
+				"eslint-plugin-unicorn/no-negated-condition": {},
+				"eslint-plugin-unicorn/no-nested-ternary": {},
+				"eslint-plugin-unicorn/no-new-array": {},
+				"eslint-plugin-unicorn/no-new-buffer": {},
+				"eslint-plugin-unicorn/no-null": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"checkStrictEquality": {
+							"type": "boolean",
+							"default": false
+						}
+					}
+				},
+				"eslint-plugin-unicorn/no-object-as-default-parameter": {},
+				"eslint-plugin-unicorn/no-process-exit": {},
+				"eslint-plugin-unicorn/no-static-only-class": {},
+				"eslint-plugin-unicorn/no-thenable": {},
+				"eslint-plugin-unicorn/no-this-assignment": {},
+				"eslint-plugin-unicorn/no-typeof-undefined": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"checkGlobalVariables": {
+							"type": "boolean",
+							"default": false
+						}
+					}
+				},
+				"eslint-plugin-unicorn/no-unnecessary-await": {},
+				"eslint-plugin-unicorn/no-unnecessary-polyfills": {
+					"type": "object",
+					"additionalProperties": false,
+					"required": [
+						"targets"
+					],
+					"properties": {
+						"targets": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "array"
+								},
+								{
+									"type": "object"
+								}
+							]
+						}
+					}
+				},
+				"eslint-plugin-unicorn/no-unreadable-array-destructuring": {},
+				"eslint-plugin-unicorn/no-unreadable-iife": {},
+				"eslint-plugin-unicorn/no-unused-properties": {},
+				"eslint-plugin-unicorn/no-useless-fallback-in-spread": {},
+				"eslint-plugin-unicorn/no-useless-length-check": {},
+				"eslint-plugin-unicorn/no-useless-promise-resolve-reject": {},
+				"eslint-plugin-unicorn/no-useless-spread": {},
+				"eslint-plugin-unicorn/no-useless-switch-case": {},
+				"eslint-plugin-unicorn/no-useless-undefined": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"checkArguments": {
+							"type": "boolean"
+						}
+					}
+				},
+				"eslint-plugin-unicorn/no-zero-fractions": {},
+				"eslint-plugin-unicorn/number-literal-case": {},
+				"eslint-plugin-unicorn/numeric-separators-style": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"binary": {
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"onlyIfContainsSeparator": {
+									"type": "boolean"
+								},
+								"minimumDigits": {
+									"type": "integer",
+									"minimum": 0,
+									"default": 0
+								},
+								"groupLength": {
+									"type": "integer",
+									"minimum": 1,
+									"default": 4
+								}
+							}
+						},
+						"octal": {
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"onlyIfContainsSeparator": {
+									"type": "boolean"
+								},
+								"minimumDigits": {
+									"type": "integer",
+									"minimum": 0,
+									"default": 0
+								},
+								"groupLength": {
+									"type": "integer",
+									"minimum": 1,
+									"default": 4
+								}
+							}
+						},
+						"hexadecimal": {
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"onlyIfContainsSeparator": {
+									"type": "boolean"
+								},
+								"minimumDigits": {
+									"type": "integer",
+									"minimum": 0,
+									"default": 0
+								},
+								"groupLength": {
+									"type": "integer",
+									"minimum": 1,
+									"default": 2
+								}
+							}
+						},
+						"number": {
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"onlyIfContainsSeparator": {
+									"type": "boolean"
+								},
+								"minimumDigits": {
+									"type": "integer",
+									"minimum": 0,
+									"default": 5
+								},
+								"groupLength": {
+									"type": "integer",
+									"minimum": 1,
+									"default": 3
+								}
+							}
+						},
+						"onlyIfContainsSeparator": {
+							"type": "boolean",
+							"default": false
+						}
+					}
+				},
+				"eslint-plugin-unicorn/prefer-add-event-listener": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"excludedPackages": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true
+						}
+					}
+				},
+				"eslint-plugin-unicorn/prefer-array-find": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"checkFromLast": {
+							"type": "boolean",
+							"default": false
+						}
+					}
+				},
+				"eslint-plugin-unicorn/prefer-array-flat-map": {},
+				"eslint-plugin-unicorn/prefer-array-flat": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"functions": {
+							"type": "array",
+							"uniqueItems": true
+						}
+					}
+				},
+				"eslint-plugin-unicorn/prefer-array-index-of": {},
+				"eslint-plugin-unicorn/prefer-array-some": {},
+				"eslint-plugin-unicorn/prefer-at": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"getLastElementFunctions": {
+							"type": "array",
+							"uniqueItems": true
+						},
+						"checkAllIndexAccess": {
+							"type": "boolean",
+							"default": false
+						}
+					}
+				},
+				"eslint-plugin-unicorn/prefer-blob-reading-methods": {},
+				"eslint-plugin-unicorn/prefer-code-point": {},
+				"eslint-plugin-unicorn/prefer-date-now": {},
+				"eslint-plugin-unicorn/prefer-default-parameters": {},
+				"eslint-plugin-unicorn/prefer-dom-node-append": {},
+				"eslint-plugin-unicorn/prefer-dom-node-dataset": {},
+				"eslint-plugin-unicorn/prefer-dom-node-remove": {},
+				"eslint-plugin-unicorn/prefer-dom-node-text-content": {},
+				"eslint-plugin-unicorn/prefer-event-target": {},
+				"eslint-plugin-unicorn/prefer-export-from": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"ignoreUsedVariables": {
+							"type": "boolean",
+							"default": false
+						}
+					}
+				},
+				"eslint-plugin-unicorn/prefer-includes": {},
+				"eslint-plugin-unicorn/prefer-json-parse-buffer": {},
+				"eslint-plugin-unicorn/prefer-keyboard-event-key": {},
+				"eslint-plugin-unicorn/prefer-logical-operator-over-ternary": {},
+				"eslint-plugin-unicorn/prefer-math-trunc": {},
+				"eslint-plugin-unicorn/prefer-modern-dom-apis": {},
+				"eslint-plugin-unicorn/prefer-modern-math-apis": {},
+				"eslint-plugin-unicorn/prefer-module": {},
+				"eslint-plugin-unicorn/prefer-native-coercion-functions": {},
+				"eslint-plugin-unicorn/prefer-negative-index": {},
+				"eslint-plugin-unicorn/prefer-node-protocol": {},
+				"eslint-plugin-unicorn/prefer-number-properties": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"checkInfinity": {
+							"type": "boolean",
+							"default": true
+						}
+					}
+				},
+				"eslint-plugin-unicorn/prefer-object-from-entries": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"functions": {
+							"type": "array",
+							"uniqueItems": true
+						}
+					}
+				},
+				"eslint-plugin-unicorn/prefer-optional-catch-binding": {},
+				"eslint-plugin-unicorn/prefer-prototype-methods": {},
+				"eslint-plugin-unicorn/prefer-query-selector": {},
+				"eslint-plugin-unicorn/prefer-reflect-apply": {},
+				"eslint-plugin-unicorn/prefer-regexp-test": {},
+				"eslint-plugin-unicorn/prefer-set-has": {},
+				"eslint-plugin-unicorn/prefer-set-size": {},
+				"eslint-plugin-unicorn/prefer-spread": {},
+				"eslint-plugin-unicorn/prefer-string-replace-all": {},
+				"eslint-plugin-unicorn/prefer-string-slice": {},
+				"eslint-plugin-unicorn/prefer-string-starts-ends-with": {},
+				"eslint-plugin-unicorn/prefer-string-trim-start-end": {},
+				"eslint-plugin-unicorn/prefer-switch": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"minimumCases": {
+							"type": "integer",
+							"minimum": 2,
+							"default": 3
+						},
+						"emptyDefaultCase": {
+							"enum": [
+								"no-default-comment",
+								"do-nothing-comment",
+								"no-default-case"
+							],
+							"default": "no-default-comment"
+						}
+					}
+				},
+				"eslint-plugin-unicorn/prefer-ternary": {
+					"enum": [
+						"always",
+						"only-single-line"
+					],
+					"default": "always"
+				},
+				"eslint-plugin-unicorn/prefer-top-level-await": {},
+				"eslint-plugin-unicorn/prefer-type-error": {},
+				"eslint-plugin-unicorn/prevent-abbreviations": {},
+				"eslint-plugin-unicorn/relative-url-style": {
+					"enum": [
+						"never",
+						"always"
+					],
+					"default": "never"
+				},
+				"eslint-plugin-unicorn/require-array-join-separator": {},
+				"eslint-plugin-unicorn/require-number-to-fixed-digits-argument": {},
+				"eslint-plugin-unicorn/require-post-message-target-origin": {},
+				"eslint-plugin-unicorn/string-content": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"patterns": {
+							"type": "object",
+							"additionalProperties": {
+								"anyOf": [
+									{
+										"type": "string"
+									},
+									{
+										"type": "object",
+										"required": [
+											"suggest"
+										],
+										"properties": {
+											"suggest": {
+												"type": "string"
+											},
+											"fix": {
+												"type": "boolean"
+											},
+											"message": {
+												"type": "string"
+											}
+										},
+										"additionalProperties": false
+									}
+								]
+							}
+						}
+					}
+				},
+				"eslint-plugin-unicorn/switch-case-braces": {
+					"enum": [
+						"always",
+						"avoid"
+					]
+				},
+				"eslint-plugin-unicorn/template-indent": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"indent": {
+							"oneOf": [
+								{
+									"type": "string",
+									"pattern": "^\\s+$"
+								},
+								{
+									"type": "integer",
+									"minimum": 1
+								}
+							]
+						},
+						"tags": {
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"type": "string"
+							}
+						},
+						"functions": {
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"type": "string"
+							}
+						},
+						"selectors": {
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"type": "string"
+							}
+						},
+						"comments": {
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"eslint-plugin-unicorn/text-encoding-identifier-case": {},
+				"eslint-plugin-unicorn/throw-new-error": {},
+				"eslint-plugin-unicorn/import-index": {},
+				"eslint-plugin-unicorn/no-array-instanceof": {},
+				"eslint-plugin-unicorn/no-fn-reference-in-iterator": {},
+				"eslint-plugin-unicorn/no-reduce": {},
+				"eslint-plugin-unicorn/no-unsafe-regex": {},
+				"eslint-plugin-unicorn/prefer-dataset": {},
+				"eslint-plugin-unicorn/prefer-event-key": {},
+				"eslint-plugin-unicorn/prefer-exponentiation-operator": {},
+				"eslint-plugin-unicorn/prefer-flat-map": {},
+				"eslint-plugin-unicorn/prefer-node-append": {},
+				"eslint-plugin-unicorn/prefer-node-remove": {},
+				"eslint-plugin-unicorn/prefer-object-has-own": {},
+				"eslint-plugin-unicorn/prefer-replace-all": {},
+				"eslint-plugin-unicorn/prefer-starts-ends-with": {},
+				"eslint-plugin-unicorn/prefer-text-content": {},
+				"eslint-plugin-unicorn/prefer-trim-start-end": {},
+				"eslint-plugin-unicorn/regex-shorthand": {},
 				"eslint-plugin-vue/array-bracket-newline": {
 					"oneOf": [
 						{
