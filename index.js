@@ -1,57 +1,37 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import Module from "node:module";
 
 /**
- * @typedef {object} ExtractionInfo
- * @property {string} extractorFile
- * @property {string} repoPath
+ * @typedef {object} RuleMetaDocs
+ * @property {string} category
+ * @property {string} description
+ * @property {string} url
  */
 
 /**
- * @param {ExtractionInfo} info
- * @returns {Promise<Record<PropertyKey, unknown>>}
-*/
-async function runExtractor(info) {
-  try {
-    const { extract: extractionFn } = await import(info.extractorFile)
-    process.chdir(info.repoPath)
-    const schemaPair = await extractionFn()
-    return schemaPair
-  } catch (err) {
-    console.error(err)
-    console.log('Continuing...')
-  } finally {
-    process.chdir('../../')
-  }
-}
+ * @typedef {object} RuleMeta
+ * @property {string} type
+ * @property {RuleMetaDocs} docs
+ * @property {string} fixable
+ * @property {Array<unknown>} schema
+ */
 
-const bigSchema = {
-  type: 'object',
-  properties: {},
-  additionalProperties: false,
-}
+/**
+ * @typedef {object} Rule
+ * @property {RuleMeta} meta
+ * @property {() => unknown} create
+ */
 
-const angularEslintSchemaPair = await runExtractor({
-  extractorFile: './lib/extractors/angular-eslint.js',
-  repoPath: './submodules/angular-eslint'
-})
-if (angularEslintSchemaPair) {
-  bigSchema.properties = {
-    ...bigSchema.properties,
-    [angularEslintSchemaPair[0]]: angularEslintSchemaPair[1],
-  }
-}
+/**
+ * @typedef {object} Plugin
+ * @property {Record<string, Rule>} rules
+ */
 
-const eslintPluginImportSchemaPair = await runExtractor({
-  extractorFile: './lib/extractors/eslint-plugin-import.js',
-  repoPath: './submodules/eslint-plugin-import'
-})
-if (eslintPluginImportSchemaPair) {
-  bigSchema.properties = {
-    ...bigSchema.properties,
-    [eslintPluginImportSchemaPair[0]]: eslintPluginImportSchemaPair[1],
-  }
-}
 
-await fs.writeFile('schema.json', JSON.stringify(bigSchema, null, '\t'))
+for (const appName of ['eslint']) {
+	const { extractSchema } = await import(path.join(process.cwd(), `lib/extractors/${appName}.js`))
+	const schema = await extractSchema()
+
+	await fs.mkdir('schemas', {recursive: true })
+	await fs.writeFile(`schemas/${appName}.schema.json`, JSON.stringify(schema, null, '\t'))
+}

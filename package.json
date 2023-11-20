@@ -1,5 +1,5 @@
 {
-  "name": "jsonschema-generator",
+  "name": "jsonschema-extractor",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,17 @@
   "author": "Edwin Kofler <edwin@kofler.dev> (https://edwinkofler.com/)",
   "license": "MPL-2.0",
   "devDependencies": {
-    "cheerio": "1.0.0-rc.12"
+    "@hyperupcall/eslint-config": "^0.6.0",
+    "@hyperupcall/markdownlint-config": "^0.3.1",
+    "@hyperupcall/prettier-config": "^0.7.0",
+    "cheerio": "1.0.0-rc.12",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "markdownlint": "^0.32.1",
+    "prettier": "^3.1.0",
+    "prettier-plugin-pkg": "^0.18.0"
+  },
+  "dependencies": {
+    "resolve": "^1.22.8"
   }
 }

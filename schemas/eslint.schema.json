@@ -1,0 +1,7274 @@
+{
+	"type": "object",
+	"properties": {
+		"rules": {
+			"type": "object",
+			"properties": {
+				"angular-eslint/component-class-suffix": {
+					"type": "object",
+					"properties": {
+						"suffixes": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/component-max-inline-declarations": {
+					"type": "object",
+					"properties": {
+						"template": {
+							"minimum": 0,
+							"type": "number"
+						},
+						"styles": {
+							"minimum": 0,
+							"type": "number"
+						},
+						"animations": {
+							"minimum": 0,
+							"type": "number"
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/component-selector": {
+					"type": "object",
+					"properties": {
+						"type": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "array",
+									"items": {
+										"enum": [
+											"element",
+											"attribute"
+										]
+									}
+								}
+							]
+						},
+						"prefix": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "array"
+								}
+							]
+						},
+						"style": {
+							"type": "string",
+							"enum": [
+								"camelCase",
+								"kebab-case"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/contextual-decorator": {},
+				"angular-eslint/contextual-lifecycle": {},
+				"angular-eslint/directive-class-suffix": {
+					"type": "object",
+					"properties": {
+						"suffixes": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/directive-selector": {
+					"type": "object",
+					"properties": {
+						"type": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "array",
+									"items": {
+										"enum": [
+											"element",
+											"attribute"
+										]
+									}
+								}
+							]
+						},
+						"prefix": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "array"
+								}
+							]
+						},
+						"style": {
+							"type": "string",
+							"enum": [
+								"camelCase",
+								"kebab-case"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/no-attribute-decorator": {},
+				"angular-eslint/no-conflicting-lifecycle": {},
+				"angular-eslint/no-empty-lifecycle-method": {},
+				"angular-eslint/no-forward-ref": {},
+				"angular-eslint/no-host-metadata-property": {
+					"type": "object",
+					"properties": {
+						"allowStatic": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/no-input-prefix": {
+					"type": "object",
+					"properties": {
+						"prefixes": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/no-input-rename": {
+					"type": "object",
+					"properties": {
+						"allowedNames": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"description": "A list with allowed input names",
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/no-inputs-metadata-property": {},
+				"angular-eslint/no-lifecycle-call": {},
+				"angular-eslint/no-output-native": {},
+				"angular-eslint/no-output-on-prefix": {},
+				"angular-eslint/no-output-rename": {},
+				"angular-eslint/no-outputs-metadata-property": {},
+				"angular-eslint/no-pipe-impure": {},
+				"angular-eslint/no-queries-metadata-property": {},
+				"angular-eslint/pipe-prefix": {
+					"type": "object",
+					"properties": {
+						"prefixes": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minimum": 1,
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/prefer-on-push-component-change-detection": {},
+				"angular-eslint/prefer-standalone-component": {},
+				"angular-eslint/prefer-output-readonly": {},
+				"angular-eslint/relative-url-prefix": {},
+				"angular-eslint/require-localize-metadata": {
+					"type": "object",
+					"properties": {
+						"requireDescription": {
+							"type": "boolean",
+							"default": false
+						},
+						"requireMeaning": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/sort-lifecycle-methods": {},
+				"angular-eslint/sort-ngmodule-metadata-arrays": {
+					"type": "object",
+					"properties": {
+						"locale": {
+							"type": "string",
+							"description": "A string with a BCP 47 language tag.",
+							"default": "en-US"
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/use-component-selector": {},
+				"angular-eslint/use-component-view-encapsulation": {},
+				"angular-eslint/use-injectable-provided-in": {
+					"type": "object",
+					"properties": {
+						"ignoreClassNamePattern": {
+							"type": "string"
+						}
+					},
+					"additionalProperties": false
+				},
+				"angular-eslint/use-lifecycle-interface": {},
+				"angular-eslint/use-pipe-transform-interface": {},
+				"eslint-plugin-import/no-unresolved": {
+					"type": "object",
+					"properties": {
+						"commonjs": {
+							"type": "boolean"
+						},
+						"amd": {
+							"type": "boolean"
+						},
+						"esmodule": {
+							"type": "boolean"
+						},
+						"ignore": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true
+						},
+						"caseSensitive": {
+							"type": "boolean",
+							"default": true
+						},
+						"caseSensitiveStrict": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/named": {
+					"type": "object",
+					"properties": {
+						"commonjs": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/default": {},
+				"eslint-plugin-import/namespace": {
+					"type": "object",
+					"properties": {
+						"allowComputed": {
+							"description": "If `false`, will report computed (and thus, un-lintable) references to namespace members.",
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-namespace": {
+					"type": "object",
+					"properties": {
+						"ignore": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true
+						}
+					}
+				},
+				"eslint-plugin-import/export": {},
+				"eslint-plugin-import/no-mutable-exports": {},
+				"eslint-plugin-import/extensions": {},
+				"eslint-plugin-import/no-restricted-paths": {
+					"type": "object",
+					"properties": {
+						"zones": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "object",
+								"properties": {
+									"target": {
+										"anyOf": [
+											{
+												"type": "string"
+											},
+											{
+												"type": "array",
+												"items": {
+													"type": "string"
+												},
+												"uniqueItems": true,
+												"minLength": 1
+											}
+										]
+									},
+									"from": {
+										"anyOf": [
+											{
+												"type": "string"
+											},
+											{
+												"type": "array",
+												"items": {
+													"type": "string"
+												},
+												"uniqueItems": true,
+												"minLength": 1
+											}
+										]
+									},
+									"except": {
+										"type": "array",
+										"items": {
+											"type": "string"
+										},
+										"uniqueItems": true
+									},
+									"message": {
+										"type": "string"
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"basePath": {
+							"type": "string"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-internal-modules": {
+					"anyOf": [
+						{
+							"type": "object",
+							"properties": {
+								"allow": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"additionalProperties": false
+						},
+						{
+							"type": "object",
+							"properties": {
+								"forbid": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"eslint-plugin-import/group-exports": {},
+				"eslint-plugin-import/no-relative-packages": {
+					"type": "object",
+					"properties": {
+						"commonjs": {
+							"type": "boolean"
+						},
+						"amd": {
+							"type": "boolean"
+						},
+						"esmodule": {
+							"type": "boolean"
+						},
+						"ignore": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-relative-parent-imports": {
+					"type": "object",
+					"properties": {
+						"commonjs": {
+							"type": "boolean"
+						},
+						"amd": {
+							"type": "boolean"
+						},
+						"esmodule": {
+							"type": "boolean"
+						},
+						"ignore": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/consistent-type-specifier-style": {
+					"type": "string",
+					"enum": [
+						"prefer-inline",
+						"prefer-top-level"
+					],
+					"default": "prefer-inline"
+				},
+				"eslint-plugin-import/no-self-import": {},
+				"eslint-plugin-import/no-cycle": {
+					"type": "object",
+					"properties": {
+						"commonjs": {
+							"type": "boolean"
+						},
+						"amd": {
+							"type": "boolean"
+						},
+						"esmodule": {
+							"type": "boolean"
+						},
+						"ignore": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true
+						},
+						"maxDepth": {
+							"anyOf": [
+								{
+									"description": "maximum dependency depth to traverse",
+									"type": "integer",
+									"minimum": 1
+								},
+								{
+									"enum": [
+										"∞"
+									],
+									"type": "string"
+								}
+							]
+						},
+						"ignoreExternal": {
+							"description": "ignore external modules",
+							"type": "boolean",
+							"default": false
+						},
+						"allowUnsafeDynamicCyclicDependency": {
+							"description": "Allow cyclic dependency if there is at least one dynamic import in the chain",
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-named-default": {},
+				"eslint-plugin-import/no-named-as-default": {},
+				"eslint-plugin-import/no-named-as-default-member": {},
+				"eslint-plugin-import/no-anonymous-default-export": {
+					"type": "object",
+					"properties": {
+						"allowArray": {
+							"description": "If `false`, will report default export of an array",
+							"type": "boolean"
+						},
+						"allowArrowFunction": {
+							"description": "If `false`, will report default export of an arrow function",
+							"type": "boolean"
+						},
+						"allowCallExpression": {
+							"description": "If `false`, will report default export of a function call",
+							"type": "boolean"
+						},
+						"allowAnonymousClass": {
+							"description": "If `false`, will report default export of an anonymous class",
+							"type": "boolean"
+						},
+						"allowAnonymousFunction": {
+							"description": "If `false`, will report default export of an anonymous function",
+							"type": "boolean"
+						},
+						"allowLiteral": {
+							"description": "If `false`, will report default export of a literal",
+							"type": "boolean"
+						},
+						"allowObject": {
+							"description": "If `false`, will report default export of an object expression",
+							"type": "boolean"
+						},
+						"allowNew": {
+							"description": "If `false`, will report default export of a class instantiation",
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-unused-modules": {
+					"properties": {
+						"src": {
+							"description": "files/paths to be analyzed (only for unused exports)",
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"type": "string",
+								"minLength": 1
+							}
+						},
+						"ignoreExports": {
+							"description": "files/paths for which unused exports will not be reported (e.g module entry points)",
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"type": "string",
+								"minLength": 1
+							}
+						},
+						"missingExports": {
+							"description": "report modules without any exports",
+							"type": "boolean"
+						},
+						"unusedExports": {
+							"description": "report exports without any usage",
+							"type": "boolean"
+						}
+					},
+					"anyOf": [
+						{
+							"properties": {
+								"unusedExports": {
+									"enum": [
+										true
+									]
+								},
+								"src": {
+									"minItems": 1
+								}
+							},
+							"required": [
+								"unusedExports"
+							]
+						},
+						{
+							"properties": {
+								"missingExports": {
+									"enum": [
+										true
+									]
+								}
+							},
+							"required": [
+								"missingExports"
+							]
+						}
+					]
+				},
+				"eslint-plugin-import/no-commonjs": {},
+				"eslint-plugin-import/no-amd": {},
+				"eslint-plugin-import/no-duplicates": {
+					"type": "object",
+					"properties": {
+						"considerQueryString": {
+							"type": "boolean"
+						},
+						"prefer-inline": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/first": {
+					"type": "string",
+					"enum": [
+						"absolute-first",
+						"disable-absolute-first"
+					]
+				},
+				"eslint-plugin-import/max-dependencies": {
+					"type": "object",
+					"properties": {
+						"max": {
+							"type": "number"
+						},
+						"ignoreTypeImports": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-extraneous-dependencies": {
+					"type": "object",
+					"properties": {
+						"devDependencies": {
+							"type": [
+								"boolean",
+								"array"
+							]
+						},
+						"optionalDependencies": {
+							"type": [
+								"boolean",
+								"array"
+							]
+						},
+						"peerDependencies": {
+							"type": [
+								"boolean",
+								"array"
+							]
+						},
+						"bundledDependencies": {
+							"type": [
+								"boolean",
+								"array"
+							]
+						},
+						"packageDir": {
+							"type": [
+								"string",
+								"array"
+							]
+						},
+						"includeInternal": {
+							"type": [
+								"boolean"
+							]
+						},
+						"includeTypes": {
+							"type": [
+								"boolean"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-absolute-path": {
+					"type": "object",
+					"properties": {
+						"commonjs": {
+							"type": "boolean"
+						},
+						"amd": {
+							"type": "boolean"
+						},
+						"esmodule": {
+							"type": "boolean"
+						},
+						"ignore": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-nodejs-modules": {
+					"type": "object",
+					"properties": {
+						"allow": {
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-webpack-loader-syntax": {},
+				"eslint-plugin-import/order": {
+					"type": "object",
+					"properties": {
+						"groups": {
+							"type": "array"
+						},
+						"pathGroupsExcludedImportTypes": {
+							"type": "array"
+						},
+						"distinctGroup": {
+							"type": "boolean",
+							"default": true
+						},
+						"pathGroups": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"pattern": {
+										"type": "string"
+									},
+									"patternOptions": {
+										"type": "object"
+									},
+									"group": {
+										"type": "string",
+										"enum": [
+											"builtin",
+											"external",
+											"internal",
+											"unknown",
+											"parent",
+											"sibling",
+											"index",
+											"object",
+											"type"
+										]
+									},
+									"position": {
+										"type": "string",
+										"enum": [
+											"after",
+											"before"
+										]
+									}
+								},
+								"additionalProperties": false,
+								"required": [
+									"pattern",
+									"group"
+								]
+							}
+						},
+						"newlines-between": {
+							"enum": [
+								"ignore",
+								"always",
+								"always-and-inside-groups",
+								"never"
+							]
+						},
+						"alphabetize": {
+							"type": "object",
+							"properties": {
+								"caseInsensitive": {
+									"type": "boolean",
+									"default": false
+								},
+								"order": {
+									"enum": [
+										"ignore",
+										"asc",
+										"desc"
+									],
+									"default": "ignore"
+								},
+								"orderImportKind": {
+									"enum": [
+										"ignore",
+										"asc",
+										"desc"
+									],
+									"default": "ignore"
+								}
+							},
+							"additionalProperties": false
+						},
+						"warnOnUnassignedImports": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/newline-after-import": {
+					"type": "object",
+					"properties": {
+						"count": {
+							"type": "integer",
+							"minimum": 1
+						},
+						"exactCount": {
+							"type": "boolean"
+						},
+						"considerComments": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/prefer-default-export": {
+					"type": "object",
+					"properties": {
+						"target": {
+							"type": "string",
+							"enum": [
+								"single",
+								"any"
+							],
+							"default": "single"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-default-export": {},
+				"eslint-plugin-import/no-named-export": {},
+				"eslint-plugin-import/no-dynamic-require": {
+					"type": "object",
+					"properties": {
+						"esmodule": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/unambiguous": {},
+				"eslint-plugin-import/no-unassigned-import": {
+					"type": "object",
+					"properties": {
+						"devDependencies": {
+							"type": [
+								"boolean",
+								"array"
+							]
+						},
+						"optionalDependencies": {
+							"type": [
+								"boolean",
+								"array"
+							]
+						},
+						"peerDependencies": {
+							"type": [
+								"boolean",
+								"array"
+							]
+						},
+						"allow": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-useless-path-segments": {
+					"type": "object",
+					"properties": {
+						"commonjs": {
+							"type": "boolean"
+						},
+						"noUselessIndex": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/dynamic-import-chunkname": {
+					"type": "object",
+					"properties": {
+						"importFunctions": {
+							"type": "array",
+							"uniqueItems": true,
+							"items": {
+								"type": "string"
+							}
+						},
+						"webpackChunknameFormat": {
+							"type": "string"
+						}
+					}
+				},
+				"eslint-plugin-import/no-import-module-exports": {
+					"type": "object",
+					"properties": {
+						"exceptions": {
+							"type": "array"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-import/no-empty-named-blocks": {},
+				"eslint-plugin-import/exports-last": {},
+				"eslint-plugin-import/no-deprecated": {},
+				"eslint-plugin-import/imports-first": {
+					"type": "string",
+					"enum": [
+						"absolute-first",
+						"disable-absolute-first"
+					]
+				},
+				"eslint-plugin-vue/array-bracket-newline": {
+					"oneOf": [
+						{
+							"enum": [
+								"always",
+								"never",
+								"consistent"
+							]
+						},
+						{
+							"type": "object",
+							"properties": {
+								"multiline": {
+									"type": "boolean"
+								},
+								"minItems": {
+									"type": [
+										"integer",
+										"null"
+									],
+									"minimum": 0
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"eslint-plugin-vue/array-bracket-spacing": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/array-element-newline": {},
+				"eslint-plugin-vue/arrow-spacing": {
+					"type": "object",
+					"properties": {
+						"before": {
+							"type": "boolean",
+							"default": true
+						},
+						"after": {
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/attribute-hyphenation": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/attributes-order": {
+					"type": "object",
+					"properties": {
+						"order": {
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"enum": [
+											"DEFINITION",
+											"LIST_RENDERING",
+											"CONDITIONALS",
+											"RENDER_MODIFIERS",
+											"GLOBAL",
+											"UNIQUE",
+											"SLOT",
+											"TWO_WAY_BINDING",
+											"OTHER_DIRECTIVES",
+											"OTHER_ATTR",
+											"ATTR_STATIC",
+											"ATTR_DYNAMIC",
+											"ATTR_SHORTHAND_BOOL",
+											"EVENTS",
+											"CONTENT"
+										]
+									},
+									{
+										"type": "array",
+										"items": {
+											"enum": [
+												"DEFINITION",
+												"LIST_RENDERING",
+												"CONDITIONALS",
+												"RENDER_MODIFIERS",
+												"GLOBAL",
+												"UNIQUE",
+												"SLOT",
+												"TWO_WAY_BINDING",
+												"OTHER_DIRECTIVES",
+												"OTHER_ATTR",
+												"ATTR_STATIC",
+												"ATTR_DYNAMIC",
+												"ATTR_SHORTHAND_BOOL",
+												"EVENTS",
+												"CONTENT"
+											],
+											"uniqueItems": true,
+											"additionalItems": false
+										}
+									}
+								]
+							},
+							"uniqueItems": true,
+							"additionalItems": false
+						},
+						"alphabetical": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/block-lang": {
+					"type": "object",
+					"patternProperties": {
+						"^(?:\\S+)$": {
+							"oneOf": [
+								{
+									"type": "object",
+									"properties": {
+										"lang": {
+											"anyOf": [
+												{
+													"type": "string"
+												},
+												{
+													"type": "array",
+													"items": {
+														"type": "string"
+													},
+													"uniqueItems": true,
+													"additionalItems": false
+												}
+											]
+										},
+										"allowNoLang": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								}
+							]
+						}
+					},
+					"minProperties": 1,
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/block-order": {
+					"type": "object",
+					"properties": {
+						"order": {
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"type": "string"
+									},
+									{
+										"type": "array",
+										"items": {
+											"type": "string"
+										},
+										"uniqueItems": true
+									}
+								]
+							},
+							"uniqueItems": true,
+							"additionalItems": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/block-spacing": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/block-tag-newline": {
+					"type": "object",
+					"properties": {
+						"singleline": {
+							"enum": [
+								"always",
+								"never",
+								"consistent",
+								"ignore"
+							]
+						},
+						"multiline": {
+							"enum": [
+								"always",
+								"never",
+								"consistent",
+								"ignore"
+							]
+						},
+						"maxEmptyLines": {
+							"type": "number",
+							"minimum": 0
+						},
+						"blocks": {
+							"type": "object",
+							"patternProperties": {
+								"^(?:\\S+)$": {
+									"type": "object",
+									"properties": {
+										"singleline": {
+											"enum": [
+												"always",
+												"never",
+												"consistent",
+												"ignore"
+											]
+										},
+										"multiline": {
+											"enum": [
+												"always",
+												"never",
+												"consistent",
+												"ignore"
+											]
+										},
+										"maxEmptyLines": {
+											"type": "number",
+											"minimum": 0
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/brace-style": {
+					"enum": [
+						"1tbs",
+						"stroustrup",
+						"allman"
+					]
+				},
+				"eslint-plugin-vue/camelcase": {
+					"type": "object",
+					"properties": {
+						"ignoreDestructuring": {
+							"type": "boolean",
+							"default": false
+						},
+						"ignoreImports": {
+							"type": "boolean",
+							"default": false
+						},
+						"ignoreGlobals": {
+							"type": "boolean",
+							"default": false
+						},
+						"properties": {
+							"enum": [
+								"always",
+								"never"
+							]
+						},
+						"allow": {
+							"type": "array",
+							"items": [
+								{
+									"type": "string"
+								}
+							],
+							"minItems": 0,
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/comma-dangle": {},
+				"eslint-plugin-vue/comma-spacing": {
+					"type": "object",
+					"properties": {
+						"before": {
+							"type": "boolean",
+							"default": false
+						},
+						"after": {
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/comma-style": {
+					"enum": [
+						"first",
+						"last"
+					]
+				},
+				"eslint-plugin-vue/comment-directive": {
+					"type": "object",
+					"properties": {
+						"reportUnusedDisableDirectives": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/component-api-style": {
+					"type": "array",
+					"items": {
+						"enum": [
+							"script-setup",
+							"composition",
+							"composition-vue2",
+							"options"
+						],
+						"uniqueItems": true,
+						"additionalItems": false
+					},
+					"minItems": 1
+				},
+				"eslint-plugin-vue/component-definition-name-casing": {
+					"enum": [
+						"PascalCase",
+						"kebab-case"
+					]
+				},
+				"eslint-plugin-vue/component-name-in-template-casing": {
+					"enum": [
+						"PascalCase",
+						"kebab-case"
+					]
+				},
+				"eslint-plugin-vue/component-options-name-casing": {
+					"enum": [
+						"camelCase",
+						"kebab-case",
+						"PascalCase"
+					]
+				},
+				"eslint-plugin-vue/component-tags-order": {
+					"type": "object",
+					"properties": {
+						"order": {
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"type": "string"
+									},
+									{
+										"type": "array",
+										"items": {
+											"type": "string"
+										},
+										"uniqueItems": true
+									}
+								]
+							},
+							"uniqueItems": true,
+							"additionalItems": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/custom-event-name-casing": {},
+				"eslint-plugin-vue/define-emits-declaration": {
+					"enum": [
+						"type-based",
+						"runtime"
+					]
+				},
+				"eslint-plugin-vue/define-macros-order": {
+					"type": "object",
+					"properties": {
+						"order": {
+							"type": "array",
+							"items": {
+								"enum": [
+									"defineEmits",
+									"defineProps",
+									"defineOptions",
+									"defineSlots"
+								]
+							},
+							"uniqueItems": true,
+							"additionalItems": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/define-props-declaration": {
+					"enum": [
+						"type-based",
+						"runtime"
+					]
+				},
+				"eslint-plugin-vue/dot-location": {
+					"enum": [
+						"object",
+						"property"
+					]
+				},
+				"eslint-plugin-vue/dot-notation": {
+					"type": "object",
+					"properties": {
+						"allowKeywords": {
+							"type": "boolean",
+							"default": true
+						},
+						"allowPattern": {
+							"type": "string",
+							"default": ""
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/eqeqeq": {},
+				"eslint-plugin-vue/first-attribute-linebreak": {
+					"type": "object",
+					"properties": {
+						"multiline": {
+							"enum": [
+								"below",
+								"beside",
+								"ignore"
+							]
+						},
+						"singleline": {
+							"enum": [
+								"below",
+								"beside",
+								"ignore"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/func-call-spacing": {},
+				"eslint-plugin-vue/html-button-has-type": {
+					"type": "object",
+					"properties": {
+						"button": {
+							"default": true,
+							"type": "boolean"
+						},
+						"submit": {
+							"default": true,
+							"type": "boolean"
+						},
+						"reset": {
+							"default": true,
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/html-closing-bracket-newline": {
+					"type": "object",
+					"properties": {
+						"singleline": {
+							"enum": [
+								"always",
+								"never"
+							]
+						},
+						"multiline": {
+							"enum": [
+								"always",
+								"never"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/html-closing-bracket-spacing": {
+					"type": "object",
+					"properties": {
+						"startTag": {
+							"enum": [
+								"always",
+								"never"
+							]
+						},
+						"endTag": {
+							"enum": [
+								"always",
+								"never"
+							]
+						},
+						"selfClosingTag": {
+							"enum": [
+								"always",
+								"never"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/html-comment-content-newline": {
+					"anyOf": [
+						{
+							"enum": [
+								"always",
+								"never"
+							]
+						},
+						{
+							"type": "object",
+							"properties": {
+								"singleline": {
+									"enum": [
+										"always",
+										"never",
+										"ignore"
+									]
+								},
+								"multiline": {
+									"enum": [
+										"always",
+										"never",
+										"ignore"
+									]
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"eslint-plugin-vue/html-comment-content-spacing": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/html-comment-indent": {
+					"anyOf": [
+						{
+							"type": "integer",
+							"minimum": 0
+						},
+						{
+							"enum": [
+								"tab"
+							]
+						}
+					]
+				},
+				"eslint-plugin-vue/html-end-tags": {},
+				"eslint-plugin-vue/html-indent": {
+					"anyOf": [
+						{
+							"type": "integer",
+							"minimum": 1
+						},
+						{
+							"enum": [
+								"tab"
+							]
+						}
+					]
+				},
+				"eslint-plugin-vue/html-quotes": {
+					"enum": [
+						"double",
+						"single"
+					]
+				},
+				"eslint-plugin-vue/html-self-closing": {},
+				"eslint-plugin-vue/jsx-uses-vars": {},
+				"eslint-plugin-vue/key-spacing": {
+					"anyOf": [
+						{
+							"type": "object",
+							"properties": {
+								"align": {
+									"anyOf": [
+										{
+											"enum": [
+												"colon",
+												"value"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"mode": {
+													"enum": [
+														"strict",
+														"minimum"
+													]
+												},
+												"on": {
+													"enum": [
+														"colon",
+														"value"
+													]
+												},
+												"beforeColon": {
+													"type": "boolean"
+												},
+												"afterColon": {
+													"type": "boolean"
+												}
+											},
+											"additionalProperties": false
+										}
+									]
+								},
+								"mode": {
+									"enum": [
+										"strict",
+										"minimum"
+									]
+								},
+								"beforeColon": {
+									"type": "boolean"
+								},
+								"afterColon": {
+									"type": "boolean"
+								}
+							},
+							"additionalProperties": false
+						},
+						{
+							"type": "object",
+							"properties": {
+								"singleLine": {
+									"type": "object",
+									"properties": {
+										"mode": {
+											"enum": [
+												"strict",
+												"minimum"
+											]
+										},
+										"beforeColon": {
+											"type": "boolean"
+										},
+										"afterColon": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"multiLine": {
+									"type": "object",
+									"properties": {
+										"align": {
+											"anyOf": [
+												{
+													"enum": [
+														"colon",
+														"value"
+													]
+												},
+												{
+													"type": "object",
+													"properties": {
+														"mode": {
+															"enum": [
+																"strict",
+																"minimum"
+															]
+														},
+														"on": {
+															"enum": [
+																"colon",
+																"value"
+															]
+														},
+														"beforeColon": {
+															"type": "boolean"
+														},
+														"afterColon": {
+															"type": "boolean"
+														}
+													},
+													"additionalProperties": false
+												}
+											]
+										},
+										"mode": {
+											"enum": [
+												"strict",
+												"minimum"
+											]
+										},
+										"beforeColon": {
+											"type": "boolean"
+										},
+										"afterColon": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						},
+						{
+							"type": "object",
+							"properties": {
+								"singleLine": {
+									"type": "object",
+									"properties": {
+										"mode": {
+											"enum": [
+												"strict",
+												"minimum"
+											]
+										},
+										"beforeColon": {
+											"type": "boolean"
+										},
+										"afterColon": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"multiLine": {
+									"type": "object",
+									"properties": {
+										"mode": {
+											"enum": [
+												"strict",
+												"minimum"
+											]
+										},
+										"beforeColon": {
+											"type": "boolean"
+										},
+										"afterColon": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"align": {
+									"type": "object",
+									"properties": {
+										"mode": {
+											"enum": [
+												"strict",
+												"minimum"
+											]
+										},
+										"on": {
+											"enum": [
+												"colon",
+												"value"
+											]
+										},
+										"beforeColon": {
+											"type": "boolean"
+										},
+										"afterColon": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"eslint-plugin-vue/keyword-spacing": {
+					"type": "object",
+					"properties": {
+						"before": {
+							"type": "boolean",
+							"default": true
+						},
+						"after": {
+							"type": "boolean",
+							"default": true
+						},
+						"overrides": {
+							"type": "object",
+							"properties": {
+								"abstract": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"as": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"async": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"await": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"boolean": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"break": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"byte": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"case": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"catch": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"char": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"class": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"const": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"continue": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"debugger": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"default": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"delete": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"do": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"double": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"else": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"enum": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"export": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"extends": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"false": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"final": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"finally": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"float": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"for": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"from": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"function": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"get": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"goto": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"if": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"implements": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"import": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"in": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"instanceof": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"int": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"interface": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"let": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"long": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"native": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"new": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"null": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"of": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"package": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"private": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"protected": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"public": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"return": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"set": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"short": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"static": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"super": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"switch": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"synchronized": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"this": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"throw": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"throws": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"transient": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"true": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"try": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"typeof": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"var": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"void": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"volatile": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"while": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"with": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"yield": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/match-component-file-name": {
+					"type": "object",
+					"properties": {
+						"extensions": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true,
+							"additionalItems": false
+						},
+						"shouldMatchCase": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/match-component-import-name": {},
+				"eslint-plugin-vue/max-attributes-per-line": {
+					"type": "object",
+					"properties": {
+						"singleline": {
+							"anyOf": [
+								{
+									"type": "number",
+									"minimum": 1
+								},
+								{
+									"type": "object",
+									"properties": {
+										"max": {
+											"type": "number",
+											"minimum": 1
+										}
+									},
+									"additionalProperties": false
+								}
+							]
+						},
+						"multiline": {
+							"anyOf": [
+								{
+									"type": "number",
+									"minimum": 1
+								},
+								{
+									"type": "object",
+									"properties": {
+										"max": {
+											"type": "number",
+											"minimum": 1
+										}
+									},
+									"additionalProperties": false
+								}
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/max-len": {
+					"anyOf": [
+						{
+							"type": "object",
+							"properties": {
+								"code": {
+									"type": "integer",
+									"minimum": 0
+								},
+								"template": {
+									"type": "integer",
+									"minimum": 0
+								},
+								"comments": {
+									"type": "integer",
+									"minimum": 0
+								},
+								"tabWidth": {
+									"type": "integer",
+									"minimum": 0
+								},
+								"ignorePattern": {
+									"type": "string"
+								},
+								"ignoreComments": {
+									"type": "boolean"
+								},
+								"ignoreTrailingComments": {
+									"type": "boolean"
+								},
+								"ignoreUrls": {
+									"type": "boolean"
+								},
+								"ignoreStrings": {
+									"type": "boolean"
+								},
+								"ignoreTemplateLiterals": {
+									"type": "boolean"
+								},
+								"ignoreRegExpLiterals": {
+									"type": "boolean"
+								},
+								"ignoreHTMLAttributeValues": {
+									"type": "boolean"
+								},
+								"ignoreHTMLTextContents": {
+									"type": "boolean"
+								}
+							},
+							"additionalProperties": false
+						},
+						{
+							"type": "integer",
+							"minimum": 0
+						}
+					]
+				},
+				"eslint-plugin-vue/max-lines-per-block": {
+					"type": "object",
+					"properties": {
+						"style": {
+							"type": "integer",
+							"minimum": 1
+						},
+						"template": {
+							"type": "integer",
+							"minimum": 1
+						},
+						"script": {
+							"type": "integer",
+							"minimum": 1
+						},
+						"skipBlankLines": {
+							"type": "boolean",
+							"minimum": 0
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/multi-word-component-names": {
+					"type": "object",
+					"properties": {
+						"ignores": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true,
+							"additionalItems": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/multiline-html-element-content-newline": {
+					"type": "object",
+					"properties": {
+						"ignoreWhenEmpty": {
+							"type": "boolean"
+						},
+						"ignores": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true,
+							"additionalItems": false
+						},
+						"allowEmptyLines": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/multiline-ternary": {
+					"enum": [
+						"always",
+						"always-multiline",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/mustache-interpolation-spacing": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/new-line-between-multi-line-property": {
+					"type": "object",
+					"properties": {
+						"minLineOfMultilineProperty": {
+							"type": "number",
+							"minimum": 2
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/next-tick-style": {
+					"enum": [
+						"promise",
+						"callback"
+					]
+				},
+				"eslint-plugin-vue/no-arrow-functions-in-watch": {},
+				"eslint-plugin-vue/no-async-in-computed-properties": {},
+				"eslint-plugin-vue/no-bare-strings-in-template": {
+					"type": "object",
+					"properties": {
+						"allowlist": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true
+						},
+						"attributes": {
+							"type": "object",
+							"patternProperties": {
+								"^(?:\\S+|/.*/[a-z]*)$": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									},
+									"uniqueItems": true
+								}
+							},
+							"additionalProperties": false
+						},
+						"directives": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"pattern": "^v-"
+							},
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-boolean-default": {
+					"enum": [
+						"default-false",
+						"no-default"
+					]
+				},
+				"eslint-plugin-vue/no-child-content": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"additionalDirectives": {
+							"type": "array",
+							"uniqueItems": true,
+							"minItems": 1,
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					"required": [
+						"additionalDirectives"
+					]
+				},
+				"eslint-plugin-vue/no-computed-properties-in-data": {},
+				"eslint-plugin-vue/no-console": {
+					"type": "object",
+					"properties": {
+						"allow": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1,
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-constant-condition": {
+					"type": "object",
+					"properties": {
+						"checkLoops": {
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-custom-modifiers-on-v-model": {},
+				"eslint-plugin-vue/no-deprecated-data-object-declaration": {},
+				"eslint-plugin-vue/no-deprecated-destroyed-lifecycle": {},
+				"eslint-plugin-vue/no-deprecated-dollar-listeners-api": {},
+				"eslint-plugin-vue/no-deprecated-dollar-scopedslots-api": {},
+				"eslint-plugin-vue/no-deprecated-events-api": {},
+				"eslint-plugin-vue/no-deprecated-filter": {},
+				"eslint-plugin-vue/no-deprecated-functional-template": {},
+				"eslint-plugin-vue/no-deprecated-html-element-is": {},
+				"eslint-plugin-vue/no-deprecated-inline-template": {},
+				"eslint-plugin-vue/no-deprecated-model-definition": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"allowVue3Compat": {
+							"type": "boolean"
+						}
+					}
+				},
+				"eslint-plugin-vue/no-deprecated-props-default-this": {},
+				"eslint-plugin-vue/no-deprecated-router-link-tag-prop": {
+					"type": "object",
+					"properties": {
+						"components": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true,
+							"minItems": 1
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-deprecated-scope-attribute": {},
+				"eslint-plugin-vue/no-deprecated-slot-attribute": {},
+				"eslint-plugin-vue/no-deprecated-slot-scope-attribute": {},
+				"eslint-plugin-vue/no-deprecated-v-bind-sync": {},
+				"eslint-plugin-vue/no-deprecated-v-is": {},
+				"eslint-plugin-vue/no-deprecated-v-on-native-modifier": {},
+				"eslint-plugin-vue/no-deprecated-v-on-number-modifiers": {},
+				"eslint-plugin-vue/no-deprecated-vue-config-keycodes": {},
+				"eslint-plugin-vue/no-dupe-keys": {
+					"type": "object",
+					"properties": {
+						"groups": {
+							"type": "array"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-dupe-v-else-if": {},
+				"eslint-plugin-vue/no-duplicate-attr-inheritance": {},
+				"eslint-plugin-vue/no-duplicate-attributes": {
+					"type": "object",
+					"properties": {
+						"allowCoexistClass": {
+							"type": "boolean"
+						},
+						"allowCoexistStyle": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-empty-component-block": {},
+				"eslint-plugin-vue/no-empty-pattern": {
+					"type": "object",
+					"properties": {
+						"allowObjectPatternsAsParameters": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-export-in-script-setup": {},
+				"eslint-plugin-vue/no-expose-after-await": {},
+				"eslint-plugin-vue/no-extra-parens": {},
+				"eslint-plugin-vue/no-invalid-model-keys": {},
+				"eslint-plugin-vue/no-irregular-whitespace": {
+					"type": "object",
+					"properties": {
+						"skipComments": {
+							"type": "boolean",
+							"default": false
+						},
+						"skipStrings": {
+							"type": "boolean",
+							"default": true
+						},
+						"skipTemplates": {
+							"type": "boolean",
+							"default": false
+						},
+						"skipRegExps": {
+							"type": "boolean",
+							"default": false
+						},
+						"skipHTMLAttributeValues": {
+							"type": "boolean",
+							"default": false
+						},
+						"skipHTMLTextContents": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-lifecycle-after-await": {},
+				"eslint-plugin-vue/no-lone-template": {
+					"type": "object",
+					"properties": {
+						"ignoreAccessible": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-loss-of-precision": {},
+				"eslint-plugin-vue/no-multi-spaces": {
+					"type": "object",
+					"properties": {
+						"ignoreProperties": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-multiple-objects-in-class": {},
+				"eslint-plugin-vue/no-multiple-slot-args": {},
+				"eslint-plugin-vue/no-multiple-template-root": {},
+				"eslint-plugin-vue/no-mutating-props": {
+					"type": "object",
+					"properties": {
+						"shallowOnly": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-parsing-error": {
+					"type": "object",
+					"properties": {
+						"abrupt-closing-of-empty-comment": {
+							"type": "boolean"
+						},
+						"absence-of-digits-in-numeric-character-reference": {
+							"type": "boolean"
+						},
+						"cdata-in-html-content": {
+							"type": "boolean"
+						},
+						"character-reference-outside-unicode-range": {
+							"type": "boolean"
+						},
+						"control-character-in-input-stream": {
+							"type": "boolean"
+						},
+						"control-character-reference": {
+							"type": "boolean"
+						},
+						"eof-before-tag-name": {
+							"type": "boolean"
+						},
+						"eof-in-cdata": {
+							"type": "boolean"
+						},
+						"eof-in-comment": {
+							"type": "boolean"
+						},
+						"eof-in-tag": {
+							"type": "boolean"
+						},
+						"incorrectly-closed-comment": {
+							"type": "boolean"
+						},
+						"incorrectly-opened-comment": {
+							"type": "boolean"
+						},
+						"invalid-first-character-of-tag-name": {
+							"type": "boolean"
+						},
+						"missing-attribute-value": {
+							"type": "boolean"
+						},
+						"missing-end-tag-name": {
+							"type": "boolean"
+						},
+						"missing-semicolon-after-character-reference": {
+							"type": "boolean"
+						},
+						"missing-whitespace-between-attributes": {
+							"type": "boolean"
+						},
+						"nested-comment": {
+							"type": "boolean"
+						},
+						"noncharacter-character-reference": {
+							"type": "boolean"
+						},
+						"noncharacter-in-input-stream": {
+							"type": "boolean"
+						},
+						"null-character-reference": {
+							"type": "boolean"
+						},
+						"surrogate-character-reference": {
+							"type": "boolean"
+						},
+						"surrogate-in-input-stream": {
+							"type": "boolean"
+						},
+						"unexpected-character-in-attribute-name": {
+							"type": "boolean"
+						},
+						"unexpected-character-in-unquoted-attribute-value": {
+							"type": "boolean"
+						},
+						"unexpected-equals-sign-before-attribute-name": {
+							"type": "boolean"
+						},
+						"unexpected-null-character": {
+							"type": "boolean"
+						},
+						"unexpected-question-mark-instead-of-tag-name": {
+							"type": "boolean"
+						},
+						"unexpected-solidus-in-tag": {
+							"type": "boolean"
+						},
+						"unknown-named-character-reference": {
+							"type": "boolean"
+						},
+						"end-tag-with-attributes": {
+							"type": "boolean"
+						},
+						"duplicate-attribute": {
+							"type": "boolean"
+						},
+						"end-tag-with-trailing-solidus": {
+							"type": "boolean"
+						},
+						"non-void-html-element-start-tag-with-trailing-solidus": {
+							"type": "boolean"
+						},
+						"x-invalid-end-tag": {
+							"type": "boolean"
+						},
+						"x-invalid-namespace": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-potential-component-option-typo": {
+					"type": "object",
+					"properties": {
+						"presets": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"all",
+									"vue",
+									"vue-router",
+									"nuxt"
+								]
+							},
+							"uniqueItems": true,
+							"minItems": 0
+						},
+						"custom": {
+							"type": "array",
+							"minItems": 0,
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true
+						},
+						"threshold": {
+							"type": "number",
+							"minimum": 1
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-ref-as-operand": {},
+				"eslint-plugin-vue/no-ref-object-destructure": {},
+				"eslint-plugin-vue/no-ref-object-reactivity-loss": {},
+				"eslint-plugin-vue/no-required-prop-with-default": {
+					"type": "object",
+					"properties": {
+						"autofix": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-reserved-component-names": {
+					"type": "object",
+					"properties": {
+						"disallowVueBuiltInComponents": {
+							"type": "boolean"
+						},
+						"disallowVue3BuiltInComponents": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-reserved-keys": {
+					"type": "object",
+					"properties": {
+						"reserved": {
+							"type": "array"
+						},
+						"groups": {
+							"type": "array"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-reserved-props": {
+					"type": "object",
+					"properties": {
+						"vueVersion": {
+							"enum": [
+								2,
+								3
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-restricted-block": {},
+				"eslint-plugin-vue/no-restricted-call-after-await": {},
+				"eslint-plugin-vue/no-restricted-class": {},
+				"eslint-plugin-vue/no-restricted-component-names": {},
+				"eslint-plugin-vue/no-restricted-component-options": {},
+				"eslint-plugin-vue/no-restricted-custom-event": {},
+				"eslint-plugin-vue/no-restricted-html-elements": {},
+				"eslint-plugin-vue/no-restricted-props": {},
+				"eslint-plugin-vue/no-restricted-static-attribute": {},
+				"eslint-plugin-vue/no-restricted-syntax": {},
+				"eslint-plugin-vue/no-restricted-v-bind": {},
+				"eslint-plugin-vue/no-root-v-if": {},
+				"eslint-plugin-vue/no-setup-props-destructure": {},
+				"eslint-plugin-vue/no-setup-props-reactivity-loss": {},
+				"eslint-plugin-vue/no-shared-component-data": {},
+				"eslint-plugin-vue/no-side-effects-in-computed-properties": {},
+				"eslint-plugin-vue/no-spaces-around-equal-signs-in-attribute": {},
+				"eslint-plugin-vue/no-sparse-arrays": {},
+				"eslint-plugin-vue/no-static-inline-styles": {
+					"type": "object",
+					"properties": {
+						"allowBinding": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-template-key": {},
+				"eslint-plugin-vue/no-template-shadow": {},
+				"eslint-plugin-vue/no-template-target-blank": {
+					"type": "object",
+					"properties": {
+						"allowReferrer": {
+							"type": "boolean"
+						},
+						"enforceDynamicLinks": {
+							"enum": [
+								"always",
+								"never"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-textarea-mustache": {},
+				"eslint-plugin-vue/no-this-in-before-route-enter": {},
+				"eslint-plugin-vue/no-undef-components": {
+					"type": "object",
+					"properties": {
+						"ignorePatterns": {
+							"type": "array"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-undef-properties": {
+					"type": "object",
+					"properties": {
+						"ignores": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-unsupported-features": {
+					"type": "object",
+					"properties": {
+						"version": {
+							"type": "string"
+						},
+						"ignores": {
+							"type": "array",
+							"items": {
+								"enum": [
+									"slot-scope-attribute",
+									"dynamic-directive-arguments",
+									"v-slot",
+									"script-setup",
+									"style-css-vars-injection",
+									"v-model-argument",
+									"v-model-custom-modifiers",
+									"v-is",
+									"is-attribute-with-vue-prefix",
+									"v-memo",
+									"v-bind-prop-modifier-shorthand",
+									"v-bind-attr-modifier",
+									"define-options",
+									"define-slots"
+								]
+							},
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-unused-components": {
+					"type": "object",
+					"properties": {
+						"ignoreWhenBindingPresent": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-unused-properties": {
+					"type": "object",
+					"properties": {
+						"groups": {
+							"type": "array",
+							"items": {
+								"enum": [
+									"props",
+									"data",
+									"asyncData",
+									"computed",
+									"methods",
+									"setup"
+								]
+							},
+							"additionalItems": false,
+							"uniqueItems": true
+						},
+						"deepData": {
+							"type": "boolean"
+						},
+						"ignorePublicMembers": {
+							"type": "boolean"
+						},
+						"unreferencedOptions": {
+							"type": "array",
+							"items": {
+								"enum": [
+									"unknownMemberAsUnreferenced",
+									"returnAsUnreferenced"
+								]
+							},
+							"additionalItems": false,
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-unused-refs": {},
+				"eslint-plugin-vue/no-unused-vars": {
+					"type": "object",
+					"properties": {
+						"ignorePattern": {
+							"type": "string"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-use-computed-property-like-method": {},
+				"eslint-plugin-vue/no-use-v-else-with-v-for": {},
+				"eslint-plugin-vue/no-use-v-if-with-v-for": {
+					"type": "object",
+					"properties": {
+						"allowUsingIterationVar": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-useless-concat": {},
+				"eslint-plugin-vue/no-useless-mustaches": {
+					"type": "object",
+					"properties": {
+						"ignoreIncludesComment": {
+							"type": "boolean"
+						},
+						"ignoreStringEscape": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-useless-template-attributes": {},
+				"eslint-plugin-vue/no-useless-v-bind": {
+					"type": "object",
+					"properties": {
+						"ignoreIncludesComment": {
+							"type": "boolean"
+						},
+						"ignoreStringEscape": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/no-v-for-template-key-on-child": {},
+				"eslint-plugin-vue/no-v-for-template-key": {},
+				"eslint-plugin-vue/no-v-html": {},
+				"eslint-plugin-vue/no-v-model-argument": {},
+				"eslint-plugin-vue/no-v-text-v-html-on-component": {},
+				"eslint-plugin-vue/no-v-text": {},
+				"eslint-plugin-vue/no-watch-after-await": {},
+				"eslint-plugin-vue/object-curly-newline": {
+					"oneOf": [
+						{
+							"oneOf": [
+								{
+									"enum": [
+										"always",
+										"never"
+									]
+								},
+								{
+									"type": "object",
+									"properties": {
+										"multiline": {
+											"type": "boolean"
+										},
+										"minProperties": {
+											"type": "integer",
+											"minimum": 0
+										},
+										"consistent": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false,
+									"minProperties": 1
+								}
+							]
+						},
+						{
+							"type": "object",
+							"properties": {
+								"ObjectExpression": {
+									"oneOf": [
+										{
+											"enum": [
+												"always",
+												"never"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"multiline": {
+													"type": "boolean"
+												},
+												"minProperties": {
+													"type": "integer",
+													"minimum": 0
+												},
+												"consistent": {
+													"type": "boolean"
+												}
+											},
+											"additionalProperties": false,
+											"minProperties": 1
+										}
+									]
+								},
+								"ObjectPattern": {
+									"oneOf": [
+										{
+											"enum": [
+												"always",
+												"never"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"multiline": {
+													"type": "boolean"
+												},
+												"minProperties": {
+													"type": "integer",
+													"minimum": 0
+												},
+												"consistent": {
+													"type": "boolean"
+												}
+											},
+											"additionalProperties": false,
+											"minProperties": 1
+										}
+									]
+								},
+								"ImportDeclaration": {
+									"oneOf": [
+										{
+											"enum": [
+												"always",
+												"never"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"multiline": {
+													"type": "boolean"
+												},
+												"minProperties": {
+													"type": "integer",
+													"minimum": 0
+												},
+												"consistent": {
+													"type": "boolean"
+												}
+											},
+											"additionalProperties": false,
+											"minProperties": 1
+										}
+									]
+								},
+								"ExportDeclaration": {
+									"oneOf": [
+										{
+											"enum": [
+												"always",
+												"never"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"multiline": {
+													"type": "boolean"
+												},
+												"minProperties": {
+													"type": "integer",
+													"minimum": 0
+												},
+												"consistent": {
+													"type": "boolean"
+												}
+											},
+											"additionalProperties": false,
+											"minProperties": 1
+										}
+									]
+								}
+							},
+							"additionalProperties": false,
+							"minProperties": 1
+						}
+					]
+				},
+				"eslint-plugin-vue/object-curly-spacing": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/object-property-newline": {
+					"type": "object",
+					"properties": {
+						"allowAllPropertiesOnSameLine": {
+							"type": "boolean",
+							"default": false
+						},
+						"allowMultiplePropertiesPerLine": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/object-shorthand": {},
+				"eslint-plugin-vue/one-component-per-file": {},
+				"eslint-plugin-vue/operator-linebreak": {
+					"enum": [
+						"after",
+						"before",
+						"none",
+						null
+					]
+				},
+				"eslint-plugin-vue/order-in-components": {
+					"type": "object",
+					"properties": {
+						"order": {
+							"type": "array"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/padding-line-between-blocks": {
+					"enum": [
+						"never",
+						"always"
+					]
+				},
+				"eslint-plugin-vue/padding-line-between-tags": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"blankLine": {
+								"enum": [
+									"always",
+									"never",
+									"consistent"
+								]
+							},
+							"prev": {
+								"type": "string"
+							},
+							"next": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false,
+						"required": [
+							"blankLine",
+							"prev",
+							"next"
+						]
+					}
+				},
+				"eslint-plugin-vue/padding-lines-in-component-definition": {
+					"oneOf": [
+						{
+							"enum": [
+								"always",
+								"never"
+							]
+						},
+						{
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"betweenOptions": {
+									"enum": [
+										"never",
+										"always",
+										"ignore"
+									]
+								},
+								"withinOption": {
+									"oneOf": [
+										{
+											"enum": [
+												"never",
+												"always",
+												"ignore"
+											]
+										},
+										{
+											"type": "object",
+											"patternProperties": {
+												"^[a-zA-Z]*$": {
+													"oneOf": [
+														{
+															"enum": [
+																"never",
+																"always",
+																"ignore"
+															]
+														},
+														{
+															"type": "object",
+															"properties": {
+																"betweenItems": {
+																	"enum": [
+																		"never",
+																		"always",
+																		"ignore"
+																	]
+																},
+																"withinEach": {
+																	"enum": [
+																		"never",
+																		"always",
+																		"ignore"
+																	]
+																}
+															},
+															"additionalProperties": false
+														}
+													]
+												}
+											},
+											"minProperties": 1,
+											"additionalProperties": false
+										}
+									]
+								},
+								"groupSingleLineProperties": {
+									"type": "boolean"
+								}
+							}
+						}
+					]
+				},
+				"eslint-plugin-vue/prefer-define-options": {},
+				"eslint-plugin-vue/prefer-import-from-vue": {},
+				"eslint-plugin-vue/prefer-prop-type-boolean-first": {},
+				"eslint-plugin-vue/prefer-separate-static-class": {},
+				"eslint-plugin-vue/prefer-template": {},
+				"eslint-plugin-vue/prefer-true-attribute-shorthand": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/prop-name-casing": {
+					"enum": [
+						"camelCase",
+						"snake_case"
+					]
+				},
+				"eslint-plugin-vue/quote-props": {},
+				"eslint-plugin-vue/require-component-is": {},
+				"eslint-plugin-vue/require-default-prop": {},
+				"eslint-plugin-vue/require-direct-export": {
+					"type": "object",
+					"properties": {
+						"disallowFunctionalComponentFunction": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/require-emit-validator": {},
+				"eslint-plugin-vue/require-explicit-emits": {
+					"type": "object",
+					"properties": {
+						"allowProps": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/require-expose": {},
+				"eslint-plugin-vue/require-macro-variable-name": {
+					"type": "object",
+					"properties": {
+						"defineProps": {
+							"type": "string",
+							"default": "props"
+						},
+						"defineEmits": {
+							"type": "string",
+							"default": "emit"
+						},
+						"defineSlots": {
+							"type": "string",
+							"default": "slots"
+						},
+						"useSlots": {
+							"type": "string",
+							"default": "slots"
+						},
+						"useAttrs": {
+							"type": "string",
+							"default": "attrs"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/require-name-property": {},
+				"eslint-plugin-vue/require-prop-comment": {
+					"type": "object",
+					"properties": {
+						"type": {
+							"enum": [
+								"JSDoc",
+								"line",
+								"block",
+								"any"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/require-prop-type-constructor": {},
+				"eslint-plugin-vue/require-prop-types": {},
+				"eslint-plugin-vue/require-render-return": {},
+				"eslint-plugin-vue/require-slots-as-functions": {},
+				"eslint-plugin-vue/require-toggle-inside-transition": {},
+				"eslint-plugin-vue/require-typed-object-prop": {},
+				"eslint-plugin-vue/require-typed-ref": {},
+				"eslint-plugin-vue/require-v-for-key": {},
+				"eslint-plugin-vue/require-valid-default-prop": {},
+				"eslint-plugin-vue/return-in-computed-property": {
+					"type": "object",
+					"properties": {
+						"treatUndefinedAsUnspecified": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/return-in-emits-validator": {},
+				"eslint-plugin-vue/script-indent": {
+					"anyOf": [
+						{
+							"type": "integer",
+							"minimum": 1
+						},
+						{
+							"enum": [
+								"tab"
+							]
+						}
+					]
+				},
+				"eslint-plugin-vue/script-setup-uses-vars": {},
+				"eslint-plugin-vue/singleline-html-element-content-newline": {
+					"type": "object",
+					"properties": {
+						"ignoreWhenNoAttributes": {
+							"type": "boolean"
+						},
+						"ignoreWhenEmpty": {
+							"type": "boolean"
+						},
+						"ignores": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"uniqueItems": true,
+							"additionalItems": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/sort-keys": {
+					"enum": [
+						"asc",
+						"desc"
+					]
+				},
+				"eslint-plugin-vue/space-in-parens": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/space-infix-ops": {
+					"type": "object",
+					"properties": {
+						"int32Hint": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/space-unary-ops": {
+					"type": "object",
+					"properties": {
+						"words": {
+							"type": "boolean",
+							"default": true
+						},
+						"nonwords": {
+							"type": "boolean",
+							"default": false
+						},
+						"overrides": {
+							"type": "object",
+							"additionalProperties": {
+								"type": "boolean"
+							}
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/static-class-names-order": {},
+				"eslint-plugin-vue/template-curly-spacing": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/this-in-template": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/use-v-on-exact": {},
+				"eslint-plugin-vue/v-bind-style": {
+					"enum": [
+						"shorthand",
+						"longform"
+					]
+				},
+				"eslint-plugin-vue/v-for-delimiter-style": {
+					"enum": [
+						"in",
+						"of"
+					]
+				},
+				"eslint-plugin-vue/v-on-event-hyphenation": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/v-on-function-call": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"eslint-plugin-vue/v-on-handler-style": {
+					"oneOf": [
+						{
+							"enum": [
+								"inline",
+								"inline-function"
+							]
+						},
+						{
+							"type": "array",
+							"items": [
+								{
+									"const": "method"
+								},
+								{
+									"enum": [
+										"inline",
+										"inline-function"
+									]
+								}
+							],
+							"uniqueItems": true,
+							"additionalItems": false,
+							"minItems": 2,
+							"maxItems": 2
+						}
+					]
+				},
+				"eslint-plugin-vue/v-on-style": {
+					"enum": [
+						"shorthand",
+						"longform"
+					]
+				},
+				"eslint-plugin-vue/v-slot-style": {
+					"anyOf": [
+						{
+							"enum": [
+								"shorthand",
+								"longform"
+							]
+						},
+						{
+							"type": "object",
+							"properties": {
+								"atComponent": {
+									"enum": [
+										"shorthand",
+										"longform",
+										"v-slot"
+									]
+								},
+								"default": {
+									"enum": [
+										"shorthand",
+										"longform",
+										"v-slot"
+									]
+								},
+								"named": {
+									"enum": [
+										"shorthand",
+										"longform"
+									]
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"eslint-plugin-vue/valid-attribute-name": {},
+				"eslint-plugin-vue/valid-define-emits": {},
+				"eslint-plugin-vue/valid-define-options": {},
+				"eslint-plugin-vue/valid-define-props": {},
+				"eslint-plugin-vue/valid-model-definition": {},
+				"eslint-plugin-vue/valid-next-tick": {},
+				"eslint-plugin-vue/valid-template-root": {},
+				"eslint-plugin-vue/valid-v-bind-sync": {},
+				"eslint-plugin-vue/valid-v-bind": {},
+				"eslint-plugin-vue/valid-v-cloak": {},
+				"eslint-plugin-vue/valid-v-else-if": {},
+				"eslint-plugin-vue/valid-v-else": {},
+				"eslint-plugin-vue/valid-v-for": {},
+				"eslint-plugin-vue/valid-v-html": {},
+				"eslint-plugin-vue/valid-v-if": {},
+				"eslint-plugin-vue/valid-v-is": {},
+				"eslint-plugin-vue/valid-v-memo": {},
+				"eslint-plugin-vue/valid-v-model": {},
+				"eslint-plugin-vue/valid-v-on": {
+					"type": "object",
+					"properties": {
+						"modifiers": {
+							"type": "array"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/valid-v-once": {},
+				"eslint-plugin-vue/valid-v-pre": {},
+				"eslint-plugin-vue/valid-v-show": {},
+				"eslint-plugin-vue/valid-v-slot": {
+					"type": "object",
+					"properties": {
+						"allowModifiers": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"eslint-plugin-vue/valid-v-text": {},
+				"typescript-eslint/adjacent-overload-signatures": {},
+				"typescript-eslint/array-type": {
+					"$defs": {
+						"arrayOption": {
+							"type": "string",
+							"enum": [
+								"array",
+								"generic",
+								"array-simple"
+							]
+						}
+					},
+					"additionalProperties": false,
+					"properties": {
+						"default": {
+							"$ref": "#/items/0/$defs/arrayOption",
+							"description": "The array type expected for mutable cases."
+						},
+						"readonly": {
+							"$ref": "#/items/0/$defs/arrayOption",
+							"description": "The array type expected for readonly cases. If omitted, the value for `default` will be used."
+						}
+					},
+					"type": "object"
+				},
+				"typescript-eslint/await-thenable": {},
+				"typescript-eslint/ban-ts-comment": {
+					"$defs": {
+						"directiveConfigSchema": {
+							"oneOf": [
+								{
+									"type": "boolean",
+									"default": true
+								},
+								{
+									"type": "string",
+									"enum": [
+										"allow-with-description"
+									]
+								},
+								{
+									"type": "object",
+									"additionalProperties": false,
+									"properties": {
+										"descriptionFormat": {
+											"type": "string"
+										}
+									}
+								}
+							]
+						}
+					},
+					"properties": {
+						"ts-expect-error": {
+							"$ref": "#/items/0/$defs/directiveConfigSchema"
+						},
+						"ts-ignore": {
+							"$ref": "#/items/0/$defs/directiveConfigSchema"
+						},
+						"ts-nocheck": {
+							"$ref": "#/items/0/$defs/directiveConfigSchema"
+						},
+						"ts-check": {
+							"$ref": "#/items/0/$defs/directiveConfigSchema"
+						},
+						"minimumDescriptionLength": {
+							"type": "number",
+							"default": 3
+						}
+					},
+					"type": "object",
+					"additionalProperties": false
+				},
+				"typescript-eslint/ban-tslint-comment": {},
+				"typescript-eslint/ban-types": {
+					"$defs": {
+						"banConfig": {
+							"oneOf": [
+								{
+									"type": "null",
+									"description": "Bans the type with the default message"
+								},
+								{
+									"type": "boolean",
+									"enum": [
+										false
+									],
+									"description": "Un-bans the type (useful when paired with `extendDefaults`)"
+								},
+								{
+									"type": "boolean",
+									"enum": [
+										true
+									],
+									"description": "Bans the type with the default message"
+								},
+								{
+									"type": "string",
+									"description": "Bans the type with a custom message"
+								},
+								{
+									"type": "object",
+									"description": "Bans a type",
+									"properties": {
+										"message": {
+											"type": "string",
+											"description": "Custom error message"
+										},
+										"fixWith": {
+											"type": "string",
+											"description": "Type to autofix replace with. Note that autofixers can be applied automatically - so you need to be careful with this option."
+										},
+										"suggest": {
+											"type": "array",
+											"items": {
+												"type": "string"
+											},
+											"description": "Types to suggest replacing with.",
+											"additionalItems": false
+										}
+									},
+									"additionalProperties": false
+								}
+							]
+						}
+					},
+					"type": "object",
+					"properties": {
+						"types": {
+							"type": "object",
+							"additionalProperties": {
+								"$ref": "#/items/0/$defs/banConfig"
+							}
+						},
+						"extendDefaults": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/block-spacing": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"typescript-eslint/brace-style": {
+					"enum": [
+						"1tbs",
+						"stroustrup",
+						"allman"
+					]
+				},
+				"typescript-eslint/class-literal-property-style": {
+					"type": "string",
+					"enum": [
+						"fields",
+						"getters"
+					]
+				},
+				"typescript-eslint/class-methods-use-this": {
+					"type": "object",
+					"properties": {
+						"exceptMethods": {
+							"type": "array",
+							"description": "Allows specified method names to be ignored with this rule",
+							"items": {
+								"type": "string"
+							}
+						},
+						"enforceForClassFields": {
+							"type": "boolean",
+							"description": "Enforces that functions used as instance field initializers utilize `this`",
+							"default": true
+						},
+						"ignoreOverrideMethods": {
+							"type": "boolean",
+							"description": "Ingore members marked with the `override` modifier"
+						},
+						"ignoreClassesThatImplementAnInterface": {
+							"type": "boolean",
+							"description": "Ignore classes that specifically implement some interface"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/comma-dangle": {},
+				"typescript-eslint/comma-spacing": {
+					"type": "object",
+					"properties": {
+						"before": {
+							"type": "boolean",
+							"default": false
+						},
+						"after": {
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/consistent-generic-constructors": {
+					"type": "string",
+					"enum": [
+						"type-annotation",
+						"constructor"
+					]
+				},
+				"typescript-eslint/consistent-indexed-object-style": {
+					"type": "string",
+					"enum": [
+						"record",
+						"index-signature"
+					]
+				},
+				"typescript-eslint/consistent-type-assertions": {
+					"oneOf": [
+						{
+							"type": "object",
+							"properties": {
+								"assertionStyle": {
+									"type": "string",
+									"enum": [
+										"never"
+									]
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"assertionStyle"
+							]
+						},
+						{
+							"type": "object",
+							"properties": {
+								"assertionStyle": {
+									"type": "string",
+									"enum": [
+										"as",
+										"angle-bracket"
+									]
+								},
+								"objectLiteralTypeAssertions": {
+									"type": "string",
+									"enum": [
+										"allow",
+										"allow-as-parameter",
+										"never"
+									]
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"assertionStyle"
+							]
+						}
+					]
+				},
+				"typescript-eslint/consistent-type-definitions": {
+					"type": "string",
+					"enum": [
+						"interface",
+						"type"
+					]
+				},
+				"typescript-eslint/consistent-type-exports": {
+					"type": "object",
+					"properties": {
+						"fixMixedExportsWithInlineTypeSpecifier": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/consistent-type-imports": {
+					"type": "object",
+					"properties": {
+						"prefer": {
+							"type": "string",
+							"enum": [
+								"type-imports",
+								"no-type-imports"
+							]
+						},
+						"disallowTypeAnnotations": {
+							"type": "boolean"
+						},
+						"fixStyle": {
+							"type": "string",
+							"enum": [
+								"separate-type-imports",
+								"inline-type-imports"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/default-param-last": {},
+				"typescript-eslint/dot-notation": {
+					"type": "object",
+					"properties": {
+						"allowKeywords": {
+							"type": "boolean",
+							"default": true
+						},
+						"allowPattern": {
+							"type": "string",
+							"default": ""
+						},
+						"allowPrivateClassPropertyAccess": {
+							"type": "boolean",
+							"default": false
+						},
+						"allowProtectedClassPropertyAccess": {
+							"type": "boolean",
+							"default": false
+						},
+						"allowIndexSignaturePropertyAccess": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/explicit-function-return-type": {
+					"type": "object",
+					"properties": {
+						"allowConciseArrowFunctionExpressionsStartingWithVoid": {
+							"description": "Whether to allow arrow functions that start with the `void` keyword.",
+							"type": "boolean"
+						},
+						"allowExpressions": {
+							"description": "Whether to ignore function expressions (functions which are not part of a declaration).",
+							"type": "boolean"
+						},
+						"allowHigherOrderFunctions": {
+							"description": "Whether to ignore functions immediately returning another function expression.",
+							"type": "boolean"
+						},
+						"allowTypedFunctionExpressions": {
+							"description": "Whether to ignore type annotations on the variable of function expressions.",
+							"type": "boolean"
+						},
+						"allowDirectConstAssertionInArrowFunctions": {
+							"description": "Whether to ignore arrow functions immediately returning a `as const` value.",
+							"type": "boolean"
+						},
+						"allowFunctionsWithoutTypeParameters": {
+							"description": "Whether to ignore functions that don't have generic type parameters.",
+							"type": "boolean"
+						},
+						"allowedNames": {
+							"description": "An array of function/method names that will not have their arguments or return values checked.",
+							"items": {
+								"type": "string"
+							},
+							"type": "array"
+						},
+						"allowIIFEs": {
+							"description": "Whether to ignore immediately invoked function expressions (IIFEs).",
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/explicit-member-accessibility": {
+					"$defs": {
+						"accessibilityLevel": {
+							"oneOf": [
+								{
+									"type": "string",
+									"enum": [
+										"explicit"
+									],
+									"description": "Always require an accessor."
+								},
+								{
+									"type": "string",
+									"enum": [
+										"no-public"
+									],
+									"description": "Require an accessor except when public."
+								},
+								{
+									"type": "string",
+									"enum": [
+										"off"
+									],
+									"description": "Never check whether there is an accessor."
+								}
+							]
+						}
+					},
+					"type": "object",
+					"properties": {
+						"accessibility": {
+							"$ref": "#/items/0/$defs/accessibilityLevel"
+						},
+						"overrides": {
+							"type": "object",
+							"properties": {
+								"accessors": {
+									"$ref": "#/items/0/$defs/accessibilityLevel"
+								},
+								"constructors": {
+									"$ref": "#/items/0/$defs/accessibilityLevel"
+								},
+								"methods": {
+									"$ref": "#/items/0/$defs/accessibilityLevel"
+								},
+								"properties": {
+									"$ref": "#/items/0/$defs/accessibilityLevel"
+								},
+								"parameterProperties": {
+									"$ref": "#/items/0/$defs/accessibilityLevel"
+								}
+							},
+							"additionalProperties": false
+						},
+						"ignoredMethodNames": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/explicit-module-boundary-types": {
+					"type": "object",
+					"properties": {
+						"allowArgumentsExplicitlyTypedAsAny": {
+							"description": "Whether to ignore arguments that are explicitly typed as `any`.",
+							"type": "boolean"
+						},
+						"allowDirectConstAssertionInArrowFunctions": {
+							"description": "Whether to ignore return type annotations on body-less arrow functions that return an `as const` type assertion.\nYou must still type the parameters of the function.",
+							"type": "boolean"
+						},
+						"allowedNames": {
+							"description": "An array of function/method names that will not have their arguments or return values checked.",
+							"items": {
+								"type": "string"
+							},
+							"type": "array"
+						},
+						"allowHigherOrderFunctions": {
+							"description": "Whether to ignore return type annotations on functions immediately returning another function expression.\nYou must still type the parameters of the function.",
+							"type": "boolean"
+						},
+						"allowTypedFunctionExpressions": {
+							"description": "Whether to ignore type annotations on the variable of a function expresion.",
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/func-call-spacing": {},
+				"typescript-eslint/indent": {
+					"oneOf": [
+						{
+							"enum": [
+								"tab"
+							]
+						},
+						{
+							"type": "integer",
+							"minimum": 0
+						}
+					]
+				},
+				"typescript-eslint/init-declarations": {},
+				"typescript-eslint/key-spacing": {
+					"anyOf": [
+						{
+							"type": "object",
+							"properties": {
+								"align": {
+									"anyOf": [
+										{
+											"enum": [
+												"colon",
+												"value"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"mode": {
+													"enum": [
+														"strict",
+														"minimum"
+													]
+												},
+												"on": {
+													"enum": [
+														"colon",
+														"value"
+													]
+												},
+												"beforeColon": {
+													"type": "boolean"
+												},
+												"afterColon": {
+													"type": "boolean"
+												}
+											},
+											"additionalProperties": false
+										}
+									]
+								},
+								"mode": {
+									"enum": [
+										"strict",
+										"minimum"
+									]
+								},
+								"beforeColon": {
+									"type": "boolean"
+								},
+								"afterColon": {
+									"type": "boolean"
+								}
+							},
+							"additionalProperties": false
+						},
+						{
+							"type": "object",
+							"properties": {
+								"singleLine": {
+									"type": "object",
+									"properties": {
+										"mode": {
+											"enum": [
+												"strict",
+												"minimum"
+											]
+										},
+										"beforeColon": {
+											"type": "boolean"
+										},
+										"afterColon": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"multiLine": {
+									"type": "object",
+									"properties": {
+										"align": {
+											"anyOf": [
+												{
+													"enum": [
+														"colon",
+														"value"
+													]
+												},
+												{
+													"type": "object",
+													"properties": {
+														"mode": {
+															"enum": [
+																"strict",
+																"minimum"
+															]
+														},
+														"on": {
+															"enum": [
+																"colon",
+																"value"
+															]
+														},
+														"beforeColon": {
+															"type": "boolean"
+														},
+														"afterColon": {
+															"type": "boolean"
+														}
+													},
+													"additionalProperties": false
+												}
+											]
+										},
+										"mode": {
+											"enum": [
+												"strict",
+												"minimum"
+											]
+										},
+										"beforeColon": {
+											"type": "boolean"
+										},
+										"afterColon": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						},
+						{
+							"type": "object",
+							"properties": {
+								"singleLine": {
+									"type": "object",
+									"properties": {
+										"mode": {
+											"enum": [
+												"strict",
+												"minimum"
+											]
+										},
+										"beforeColon": {
+											"type": "boolean"
+										},
+										"afterColon": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"multiLine": {
+									"type": "object",
+									"properties": {
+										"mode": {
+											"enum": [
+												"strict",
+												"minimum"
+											]
+										},
+										"beforeColon": {
+											"type": "boolean"
+										},
+										"afterColon": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"align": {
+									"type": "object",
+									"properties": {
+										"mode": {
+											"enum": [
+												"strict",
+												"minimum"
+											]
+										},
+										"on": {
+											"enum": [
+												"colon",
+												"value"
+											]
+										},
+										"beforeColon": {
+											"type": "boolean"
+										},
+										"afterColon": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"typescript-eslint/keyword-spacing": {
+					"type": "object",
+					"properties": {
+						"before": {
+							"type": "boolean",
+							"default": true
+						},
+						"after": {
+							"type": "boolean",
+							"default": true
+						},
+						"overrides": {
+							"type": "object",
+							"properties": {
+								"abstract": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"as": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"async": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"await": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"boolean": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"break": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"byte": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"case": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"catch": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"char": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"class": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"const": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"continue": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"debugger": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"default": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"delete": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"do": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"double": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"else": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"enum": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"export": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"extends": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"false": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"final": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"finally": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"float": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"for": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"from": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"function": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"get": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"goto": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"if": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"implements": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"import": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"in": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"instanceof": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"int": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"interface": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"let": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"long": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"native": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"new": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"null": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"of": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"package": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"private": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"protected": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"public": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"return": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"set": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"short": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"static": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"super": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"switch": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"synchronized": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"this": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"throw": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"throws": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"transient": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"true": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"try": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"typeof": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"var": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"void": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"volatile": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"while": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"with": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"yield": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"type": {
+									"type": "object",
+									"properties": {
+										"before": {
+											"type": "boolean"
+										},
+										"after": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/lines-around-comment": {
+					"type": "object",
+					"properties": {
+						"beforeBlockComment": {
+							"type": "boolean",
+							"default": true
+						},
+						"afterBlockComment": {
+							"type": "boolean",
+							"default": false
+						},
+						"beforeLineComment": {
+							"type": "boolean",
+							"default": false
+						},
+						"afterLineComment": {
+							"type": "boolean",
+							"default": false
+						},
+						"allowBlockStart": {
+							"type": "boolean",
+							"default": false
+						},
+						"allowBlockEnd": {
+							"type": "boolean",
+							"default": false
+						},
+						"allowClassStart": {
+							"type": "boolean"
+						},
+						"allowClassEnd": {
+							"type": "boolean"
+						},
+						"allowObjectStart": {
+							"type": "boolean"
+						},
+						"allowObjectEnd": {
+							"type": "boolean"
+						},
+						"allowArrayStart": {
+							"type": "boolean"
+						},
+						"allowArrayEnd": {
+							"type": "boolean"
+						},
+						"allowInterfaceStart": {
+							"type": "boolean"
+						},
+						"allowInterfaceEnd": {
+							"type": "boolean"
+						},
+						"allowTypeStart": {
+							"type": "boolean"
+						},
+						"allowTypeEnd": {
+							"type": "boolean"
+						},
+						"allowEnumStart": {
+							"type": "boolean"
+						},
+						"allowEnumEnd": {
+							"type": "boolean"
+						},
+						"allowModuleStart": {
+							"type": "boolean"
+						},
+						"allowModuleEnd": {
+							"type": "boolean"
+						},
+						"ignorePattern": {
+							"type": "string"
+						},
+						"applyDefaultIgnorePatterns": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/lines-between-class-members": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"typescript-eslint/member-delimiter-style": {
+					"$defs": {
+						"multiLineOption": {
+							"type": "string",
+							"enum": [
+								"none",
+								"semi",
+								"comma"
+							]
+						},
+						"singleLineOption": {
+							"type": "string",
+							"enum": [
+								"semi",
+								"comma"
+							]
+						},
+						"delimiterConfig": {
+							"type": "object",
+							"properties": {
+								"multiline": {
+									"type": "object",
+									"properties": {
+										"delimiter": {
+											"$ref": "#/items/0/$defs/multiLineOption"
+										},
+										"requireLast": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"singleline": {
+									"type": "object",
+									"properties": {
+										"delimiter": {
+											"$ref": "#/items/0/$defs/singleLineOption"
+										},
+										"requireLast": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"type": "object",
+					"properties": {
+						"multiline": {
+							"type": "object",
+							"properties": {
+								"delimiter": {
+									"$ref": "#/items/0/$defs/multiLineOption"
+								},
+								"requireLast": {
+									"type": "boolean"
+								}
+							},
+							"additionalProperties": false
+						},
+						"singleline": {
+							"type": "object",
+							"properties": {
+								"delimiter": {
+									"$ref": "#/items/0/$defs/singleLineOption"
+								},
+								"requireLast": {
+									"type": "boolean"
+								}
+							},
+							"additionalProperties": false
+						},
+						"overrides": {
+							"type": "object",
+							"properties": {
+								"interface": {
+									"$ref": "#/items/0/$defs/delimiterConfig"
+								},
+								"typeLiteral": {
+									"$ref": "#/items/0/$defs/delimiterConfig"
+								}
+							},
+							"additionalProperties": false
+						},
+						"multilineDetection": {
+							"type": "string",
+							"enum": [
+								"brackets",
+								"last-member"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/member-ordering": {
+					"$defs": {
+						"orderOptions": {
+							"type": "string",
+							"enum": [
+								"alphabetically",
+								"alphabetically-case-insensitive",
+								"as-written",
+								"natural",
+								"natural-case-insensitive"
+							]
+						},
+						"optionalityOrderOptions": {
+							"type": "string",
+							"enum": [
+								"optional-first",
+								"required-first"
+							]
+						},
+						"allItems": {
+							"type": "string",
+							"enum": [
+								"readonly-signature",
+								"signature",
+								"readonly-field",
+								"public-readonly-field",
+								"public-decorated-readonly-field",
+								"decorated-readonly-field",
+								"static-readonly-field",
+								"public-static-readonly-field",
+								"instance-readonly-field",
+								"public-instance-readonly-field",
+								"abstract-readonly-field",
+								"public-abstract-readonly-field",
+								"protected-readonly-field",
+								"protected-decorated-readonly-field",
+								"protected-static-readonly-field",
+								"protected-instance-readonly-field",
+								"protected-abstract-readonly-field",
+								"private-readonly-field",
+								"private-decorated-readonly-field",
+								"private-static-readonly-field",
+								"private-instance-readonly-field",
+								"#private-readonly-field",
+								"#private-static-readonly-field",
+								"#private-instance-readonly-field",
+								"field",
+								"public-field",
+								"public-decorated-field",
+								"decorated-field",
+								"static-field",
+								"public-static-field",
+								"instance-field",
+								"public-instance-field",
+								"abstract-field",
+								"public-abstract-field",
+								"protected-field",
+								"protected-decorated-field",
+								"protected-static-field",
+								"protected-instance-field",
+								"protected-abstract-field",
+								"private-field",
+								"private-decorated-field",
+								"private-static-field",
+								"private-instance-field",
+								"#private-field",
+								"#private-static-field",
+								"#private-instance-field",
+								"method",
+								"public-method",
+								"public-decorated-method",
+								"decorated-method",
+								"static-method",
+								"public-static-method",
+								"instance-method",
+								"public-instance-method",
+								"abstract-method",
+								"public-abstract-method",
+								"protected-method",
+								"protected-decorated-method",
+								"protected-static-method",
+								"protected-instance-method",
+								"protected-abstract-method",
+								"private-method",
+								"private-decorated-method",
+								"private-static-method",
+								"private-instance-method",
+								"#private-method",
+								"#private-static-method",
+								"#private-instance-method",
+								"call-signature",
+								"constructor",
+								"public-constructor",
+								"protected-constructor",
+								"private-constructor",
+								"get",
+								"public-get",
+								"public-decorated-get",
+								"decorated-get",
+								"static-get",
+								"public-static-get",
+								"instance-get",
+								"public-instance-get",
+								"abstract-get",
+								"public-abstract-get",
+								"protected-get",
+								"protected-decorated-get",
+								"protected-static-get",
+								"protected-instance-get",
+								"protected-abstract-get",
+								"private-get",
+								"private-decorated-get",
+								"private-static-get",
+								"private-instance-get",
+								"#private-get",
+								"#private-static-get",
+								"#private-instance-get",
+								"set",
+								"public-set",
+								"public-decorated-set",
+								"decorated-set",
+								"static-set",
+								"public-static-set",
+								"instance-set",
+								"public-instance-set",
+								"abstract-set",
+								"public-abstract-set",
+								"protected-set",
+								"protected-decorated-set",
+								"protected-static-set",
+								"protected-instance-set",
+								"protected-abstract-set",
+								"private-set",
+								"private-decorated-set",
+								"private-static-set",
+								"private-instance-set",
+								"#private-set",
+								"#private-static-set",
+								"#private-instance-set",
+								"static-initialization",
+								"static-static-initialization",
+								"public-static-static-initialization",
+								"instance-static-initialization",
+								"public-instance-static-initialization",
+								"abstract-static-initialization",
+								"public-abstract-static-initialization",
+								"protected-static-static-initialization",
+								"protected-instance-static-initialization",
+								"protected-abstract-static-initialization",
+								"private-static-static-initialization",
+								"private-instance-static-initialization",
+								"#private-static-static-initialization",
+								"#private-instance-static-initialization"
+							]
+						},
+						"typeItems": {
+							"type": "string",
+							"enum": [
+								"readonly-signature",
+								"signature",
+								"readonly-field",
+								"field",
+								"method",
+								"constructor"
+							]
+						},
+						"baseConfig": {
+							"oneOf": [
+								{
+									"type": "string",
+									"enum": [
+										"never"
+									]
+								},
+								{
+									"type": "array",
+									"items": {
+										"oneOf": [
+											{
+												"$ref": "#/items/0/$defs/allItems"
+											},
+											{
+												"type": "array",
+												"items": {
+													"$ref": "#/items/0/$defs/allItems"
+												}
+											}
+										]
+									}
+								},
+								{
+									"type": "object",
+									"properties": {
+										"memberTypes": {
+											"oneOf": [
+												{
+													"type": "array",
+													"items": {
+														"oneOf": [
+															{
+																"$ref": "#/items/0/$defs/allItems"
+															},
+															{
+																"type": "array",
+																"items": {
+																	"$ref": "#/items/0/$defs/allItems"
+																}
+															}
+														]
+													}
+												},
+												{
+													"type": "string",
+													"enum": [
+														"never"
+													]
+												}
+											]
+										},
+										"order": {
+											"$ref": "#/items/0/$defs/orderOptions"
+										},
+										"optionalityOrder": {
+											"$ref": "#/items/0/$defs/optionalityOrderOptions"
+										}
+									},
+									"additionalProperties": false
+								}
+							]
+						},
+						"typesConfig": {
+							"oneOf": [
+								{
+									"type": "string",
+									"enum": [
+										"never"
+									]
+								},
+								{
+									"type": "array",
+									"items": {
+										"oneOf": [
+											{
+												"$ref": "#/items/0/$defs/typeItems"
+											},
+											{
+												"type": "array",
+												"items": {
+													"$ref": "#/items/0/$defs/typeItems"
+												}
+											}
+										]
+									}
+								},
+								{
+									"type": "object",
+									"properties": {
+										"memberTypes": {
+											"oneOf": [
+												{
+													"type": "array",
+													"items": {
+														"oneOf": [
+															{
+																"$ref": "#/items/0/$defs/typeItems"
+															},
+															{
+																"type": "array",
+																"items": {
+																	"$ref": "#/items/0/$defs/typeItems"
+																}
+															}
+														]
+													}
+												},
+												{
+													"type": "string",
+													"enum": [
+														"never"
+													]
+												}
+											]
+										},
+										"order": {
+											"$ref": "#/items/0/$defs/orderOptions"
+										},
+										"optionalityOrder": {
+											"$ref": "#/items/0/$defs/optionalityOrderOptions"
+										}
+									},
+									"additionalProperties": false
+								}
+							]
+						}
+					},
+					"type": "object",
+					"properties": {
+						"default": {
+							"$ref": "#/items/0/$defs/baseConfig"
+						},
+						"classes": {
+							"$ref": "#/items/0/$defs/baseConfig"
+						},
+						"classExpressions": {
+							"$ref": "#/items/0/$defs/baseConfig"
+						},
+						"interfaces": {
+							"$ref": "#/items/0/$defs/typesConfig"
+						},
+						"typeLiterals": {
+							"$ref": "#/items/0/$defs/typesConfig"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/method-signature-style": {
+					"type": "string",
+					"enum": [
+						"property",
+						"method"
+					]
+				},
+				"typescript-eslint/naming-convention": {},
+				"typescript-eslint/no-array-constructor": {},
+				"typescript-eslint/no-base-to-string": {
+					"type": "object",
+					"properties": {
+						"ignoredTypeNames": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-confusing-non-null-assertion": {},
+				"typescript-eslint/no-confusing-void-expression": {
+					"type": "object",
+					"properties": {
+						"ignoreArrowShorthand": {
+							"type": "boolean"
+						},
+						"ignoreVoidOperator": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-dupe-class-members": {},
+				"typescript-eslint/no-duplicate-enum-values": {},
+				"typescript-eslint/no-duplicate-type-constituents": {
+					"additionalProperties": false,
+					"type": "object",
+					"properties": {
+						"ignoreIntersections": {
+							"type": "boolean"
+						},
+						"ignoreUnions": {
+							"type": "boolean"
+						}
+					}
+				},
+				"typescript-eslint/no-dynamic-delete": {},
+				"typescript-eslint/no-empty-function": {
+					"type": "object",
+					"properties": {
+						"allow": {
+							"type": "array",
+							"items": {
+								"enum": [
+									"functions",
+									"arrowFunctions",
+									"generatorFunctions",
+									"methods",
+									"generatorMethods",
+									"getters",
+									"setters",
+									"constructors",
+									"private-constructors",
+									"protected-constructors",
+									"asyncFunctions",
+									"asyncMethods",
+									"decoratedFunctions",
+									"overrideMethods"
+								],
+								"type": "string"
+							},
+							"uniqueItems": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-empty-interface": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"allowSingleExtends": {
+							"type": "boolean"
+						}
+					}
+				},
+				"typescript-eslint/no-explicit-any": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"fixToUnknown": {
+							"description": "Whether to enable auto-fixing in which the `any` type is converted to the `unknown` type.",
+							"type": "boolean"
+						},
+						"ignoreRestArgs": {
+							"description": "Whether to ignore rest parameter arrays.",
+							"type": "boolean"
+						}
+					}
+				},
+				"typescript-eslint/no-extra-non-null-assertion": {},
+				"typescript-eslint/no-extra-parens": {},
+				"typescript-eslint/no-extra-semi": {},
+				"typescript-eslint/no-extraneous-class": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"allowConstructorOnly": {
+							"description": "Whether to allow extraneous classes that contain only a constructor.",
+							"type": "boolean"
+						},
+						"allowEmpty": {
+							"description": "Whether to allow extraneous classes that have no body (i.e. are empty).",
+							"type": "boolean"
+						},
+						"allowStaticOnly": {
+							"description": "Whether to allow extraneous classes that only contain static members.",
+							"type": "boolean"
+						},
+						"allowWithDecorator": {
+							"description": "Whether to allow extraneous classes that include a decorator.",
+							"type": "boolean"
+						}
+					}
+				},
+				"typescript-eslint/no-floating-promises": {
+					"type": "object",
+					"properties": {
+						"ignoreVoid": {
+							"description": "Whether to ignore `void` expressions.",
+							"type": "boolean"
+						},
+						"ignoreIIFE": {
+							"description": "Whether to ignore async IIFEs (Immediately Invoked Function Expressions).",
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-for-in-array": {},
+				"typescript-eslint/no-implied-eval": {},
+				"typescript-eslint/no-import-type-side-effects": {},
+				"typescript-eslint/no-inferrable-types": {
+					"type": "object",
+					"properties": {
+						"ignoreParameters": {
+							"type": "boolean"
+						},
+						"ignoreProperties": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-invalid-this": {
+					"type": "object",
+					"properties": {
+						"capIsConstructor": {
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-invalid-void-type": {
+					"type": "object",
+					"properties": {
+						"allowInGenericTypeArguments": {
+							"oneOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"type": "array",
+									"items": {
+										"type": "string"
+									},
+									"minItems": 1
+								}
+							]
+						},
+						"allowAsThisParameter": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-loop-func": {},
+				"typescript-eslint/no-loss-of-precision": {},
+				"typescript-eslint/no-magic-numbers": {
+					"type": "object",
+					"properties": {
+						"detectObjects": {
+							"type": "boolean",
+							"default": false
+						},
+						"enforceConst": {
+							"type": "boolean",
+							"default": false
+						},
+						"ignore": {
+							"type": "array",
+							"items": {
+								"anyOf": [
+									{
+										"type": "number"
+									},
+									{
+										"type": "string",
+										"pattern": "^[+-]?(?:0|[1-9][0-9]*)n$"
+									}
+								]
+							},
+							"uniqueItems": true
+						},
+						"ignoreArrayIndexes": {
+							"type": "boolean",
+							"default": false
+						},
+						"ignoreDefaultValues": {
+							"type": "boolean",
+							"default": false
+						},
+						"ignoreClassFieldInitialValues": {
+							"type": "boolean",
+							"default": false
+						},
+						"ignoreNumericLiteralTypes": {
+							"type": "boolean"
+						},
+						"ignoreEnums": {
+							"type": "boolean"
+						},
+						"ignoreReadonlyClassProperties": {
+							"type": "boolean"
+						},
+						"ignoreTypeIndexes": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-meaningless-void-operator": {
+					"type": "object",
+					"properties": {
+						"checkNever": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-misused-new": {},
+				"typescript-eslint/no-misused-promises": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"checksConditionals": {
+							"type": "boolean"
+						},
+						"checksVoidReturn": {
+							"oneOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"additionalProperties": false,
+									"properties": {
+										"arguments": {
+											"type": "boolean"
+										},
+										"attributes": {
+											"type": "boolean"
+										},
+										"properties": {
+											"type": "boolean"
+										},
+										"returns": {
+											"type": "boolean"
+										},
+										"variables": {
+											"type": "boolean"
+										}
+									},
+									"type": "object"
+								}
+							]
+						},
+						"checksSpreads": {
+							"type": "boolean"
+						}
+					}
+				},
+				"typescript-eslint/no-mixed-enums": {},
+				"typescript-eslint/no-namespace": {
+					"type": "object",
+					"properties": {
+						"allowDeclarations": {
+							"description": "Whether to allow `declare` with custom TypeScript namespaces.",
+							"type": "boolean"
+						},
+						"allowDefinitionFiles": {
+							"description": "Whether to allow `declare` with custom TypeScript namespaces inside definition files.",
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-non-null-asserted-nullish-coalescing": {},
+				"typescript-eslint/no-non-null-asserted-optional-chain": {},
+				"typescript-eslint/no-non-null-assertion": {},
+				"typescript-eslint/no-redeclare": {
+					"type": "object",
+					"properties": {
+						"builtinGlobals": {
+							"type": "boolean"
+						},
+						"ignoreDeclarationMerge": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-redundant-type-constituents": {},
+				"typescript-eslint/no-require-imports": {},
+				"typescript-eslint/no-restricted-imports": {},
+				"typescript-eslint/no-shadow": {
+					"type": "object",
+					"properties": {
+						"builtinGlobals": {
+							"type": "boolean"
+						},
+						"hoist": {
+							"type": "string",
+							"enum": [
+								"all",
+								"functions",
+								"never"
+							]
+						},
+						"allow": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"ignoreOnInitialization": {
+							"type": "boolean"
+						},
+						"ignoreTypeValueShadow": {
+							"type": "boolean"
+						},
+						"ignoreFunctionTypeParameterNameValueShadow": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-this-alias": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"allowDestructuring": {
+							"description": "Whether to ignore destructurings, such as `const { props, state } = this`.",
+							"type": "boolean"
+						},
+						"allowedNames": {
+							"description": "Names to ignore, such as [\"self\"] for `const self = this;`.",
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"typescript-eslint/no-throw-literal": {
+					"type": "object",
+					"properties": {
+						"allowThrowingAny": {
+							"type": "boolean"
+						},
+						"allowThrowingUnknown": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-type-alias": {
+					"$defs": {
+						"expandedOptions": {
+							"type": "string",
+							"enum": [
+								"always",
+								"never",
+								"in-unions",
+								"in-intersections",
+								"in-unions-and-intersections"
+							]
+						},
+						"simpleOptions": {
+							"type": "string",
+							"enum": [
+								"always",
+								"never"
+							]
+						}
+					},
+					"type": "object",
+					"properties": {
+						"allowAliases": {
+							"description": "Whether to allow direct one-to-one type aliases.",
+							"$ref": "#/items/0/$defs/expandedOptions"
+						},
+						"allowCallbacks": {
+							"description": "Whether to allow type aliases for callbacks.",
+							"$ref": "#/items/0/$defs/simpleOptions"
+						},
+						"allowConditionalTypes": {
+							"description": "Whether to allow type aliases for conditional types.",
+							"$ref": "#/items/0/$defs/simpleOptions"
+						},
+						"allowConstructors": {
+							"description": "Whether to allow type aliases with constructors.",
+							"$ref": "#/items/0/$defs/simpleOptions"
+						},
+						"allowLiterals": {
+							"description": "Whether to allow type aliases with object literal types.",
+							"$ref": "#/items/0/$defs/expandedOptions"
+						},
+						"allowMappedTypes": {
+							"description": "Whether to allow type aliases with mapped types.",
+							"$ref": "#/items/0/$defs/expandedOptions"
+						},
+						"allowTupleTypes": {
+							"description": "Whether to allow type aliases with tuple types.",
+							"$ref": "#/items/0/$defs/expandedOptions"
+						},
+						"allowGenerics": {
+							"description": "Whether to allow type aliases with generic types.",
+							"$ref": "#/items/0/$defs/simpleOptions"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-unnecessary-boolean-literal-compare": {
+					"type": "object",
+					"properties": {
+						"allowComparingNullableBooleansToTrue": {
+							"description": "Whether to allow comparisons between nullable boolean variables and `true`.",
+							"type": "boolean"
+						},
+						"allowComparingNullableBooleansToFalse": {
+							"description": "Whether to allow comparisons between nullable boolean variables and `false`.",
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-unnecessary-condition": {
+					"type": "object",
+					"properties": {
+						"allowConstantLoopConditions": {
+							"description": "Whether to ignore constant loop conditions, such as `while (true)`.",
+							"type": "boolean"
+						},
+						"allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": {
+							"description": "Whether to not error when running with a tsconfig that has strictNullChecks turned.",
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-unnecessary-qualifier": {},
+				"typescript-eslint/no-unnecessary-type-arguments": {},
+				"typescript-eslint/no-unnecessary-type-assertion": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"typesToIgnore": {
+							"description": "A list of type names to ignore.",
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"typescript-eslint/no-unnecessary-type-constraint": {},
+				"typescript-eslint/no-unsafe-argument": {},
+				"typescript-eslint/no-unsafe-assignment": {},
+				"typescript-eslint/no-unsafe-call": {},
+				"typescript-eslint/no-unsafe-declaration-merging": {},
+				"typescript-eslint/no-unsafe-enum-comparison": {},
+				"typescript-eslint/no-unsafe-member-access": {},
+				"typescript-eslint/no-unsafe-return": {},
+				"typescript-eslint/no-unused-expressions": {
+					"type": "object",
+					"properties": {
+						"allowShortCircuit": {
+							"type": "boolean",
+							"default": false
+						},
+						"allowTernary": {
+							"type": "boolean",
+							"default": false
+						},
+						"allowTaggedTemplates": {
+							"type": "boolean",
+							"default": false
+						},
+						"enforceForJSX": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/no-unused-vars": {
+					"oneOf": [
+						{
+							"type": "string",
+							"enum": [
+								"all",
+								"local"
+							]
+						},
+						{
+							"type": "object",
+							"properties": {
+								"vars": {
+									"type": "string",
+									"enum": [
+										"all",
+										"local"
+									]
+								},
+								"varsIgnorePattern": {
+									"type": "string"
+								},
+								"args": {
+									"type": "string",
+									"enum": [
+										"all",
+										"after-used",
+										"none"
+									]
+								},
+								"ignoreRestSiblings": {
+									"type": "boolean"
+								},
+								"argsIgnorePattern": {
+									"type": "string"
+								},
+								"caughtErrors": {
+									"type": "string",
+									"enum": [
+										"all",
+										"none"
+									]
+								},
+								"caughtErrorsIgnorePattern": {
+									"type": "string"
+								},
+								"destructuredArrayIgnorePattern": {
+									"type": "string"
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"typescript-eslint/no-use-before-define": {
+					"oneOf": [
+						{
+							"type": "string",
+							"enum": [
+								"nofunc"
+							]
+						},
+						{
+							"type": "object",
+							"properties": {
+								"functions": {
+									"type": "boolean"
+								},
+								"classes": {
+									"type": "boolean"
+								},
+								"enums": {
+									"type": "boolean"
+								},
+								"variables": {
+									"type": "boolean"
+								},
+								"typedefs": {
+									"type": "boolean"
+								},
+								"ignoreTypeReferences": {
+									"type": "boolean"
+								},
+								"allowNamedExports": {
+									"type": "boolean"
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"typescript-eslint/no-useless-constructor": {},
+				"typescript-eslint/no-useless-empty-export": {},
+				"typescript-eslint/no-var-requires": {},
+				"typescript-eslint/non-nullable-type-assertion-style": {},
+				"typescript-eslint/object-curly-spacing": {
+					"enum": [
+						"always",
+						"never"
+					]
+				},
+				"typescript-eslint/padding-line-between-statements": {},
+				"typescript-eslint/parameter-properties": {
+					"$defs": {
+						"modifier": {
+							"type": "string",
+							"enum": [
+								"readonly",
+								"private",
+								"protected",
+								"public",
+								"private readonly",
+								"protected readonly",
+								"public readonly"
+							]
+						}
+					},
+					"type": "object",
+					"properties": {
+						"allow": {
+							"type": "array",
+							"items": {
+								"$ref": "#/items/0/$defs/modifier"
+							}
+						},
+						"prefer": {
+							"type": "string",
+							"enum": [
+								"class-property",
+								"parameter-property"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/prefer-as-const": {},
+				"typescript-eslint/prefer-enum-initializers": {},
+				"typescript-eslint/prefer-for-of": {},
+				"typescript-eslint/prefer-function-type": {},
+				"typescript-eslint/prefer-includes": {},
+				"typescript-eslint/prefer-literal-enum-member": {
+					"type": "object",
+					"properties": {
+						"allowBitwiseExpressions": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/prefer-namespace-keyword": {},
+				"typescript-eslint/prefer-nullish-coalescing": {
+					"type": "object",
+					"properties": {
+						"allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": {
+							"type": "boolean"
+						},
+						"ignoreConditionalTests": {
+							"type": "boolean"
+						},
+						"ignoreMixedLogicalExpressions": {
+							"type": "boolean"
+						},
+						"ignorePrimitives": {
+							"oneOf": [
+								{
+									"type": "object",
+									"properties": {
+										"bigint": {
+											"type": "boolean"
+										},
+										"boolean": {
+											"type": "boolean"
+										},
+										"number": {
+											"type": "boolean"
+										},
+										"string": {
+											"type": "boolean"
+										}
+									}
+								},
+								{
+									"type": "boolean",
+									"enum": [
+										true
+									]
+								}
+							]
+						},
+						"ignoreTernaryTests": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/prefer-optional-chain": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"checkAny": {
+							"type": "boolean",
+							"description": "Check operands that are typed as `any` when inspecting \"loose boolean\" operands."
+						},
+						"checkUnknown": {
+							"type": "boolean",
+							"description": "Check operands that are typed as `unknown` when inspecting \"loose boolean\" operands."
+						},
+						"checkString": {
+							"type": "boolean",
+							"description": "Check operands that are typed as `string` when inspecting \"loose boolean\" operands."
+						},
+						"checkNumber": {
+							"type": "boolean",
+							"description": "Check operands that are typed as `number` when inspecting \"loose boolean\" operands."
+						},
+						"checkBoolean": {
+							"type": "boolean",
+							"description": "Check operands that are typed as `boolean` when inspecting \"loose boolean\" operands."
+						},
+						"checkBigInt": {
+							"type": "boolean",
+							"description": "Check operands that are typed as `bigint` when inspecting \"loose boolean\" operands."
+						},
+						"requireNullish": {
+							"type": "boolean",
+							"description": "Skip operands that are not typed with `null` and/or `undefined` when inspecting \"loose boolean\" operands."
+						},
+						"allowPotentiallyUnsafeFixesThatModifyTheReturnTypeIKnowWhatImDoing": {
+							"type": "boolean",
+							"description": "Allow autofixers that will change the return type of the expression. This option is considered unsafe as it may break the build."
+						}
+					}
+				},
+				"typescript-eslint/prefer-readonly": {
+					"additionalProperties": false,
+					"properties": {
+						"onlyInlineLambdas": {
+							"type": "boolean"
+						}
+					},
+					"type": "object"
+				},
+				"typescript-eslint/prefer-readonly-parameter-types": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"allow": {
+							"type": "array",
+							"items": {
+								"oneOf": [
+									{
+										"type": "string"
+									},
+									{
+										"type": "object",
+										"additionalProperties": false,
+										"properties": {
+											"from": {
+												"type": "string",
+												"enum": [
+													"file"
+												]
+											},
+											"name": {
+												"oneOf": [
+													{
+														"type": "string"
+													},
+													{
+														"type": "array",
+														"minItems": 1,
+														"uniqueItems": true,
+														"items": {
+															"type": "string"
+														}
+													}
+												]
+											},
+											"path": {
+												"type": "string"
+											}
+										},
+										"required": [
+											"from",
+											"name"
+										]
+									},
+									{
+										"type": "object",
+										"additionalProperties": false,
+										"properties": {
+											"from": {
+												"type": "string",
+												"enum": [
+													"lib"
+												]
+											},
+											"name": {
+												"oneOf": [
+													{
+														"type": "string"
+													},
+													{
+														"type": "array",
+														"minItems": 1,
+														"uniqueItems": true,
+														"items": {
+															"type": "string"
+														}
+													}
+												]
+											}
+										},
+										"required": [
+											"from",
+											"name"
+										]
+									},
+									{
+										"type": "object",
+										"additionalProperties": false,
+										"properties": {
+											"from": {
+												"type": "string",
+												"enum": [
+													"package"
+												]
+											},
+											"name": {
+												"oneOf": [
+													{
+														"type": "string"
+													},
+													{
+														"type": "array",
+														"minItems": 1,
+														"uniqueItems": true,
+														"items": {
+															"type": "string"
+														}
+													}
+												]
+											},
+											"package": {
+												"type": "string"
+											}
+										},
+										"required": [
+											"from",
+											"name",
+											"package"
+										]
+									}
+								]
+							}
+						},
+						"checkParameterProperties": {
+							"type": "boolean"
+						},
+						"ignoreInferredTypes": {
+							"type": "boolean"
+						},
+						"treatMethodsAsReadonly": {
+							"type": "boolean"
+						}
+					}
+				},
+				"typescript-eslint/prefer-reduce-type-parameter": {},
+				"typescript-eslint/prefer-regexp-exec": {},
+				"typescript-eslint/prefer-return-this-type": {},
+				"typescript-eslint/prefer-string-starts-ends-with": {},
+				"typescript-eslint/prefer-ts-expect-error": {},
+				"typescript-eslint/promise-function-async": {
+					"type": "object",
+					"properties": {
+						"allowAny": {
+							"description": "Whether to consider `any` and `unknown` to be Promises.",
+							"type": "boolean"
+						},
+						"allowedPromiseNames": {
+							"description": "Any extra names of classes or interfaces to be considered Promises.",
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"checkArrowFunctions": {
+							"type": "boolean"
+						},
+						"checkFunctionDeclarations": {
+							"type": "boolean"
+						},
+						"checkFunctionExpressions": {
+							"type": "boolean"
+						},
+						"checkMethodDeclarations": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/quotes": {
+					"enum": [
+						"single",
+						"double",
+						"backtick"
+					]
+				},
+				"typescript-eslint/require-array-sort-compare": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"ignoreStringArrays": {
+							"description": "Whether to ignore arrays in which all elements are strings.",
+							"type": "boolean"
+						}
+					}
+				},
+				"typescript-eslint/require-await": {},
+				"typescript-eslint/restrict-plus-operands": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"allowAny": {
+							"description": "Whether to allow `any` typed values.",
+							"type": "boolean"
+						},
+						"allowBoolean": {
+							"description": "Whether to allow `boolean` typed values.",
+							"type": "boolean"
+						},
+						"allowNullish": {
+							"description": "Whether to allow potentially `null` or `undefined` typed values.",
+							"type": "boolean"
+						},
+						"allowNumberAndString": {
+							"description": "Whether to allow `bigint`/`number` typed values and `string` typed values to be added together.",
+							"type": "boolean"
+						},
+						"allowRegExp": {
+							"description": "Whether to allow `regexp` typed values.",
+							"type": "boolean"
+						},
+						"skipCompoundAssignments": {
+							"description": "Whether to skip compound assignments such as `+=`.",
+							"type": "boolean"
+						}
+					}
+				},
+				"typescript-eslint/restrict-template-expressions": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"allowAny": {
+							"description": "Whether to allow `any` typed values in template expressions.",
+							"type": "boolean"
+						},
+						"allowBoolean": {
+							"description": "Whether to allow `boolean` typed values in template expressions.",
+							"type": "boolean"
+						},
+						"allowNullish": {
+							"description": "Whether to allow `nullish` typed values in template expressions.",
+							"type": "boolean"
+						},
+						"allowNumber": {
+							"description": "Whether to allow `number` typed values in template expressions.",
+							"type": "boolean"
+						},
+						"allowRegExp": {
+							"description": "Whether to allow `regexp` typed values in template expressions.",
+							"type": "boolean"
+						},
+						"allowNever": {
+							"description": "Whether to allow `never` typed values in template expressions.",
+							"type": "boolean"
+						}
+					}
+				},
+				"typescript-eslint/return-await": {
+					"type": "string",
+					"enum": [
+						"in-try-catch",
+						"always",
+						"never"
+					]
+				},
+				"typescript-eslint/semi": {},
+				"typescript-eslint/sort-type-constituents": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"checkIntersections": {
+							"description": "Whether to check intersection types.",
+							"type": "boolean"
+						},
+						"checkUnions": {
+							"description": "Whether to check union types.",
+							"type": "boolean"
+						},
+						"groupOrder": {
+							"description": "Ordering of the groups.",
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"conditional",
+									"function",
+									"import",
+									"intersection",
+									"keyword",
+									"nullish",
+									"literal",
+									"named",
+									"object",
+									"operator",
+									"tuple",
+									"union"
+								]
+							}
+						}
+					}
+				},
+				"typescript-eslint/space-before-blocks": {
+					"oneOf": [
+						{
+							"enum": [
+								"always",
+								"never"
+							]
+						},
+						{
+							"type": "object",
+							"properties": {
+								"keywords": {
+									"enum": [
+										"always",
+										"never",
+										"off"
+									]
+								},
+								"functions": {
+									"enum": [
+										"always",
+										"never",
+										"off"
+									]
+								},
+								"classes": {
+									"enum": [
+										"always",
+										"never",
+										"off"
+									]
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"typescript-eslint/space-before-function-paren": {
+					"oneOf": [
+						{
+							"type": "string",
+							"enum": [
+								"always",
+								"never"
+							]
+						},
+						{
+							"type": "object",
+							"properties": {
+								"anonymous": {
+									"type": "string",
+									"enum": [
+										"always",
+										"never",
+										"ignore"
+									]
+								},
+								"named": {
+									"type": "string",
+									"enum": [
+										"always",
+										"never",
+										"ignore"
+									]
+								},
+								"asyncArrow": {
+									"type": "string",
+									"enum": [
+										"always",
+										"never",
+										"ignore"
+									]
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
+				"typescript-eslint/space-infix-ops": {
+					"type": "object",
+					"properties": {
+						"int32Hint": {
+							"type": "boolean",
+							"default": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/strict-boolean-expressions": {
+					"type": "object",
+					"properties": {
+						"allowString": {
+							"type": "boolean"
+						},
+						"allowNumber": {
+							"type": "boolean"
+						},
+						"allowNullableObject": {
+							"type": "boolean"
+						},
+						"allowNullableBoolean": {
+							"type": "boolean"
+						},
+						"allowNullableString": {
+							"type": "boolean"
+						},
+						"allowNullableNumber": {
+							"type": "boolean"
+						},
+						"allowNullableEnum": {
+							"type": "boolean"
+						},
+						"allowAny": {
+							"type": "boolean"
+						},
+						"allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/switch-exhaustiveness-check": {},
+				"typescript-eslint/triple-slash-reference": {
+					"type": "object",
+					"properties": {
+						"lib": {
+							"type": "string",
+							"enum": [
+								"always",
+								"never"
+							]
+						},
+						"path": {
+							"type": "string",
+							"enum": [
+								"always",
+								"never"
+							]
+						},
+						"types": {
+							"type": "string",
+							"enum": [
+								"always",
+								"never",
+								"prefer-import"
+							]
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/type-annotation-spacing": {
+					"$defs": {
+						"spacingConfig": {
+							"type": "object",
+							"properties": {
+								"before": {
+									"type": "boolean"
+								},
+								"after": {
+									"type": "boolean"
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"type": "object",
+					"properties": {
+						"before": {
+							"type": "boolean"
+						},
+						"after": {
+							"type": "boolean"
+						},
+						"overrides": {
+							"type": "object",
+							"properties": {
+								"colon": {
+									"$ref": "#/items/0/$defs/spacingConfig"
+								},
+								"arrow": {
+									"$ref": "#/items/0/$defs/spacingConfig"
+								},
+								"variable": {
+									"$ref": "#/items/0/$defs/spacingConfig"
+								},
+								"parameter": {
+									"$ref": "#/items/0/$defs/spacingConfig"
+								},
+								"property": {
+									"$ref": "#/items/0/$defs/spacingConfig"
+								},
+								"returnType": {
+									"$ref": "#/items/0/$defs/spacingConfig"
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/typedef": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"arrayDestructuring": {
+							"type": "boolean"
+						},
+						"arrowParameter": {
+							"type": "boolean"
+						},
+						"memberVariableDeclaration": {
+							"type": "boolean"
+						},
+						"objectDestructuring": {
+							"type": "boolean"
+						},
+						"parameter": {
+							"type": "boolean"
+						},
+						"propertyDeclaration": {
+							"type": "boolean"
+						},
+						"variableDeclaration": {
+							"type": "boolean"
+						},
+						"variableDeclarationIgnoreFunction": {
+							"type": "boolean"
+						}
+					}
+				},
+				"typescript-eslint/unbound-method": {
+					"type": "object",
+					"properties": {
+						"ignoreStatic": {
+							"description": "Whether to skip checking whether `static` methods are correctly bound.",
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
+				},
+				"typescript-eslint/unified-signatures": {
+					"additionalProperties": false,
+					"properties": {
+						"ignoreDifferentlyNamedParameters": {
+							"description": "Whether two parameters with different names at the same index should be considered different even if their types are the same.",
+							"type": "boolean"
+						}
+					},
+					"type": "object"
+				}
+			}
+		}
+	},
+	"additionalProperties": false
+}
