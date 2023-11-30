@@ -45,6 +45,7 @@
 								{
 									"type": "array",
 									"items": {
+										"type": "string",
 										"enum": [
 											"element",
 											"attribute"
@@ -98,6 +99,7 @@
 								{
 									"type": "array",
 									"items": {
+										"type": "string",
 										"enum": [
 											"element",
 											"attribute"
@@ -182,7 +184,6 @@
 							"items": {
 								"type": "string"
 							},
-							"minimum": 1,
 							"uniqueItems": true
 						}
 					},
@@ -1130,28 +1131,6 @@
 					}
 				},
 				"eslint-plugin-unicorn/no-unnecessary-await": {},
-				"eslint-plugin-unicorn/no-unnecessary-polyfills": {
-					"type": "object",
-					"additionalProperties": false,
-					"required": [
-						"targets"
-					],
-					"properties": {
-						"targets": {
-							"oneOf": [
-								{
-									"type": "string"
-								},
-								{
-									"type": "array"
-								},
-								{
-									"type": "object"
-								}
-							]
-						}
-					}
-				},
 				"eslint-plugin-unicorn/no-unreadable-array-destructuring": {},
 				"eslint-plugin-unicorn/no-unreadable-iife": {},
 				"eslint-plugin-unicorn/no-unused-properties": {},
@@ -4739,7 +4718,19 @@
 							"description": "Ingore members marked with the `override` modifier"
 						},
 						"ignoreClassesThatImplementAnInterface": {
-							"type": "boolean",
+							"oneOf": [
+								{
+									"type": "boolean",
+									"description": "Ignore all classes that implement an interface"
+								},
+								{
+									"type": "string",
+									"enum": [
+										"public-fields"
+									],
+									"description": "Ignore only the public fields of classes that implement an interface"
+								}
+							],
 							"description": "Ignore classes that specifically implement some interface"
 						}
 					},
@@ -6156,10 +6147,75 @@
 					"additionalProperties": false
 				},
 				"typescript-eslint/lines-between-class-members": {
-					"enum": [
-						"always",
-						"never"
+					"anyOf": [
+						{
+							"type": "object",
+							"properties": {
+								"enforce": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"blankLine": {
+												"enum": [
+													"always",
+													"never"
+												]
+											},
+											"prev": {
+												"enum": [
+													"method",
+													"field",
+													"*"
+												]
+											},
+											"next": {
+												"enum": [
+													"method",
+													"field",
+													"*"
+												]
+											}
+										},
+										"additionalProperties": false,
+										"required": [
+											"blankLine",
+											"prev",
+											"next"
+										]
+									},
+									"minItems": 1
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"enforce"
+							]
+						},
+						{
+							"enum": [
+								"always",
+								"never"
+							]
+						}
 					]
+				},
+				"typescript-eslint/max-params": {
+					"type": "object",
+					"properties": {
+						"maximum": {
+							"type": "integer",
+							"minimum": 0
+						},
+						"max": {
+							"type": "integer",
+							"minimum": 0
+						},
+						"countVoidThis": {
+							"type": "boolean"
+						}
+					},
+					"additionalProperties": false
 				},
 				"typescript-eslint/member-delimiter-style": {
 					"$defs": {
@@ -6352,6 +6408,28 @@
 								"public-constructor",
 								"protected-constructor",
 								"private-constructor",
+								"accessor",
+								"public-accessor",
+								"public-decorated-accessor",
+								"decorated-accessor",
+								"static-accessor",
+								"public-static-accessor",
+								"instance-accessor",
+								"public-instance-accessor",
+								"abstract-accessor",
+								"public-abstract-accessor",
+								"protected-accessor",
+								"protected-decorated-accessor",
+								"protected-static-accessor",
+								"protected-instance-accessor",
+								"protected-abstract-accessor",
+								"private-accessor",
+								"private-decorated-accessor",
+								"private-static-accessor",
+								"private-instance-accessor",
+								"#private-accessor",
+								"#private-static-accessor",
+								"#private-instance-accessor",
 								"get",
 								"public-get",
 								"public-decorated-get",
@@ -7068,6 +7146,7 @@
 				"typescript-eslint/no-unsafe-enum-comparison": {},
 				"typescript-eslint/no-unsafe-member-access": {},
 				"typescript-eslint/no-unsafe-return": {},
+				"typescript-eslint/no-unsafe-unary-minus": {},
 				"typescript-eslint/no-unused-expressions": {
 					"type": "object",
 					"properties": {
@@ -7226,6 +7305,52 @@
 					"additionalProperties": false
 				},
 				"typescript-eslint/prefer-as-const": {},
+				"typescript-eslint/prefer-destructuring": {
+					"oneOf": [
+						{
+							"type": "object",
+							"properties": {
+								"VariableDeclarator": {
+									"type": "object",
+									"properties": {
+										"array": {
+											"type": "boolean"
+										},
+										"object": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								},
+								"AssignmentExpression": {
+									"type": "object",
+									"properties": {
+										"array": {
+											"type": "boolean"
+										},
+										"object": {
+											"type": "boolean"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"additionalProperties": false
+						},
+						{
+							"type": "object",
+							"properties": {
+								"array": {
+									"type": "boolean"
+								},
+								"object": {
+									"type": "boolean"
+								}
+							},
+							"additionalProperties": false
+						}
+					]
+				},
 				"typescript-eslint/prefer-enum-initializers": {},
 				"typescript-eslint/prefer-for-of": {},
 				"typescript-eslint/prefer-function-type": {},
@@ -7734,7 +7859,16 @@
 					},
 					"additionalProperties": false
 				},
-				"typescript-eslint/switch-exhaustiveness-check": {},
+				"typescript-eslint/switch-exhaustiveness-check": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"requireDefaultForNonUnion": {
+							"description": "If 'true', require a 'default' clause for switches on non-union types.",
+							"type": "boolean"
+						}
+					}
+				},
 				"typescript-eslint/triple-slash-reference": {
 					"type": "object",
 					"properties": {

@@ -1,27 +1,32 @@
 {
-  "name": "jsonschema-extractor",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Edwin Kofler <edwin@kofler.dev> (https://edwinkofler.com/)",
-  "license": "MPL-2.0",
-  "devDependencies": {
-    "@hyperupcall/eslint-config": "^0.6.0",
-    "@hyperupcall/markdownlint-config": "^0.3.1",
-    "@hyperupcall/prettier-config": "^0.7.0",
-    "cheerio": "1.0.0-rc.12",
-    "eslint": "^8.54.0",
-    "eslint-config-prettier": "^9.0.0",
-    "markdownlint": "^0.32.1",
-    "prettier": "^3.1.0",
-    "prettier-plugin-pkg": "^0.18.0"
-  },
-  "dependencies": {
-    "stylelint": "^15.11.0"
-  }
+	"name": "jsonschema-extractor",
+	"version": "0.1.0",
+	"type": "module",
+	"description": "",
+	"author": "Edwin Kofler <edwin@kofler.dev> (https://edwinkofler.com/)",
+	"license": "MPL-2.0",
+	"main": "index.js",
+	"keywords": [],
+	"scripts": {
+		"start": "node index.js"
+	},
+	"dependencies": {
+		"@angular-eslint/eslint-plugin": "^17.1.0",
+		"@typescript-eslint/eslint-plugin": "^6.13.1",
+		"eslint-plugin-import": "^2.29.0",
+		"eslint-plugin-unicorn": "^49.0.0",
+		"eslint-plugin-vue": "^9.18.1",
+		"stylelint": "^15.11.0"
+	},
+	"devDependencies": {
+		"@hyperupcall/eslint-config": "^0.6.0",
+		"@hyperupcall/markdownlint-config": "^0.3.1",
+		"@hyperupcall/prettier-config": "^0.7.0",
+		"cheerio": "1.0.0-rc.12",
+		"eslint": "^8.54.0",
+		"eslint-config-prettier": "^9.0.0",
+		"markdownlint": "^0.32.1",
+		"prettier": "^3.1.0",
+		"prettier-plugin-pkg": "^0.18.0"
+	}
 }

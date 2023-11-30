@@ -30,6 +30,7 @@ import path from 'node:path'
 
 for (const appName of ['stylelint', 'eslint']) {
 	const { extractSchema } = await import(path.join(process.cwd(), `lib/extractors/${appName}.js`))
+	console.log(`Extracting for ${appName}...`)
 	const schema = await extractSchema()
 
 	await fs.mkdir('schemas', {recursive: true })

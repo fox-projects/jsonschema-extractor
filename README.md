@@ -1,8 +1,9 @@
-# jsonschema-generator
+# jsonschema-extractor
 
-```json
-git clone --recurse-submodules git@github.com:fox-projects/jsonschema-generator
-cd ./jsonschema-generator
+```sh
+git clone --recurse-submodules git@github.com:fox-projects/jsonschema-extractor
+cd ./jsonschema-extractor
+pnpm i
 ```
 
 ## Others
