@@ -1,17 +1,22 @@
 # jsonschema-extractor
 
 ```sh
-git clone --recurse-submodules git@github.com:fox-projects/jsonschema-extractor
+git clone https://github.com/fox-projects/jsonschema-extractor
 cd ./jsonschema-extractor
 pnpm i
+node index.js
 ```
 
 ## Others
 
+- TODO: add various common configs
 - TODO: eslint built-in rules
-- [eslint-plugin](https://github.com/topics/eslint-plugin)
-- [eslint-config](https://github.com/topics/eslint-config)
-- Babel
-- Prettier
-- TSLint
+- Rome/Biome
+
+## Unclassified
+
+Some software has plugin sytems, but extracting the schema is not straightfoward, or there isn't much schema:
+
 - pre-commit
+- Prettier
+- Babel

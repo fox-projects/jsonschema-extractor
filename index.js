@@ -1,38 +1,22 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import { parseArgs } from 'node:util'
 
-/**
- * @typedef {object} RuleMetaDocs
- * @property {string} category
- * @property {string} description
- * @property {string} url
- */
+const { values, positionals } = parseArgs({
+	options: {
+		extractor: {
+			type: 'string',
+		},
+	},
+})
 
-/**
- * @typedef {object} RuleMeta
- * @property {string} type
- * @property {RuleMetaDocs} docs
- * @property {string} fixable
- * @property {Array<unknown>} schema
- */
-
-/**
- * @typedef {object} Rule
- * @property {RuleMeta} meta
- * @property {() => unknown} create
- */
-
-/**
- * @typedef {object} Plugin
- * @property {Record<string, Rule>} rules
- */
-
-
-for (const appName of ['stylelint', 'eslint']) {
-	const { extractSchema } = await import(path.join(process.cwd(), `lib/extractors/${appName}.js`))
+for (const appName of ['tslint', 'stylelint', 'eslint']) {
+	const { extractSchema } = await import(
+		path.join(process.cwd(), `lib/extractors/${appName}.js`)
+	)
 	console.log(`Extracting for ${appName}...`)
 	const schema = await extractSchema()
 
-	await fs.mkdir('schemas', {recursive: true })
+	await fs.mkdir('schemas', { recursive: true })
 	await fs.writeFile(`schemas/${appName}.schema.json`, JSON.stringify(schema, null, '\t'))
 }
