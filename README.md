@@ -12,6 +12,7 @@ node index.js
 - TODO: add various common configs
 - TODO: eslint built-in rules
 - Rome/Biome
+- GitHub actions actions.yml
 
 ## Unclassified
 
