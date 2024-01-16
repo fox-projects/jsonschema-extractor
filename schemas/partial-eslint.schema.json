@@ -12,11 +12,7 @@
 		"ruleString": {
 			"description": "ESLint rule\n\n\"off\" - turns the rule off\n\"warn\" - turn the rule on as a warning (doesn't affect exit code)\n\"error\" - turn the rule on as an error (exit code is 1 when triggered)\n",
 			"type": "string",
-			"enum": [
-				"off",
-				"warn",
-				"error"
-			]
+			"enum": ["off", "warn", "error"]
 		}
 	},
 	"properties": {
@@ -142,10 +138,7 @@
 											"type": "array",
 											"items": {
 												"type": "string",
-												"enum": [
-													"element",
-													"attribute"
-												]
+												"enum": ["element", "attribute"]
 											}
 										}
 									]
@@ -162,10 +155,7 @@
 								},
 								"style": {
 									"type": "string",
-									"enum": [
-										"camelCase",
-										"kebab-case"
-									]
+									"enum": ["camelCase", "kebab-case"]
 								}
 							}
 						}
@@ -256,10 +246,7 @@
 											"type": "array",
 											"items": {
 												"type": "string",
-												"enum": [
-													"element",
-													"attribute"
-												]
+												"enum": ["element", "attribute"]
 											}
 										}
 									]
@@ -276,10 +263,7 @@
 								},
 								"style": {
 									"type": "string",
-									"enum": [
-										"camelCase",
-										"kebab-case"
-									]
+									"enum": ["camelCase", "kebab-case"]
 								}
 							}
 						}
@@ -862,7 +846,7 @@
 															"type": "string"
 														},
 														"uniqueItems": true,
-														"minLength": 1
+														"minItems": 1
 													}
 												]
 											},
@@ -877,7 +861,7 @@
 															"type": "string"
 														},
 														"uniqueItems": true,
-														"minLength": 1
+														"minItems": 1
 													}
 												]
 											},
@@ -1131,9 +1115,7 @@
 											"minimum": 1
 										},
 										{
-											"enum": [
-												"∞"
-											],
+											"enum": ["∞"],
 											"type": "string"
 										}
 									]
@@ -1437,43 +1419,72 @@
 							"additionalProperties": false,
 							"properties": {
 								"devDependencies": {
-									"type": [
-										"boolean",
-										"array"
+									"oneOf": [
+										{
+											"type": "boolean"
+										},
+										{
+											"type": "array",
+											"items": {}
+										}
 									]
 								},
 								"optionalDependencies": {
-									"type": [
-										"boolean",
-										"array"
+									"oneOf": [
+										{
+											"type": "boolean"
+										},
+										{
+											"type": "array",
+											"items": {}
+										}
 									]
 								},
 								"peerDependencies": {
-									"type": [
-										"boolean",
-										"array"
+									"oneOf": [
+										{
+											"type": "boolean"
+										},
+										{
+											"type": "array",
+											"items": {}
+										}
 									]
 								},
 								"bundledDependencies": {
-									"type": [
-										"boolean",
-										"array"
+									"oneOf": [
+										{
+											"type": "boolean"
+										},
+										{
+											"type": "array",
+											"items": {}
+										}
 									]
 								},
 								"packageDir": {
-									"type": [
-										"string",
-										"array"
+									"oneOf": [
+										{
+											"type": "string"
+										},
+										{
+											"type": "array",
+											"items": {}
+										}
 									]
 								},
 								"includeInternal": {
-									"type": [
-										"boolean"
+									"oneOf": [
+										{
+											"type": "boolean"
+										}
 									]
 								},
 								"includeTypes": {
-									"type": [
-										"boolean"
+									"oneOf": [
+										{
+											"type": "boolean"
+										}
 									]
 								}
 							}
@@ -1642,26 +1653,15 @@
 											},
 											"position": {
 												"type": "string",
-												"enum": [
-													"after",
-													"before"
-												]
+												"enum": ["after", "before"]
 											}
 										},
 										"additionalProperties": false,
-										"required": [
-											"pattern",
-											"group"
-										]
+										"required": ["pattern", "group"]
 									}
 								},
 								"newlines-between": {
-									"enum": [
-										"ignore",
-										"always",
-										"always-and-inside-groups",
-										"never"
-									]
+									"enum": ["ignore", "always", "always-and-inside-groups", "never"]
 								},
 								"alphabetize": {
 									"type": "object",
@@ -1671,19 +1671,11 @@
 											"default": false
 										},
 										"order": {
-											"enum": [
-												"ignore",
-												"asc",
-												"desc"
-											],
+											"enum": ["ignore", "asc", "desc"],
 											"default": "ignore"
 										},
 										"orderImportKind": {
-											"enum": [
-												"ignore",
-												"asc",
-												"desc"
-											],
+											"enum": ["ignore", "asc", "desc"],
 											"default": "ignore"
 										}
 									},
@@ -1773,10 +1765,7 @@
 							"properties": {
 								"target": {
 									"type": "string",
-									"enum": [
-										"single",
-										"any"
-									],
+									"enum": ["single", "any"],
 									"default": "single"
 								}
 							}
@@ -1860,21 +1849,36 @@
 							"additionalProperties": false,
 							"properties": {
 								"devDependencies": {
-									"type": [
-										"boolean",
-										"array"
+									"oneOf": [
+										{
+											"type": "boolean"
+										},
+										{
+											"type": "array",
+											"items": {}
+										}
 									]
 								},
 								"optionalDependencies": {
-									"type": [
-										"boolean",
-										"array"
+									"oneOf": [
+										{
+											"type": "boolean"
+										},
+										{
+											"type": "array",
+											"items": {}
+										}
 									]
 								},
 								"peerDependencies": {
-									"type": [
-										"boolean",
-										"array"
+									"oneOf": [
+										{
+											"type": "boolean"
+										},
+										{
+											"type": "array",
+											"items": {}
+										}
 									]
 								},
 								"allow": {
@@ -2269,10 +2273,7 @@
 							"additionalProperties": false,
 							"properties": {
 								"non-zero": {
-									"enum": [
-										"greater-than",
-										"not-equal"
-									],
+									"enum": ["greater-than", "not-equal"],
 									"default": "greater-than"
 								}
 							}
@@ -2467,8 +2468,9 @@
 											"type": "string"
 										}
 									],
-									"minItems": 0,
-									"uniqueItems": true
+									"minItems": 1,
+									"uniqueItems": true,
+									"maxItems": 1
 								},
 								"checkProperties": {
 									"type": "boolean"
@@ -3184,11 +3186,7 @@
 									"default": 3
 								},
 								"emptyDefaultCase": {
-									"enum": [
-										"no-default-comment",
-										"do-nothing-comment",
-										"no-default-case"
-									],
+									"enum": ["no-default-comment", "do-nothing-comment", "no-default-case"],
 									"default": "no-default-comment"
 								}
 							}
@@ -3318,9 +3316,7 @@
 											},
 											{
 												"type": "object",
-												"required": [
-													"suggest"
-												],
+												"required": ["suggest"],
 												"properties": {
 													"suggest": {
 														"type": "string"
@@ -3721,15 +3717,12 @@
 														"ATTR_SHORTHAND_BOOL",
 														"EVENTS",
 														"CONTENT"
-													],
-													"uniqueItems": true,
-													"additionalItems": false
+													]
 												}
 											}
 										]
 									},
-									"uniqueItems": true,
-									"additionalItems": false
+									"uniqueItems": true
 								},
 								"alphabetical": {
 									"type": "boolean"
@@ -3817,8 +3810,7 @@
 											}
 										]
 									},
-									"uniqueItems": true,
-									"additionalItems": false
+									"uniqueItems": true
 								}
 							}
 						}
@@ -3888,20 +3880,10 @@
 							"additionalProperties": false,
 							"properties": {
 								"singleline": {
-									"enum": [
-										"always",
-										"never",
-										"consistent",
-										"ignore"
-									]
+									"enum": ["always", "never", "consistent", "ignore"]
 								},
 								"multiline": {
-									"enum": [
-										"always",
-										"never",
-										"consistent",
-										"ignore"
-									]
+									"enum": ["always", "never", "consistent", "ignore"]
 								},
 								"maxEmptyLines": {
 									"type": "number",
@@ -3914,20 +3896,10 @@
 											"type": "object",
 											"properties": {
 												"singleline": {
-													"enum": [
-														"always",
-														"never",
-														"consistent",
-														"ignore"
-													]
+													"enum": ["always", "never", "consistent", "ignore"]
 												},
 												"multiline": {
-													"enum": [
-														"always",
-														"never",
-														"consistent",
-														"ignore"
-													]
+													"enum": ["always", "never", "consistent", "ignore"]
 												},
 												"maxEmptyLines": {
 													"type": "number",
@@ -4019,10 +3991,7 @@
 									"default": false
 								},
 								"properties": {
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								},
 								"allow": {
 									"type": "array",
@@ -4331,8 +4300,7 @@
 											}
 										]
 									},
-									"uniqueItems": true,
-									"additionalItems": false
+									"uniqueItems": true
 								}
 							}
 						}
@@ -4407,15 +4375,9 @@
 								"order": {
 									"type": "array",
 									"items": {
-										"enum": [
-											"defineEmits",
-											"defineProps",
-											"defineOptions",
-											"defineSlots"
-										]
+										"enum": ["defineEmits", "defineProps", "defineOptions", "defineSlots"]
 									},
-									"uniqueItems": true,
-									"additionalItems": false
+									"uniqueItems": true
 								}
 							}
 						}
@@ -4563,18 +4525,10 @@
 							"additionalProperties": false,
 							"properties": {
 								"multiline": {
-									"enum": [
-										"below",
-										"beside",
-										"ignore"
-									]
+									"enum": ["below", "beside", "ignore"]
 								},
 								"singleline": {
-									"enum": [
-										"below",
-										"beside",
-										"ignore"
-									]
+									"enum": ["below", "beside", "ignore"]
 								}
 							}
 						}
@@ -4660,16 +4614,10 @@
 							"additionalProperties": false,
 							"properties": {
 								"singleline": {
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								},
 								"multiline": {
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								}
 							}
 						}
@@ -4706,22 +4654,13 @@
 							"additionalProperties": false,
 							"properties": {
 								"startTag": {
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								},
 								"endTag": {
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								},
 								"selfClosingTag": {
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								}
 							}
 						}
@@ -5833,8 +5772,7 @@
 									"items": {
 										"type": "string"
 									},
-									"uniqueItems": true,
-									"additionalItems": false
+									"uniqueItems": true
 								},
 								"shouldMatchCase": {
 									"type": "boolean"
@@ -6034,8 +5972,7 @@
 									"items": {
 										"type": "string"
 									},
-									"uniqueItems": true,
-									"additionalItems": false
+									"uniqueItems": true
 								}
 							}
 						}
@@ -6079,8 +6016,7 @@
 									"items": {
 										"type": "string"
 									},
-									"uniqueItems": true,
-									"additionalItems": false
+									"uniqueItems": true
 								},
 								"allowEmptyLines": {
 									"type": "boolean"
@@ -7084,12 +7020,7 @@
 									"type": "array",
 									"items": {
 										"type": "string",
-										"enum": [
-											"all",
-											"vue",
-											"vue-router",
-											"nuxt"
-										]
+										"enum": ["all", "vue", "vue-router", "nuxt"]
 									},
 									"uniqueItems": true,
 									"minItems": 0
@@ -7267,10 +7198,7 @@
 							"additionalProperties": false,
 							"properties": {
 								"vueVersion": {
-									"enum": [
-										2,
-										3
-									]
+									"enum": [2, 3]
 								}
 							}
 						}
@@ -7407,10 +7335,7 @@
 									"type": "boolean"
 								},
 								"enforceDynamicLinks": {
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								}
 							}
 						}
@@ -7629,16 +7554,8 @@
 								"groups": {
 									"type": "array",
 									"items": {
-										"enum": [
-											"props",
-											"data",
-											"asyncData",
-											"computed",
-											"methods",
-											"setup"
-										]
+										"enum": ["props", "data", "asyncData", "computed", "methods", "setup"]
 									},
-									"additionalItems": false,
 									"uniqueItems": true
 								},
 								"deepData": {
@@ -7650,12 +7567,8 @@
 								"unreferencedOptions": {
 									"type": "array",
 									"items": {
-										"enum": [
-											"unknownMemberAsUnreferenced",
-											"returnAsUnreferenced"
-										]
+										"enum": ["unknownMemberAsUnreferenced", "returnAsUnreferenced"]
 									},
-									"additionalItems": false,
 									"uniqueItems": true
 								}
 							}
@@ -8393,12 +8306,7 @@
 							"additionalProperties": false,
 							"properties": {
 								"type": {
-									"enum": [
-										"JSDoc",
-										"line",
-										"block",
-										"any"
-									]
+									"enum": ["JSDoc", "line", "block", "any"]
 								}
 							}
 						}
@@ -8548,8 +8456,7 @@
 									"items": {
 										"type": "string"
 									},
-									"uniqueItems": true,
-									"additionalItems": false
+									"uniqueItems": true
 								}
 							}
 						}
@@ -9184,11 +9091,9 @@
 							"additionalProperties": false,
 							"properties": {
 								"default": {
-									"$ref": "#/items/0/$defs/arrayOption",
 									"description": "The array type expected for mutable cases."
 								},
 								"readonly": {
-									"$ref": "#/items/0/$defs/arrayOption",
 									"description": "The array type expected for readonly cases. If omitted, the value for `default` will be used."
 								}
 							}
@@ -9228,18 +9133,10 @@
 							"type": "object",
 							"additionalProperties": false,
 							"properties": {
-								"ts-expect-error": {
-									"$ref": "#/items/0/$defs/directiveConfigSchema"
-								},
-								"ts-ignore": {
-									"$ref": "#/items/0/$defs/directiveConfigSchema"
-								},
-								"ts-nocheck": {
-									"$ref": "#/items/0/$defs/directiveConfigSchema"
-								},
-								"ts-check": {
-									"$ref": "#/items/0/$defs/directiveConfigSchema"
-								},
+								"ts-expect-error": {},
+								"ts-ignore": {},
+								"ts-nocheck": {},
+								"ts-check": {},
 								"minimumDescriptionLength": {
 									"type": "number",
 									"default": 3
@@ -9283,9 +9180,7 @@
 							"properties": {
 								"types": {
 									"type": "object",
-									"additionalProperties": {
-										"$ref": "#/items/0/$defs/banConfig"
-									}
+									"additionalProperties": {}
 								},
 								"extendDefaults": {
 									"type": "boolean"
@@ -9437,7 +9332,7 @@
 								},
 								"ignoreOverrideMethods": {
 									"type": "boolean",
-									"description": "Ingore members marked with the `override` modifier"
+									"description": "Ignore members marked with the `override` modifier"
 								},
 								"ignoreClassesThatImplementAnInterface": {
 									"oneOf": [
@@ -9447,9 +9342,7 @@
 										},
 										{
 											"type": "string",
-											"enum": [
-												"public-fields"
-											],
+											"enum": ["public-fields"],
 											"description": "Ignore only the public fields of classes that implement an interface"
 										}
 									],
@@ -9705,20 +9598,14 @@
 							"properties": {
 								"prefer": {
 									"type": "string",
-									"enum": [
-										"type-imports",
-										"no-type-imports"
-									]
+									"enum": ["type-imports", "no-type-imports"]
 								},
 								"disallowTypeAnnotations": {
 									"type": "boolean"
 								},
 								"fixStyle": {
 									"type": "string",
-									"enum": [
-										"separate-type-imports",
-										"inline-type-imports"
-									]
+									"enum": ["separate-type-imports", "inline-type-imports"]
 								}
 							}
 						}
@@ -9880,27 +9767,15 @@
 							"type": "object",
 							"additionalProperties": false,
 							"properties": {
-								"accessibility": {
-									"$ref": "#/items/0/$defs/accessibilityLevel"
-								},
+								"accessibility": {},
 								"overrides": {
 									"type": "object",
 									"properties": {
-										"accessors": {
-											"$ref": "#/items/0/$defs/accessibilityLevel"
-										},
-										"constructors": {
-											"$ref": "#/items/0/$defs/accessibilityLevel"
-										},
-										"methods": {
-											"$ref": "#/items/0/$defs/accessibilityLevel"
-										},
-										"properties": {
-											"$ref": "#/items/0/$defs/accessibilityLevel"
-										},
-										"parameterProperties": {
-											"$ref": "#/items/0/$defs/accessibilityLevel"
-										}
+										"accessors": {},
+										"constructors": {},
+										"methods": {},
+										"properties": {},
+										"parameterProperties": {}
 									},
 									"additionalProperties": false
 								},
@@ -9964,7 +9839,7 @@
 									"type": "boolean"
 								},
 								"allowTypedFunctionExpressions": {
-									"description": "Whether to ignore type annotations on the variable of a function expresion.",
+									"description": "Whether to ignore type annotations on the variable of a function expression.",
 									"type": "boolean"
 								}
 							}
@@ -11136,9 +11011,7 @@
 								"multiline": {
 									"type": "object",
 									"properties": {
-										"delimiter": {
-											"$ref": "#/items/0/$defs/multiLineOption"
-										},
+										"delimiter": {},
 										"requireLast": {
 											"type": "boolean"
 										}
@@ -11148,9 +11021,7 @@
 								"singleline": {
 									"type": "object",
 									"properties": {
-										"delimiter": {
-											"$ref": "#/items/0/$defs/singleLineOption"
-										},
+										"delimiter": {},
 										"requireLast": {
 											"type": "boolean"
 										}
@@ -11160,21 +11031,14 @@
 								"overrides": {
 									"type": "object",
 									"properties": {
-										"interface": {
-											"$ref": "#/items/0/$defs/delimiterConfig"
-										},
-										"typeLiteral": {
-											"$ref": "#/items/0/$defs/delimiterConfig"
-										}
+										"interface": {},
+										"typeLiteral": {}
 									},
 									"additionalProperties": false
 								},
 								"multilineDetection": {
 									"type": "string",
-									"enum": [
-										"brackets",
-										"last-member"
-									]
+									"enum": ["brackets", "last-member"]
 								}
 							}
 						}
@@ -11210,21 +11074,11 @@
 							"type": "object",
 							"additionalProperties": false,
 							"properties": {
-								"default": {
-									"$ref": "#/items/0/$defs/baseConfig"
-								},
-								"classes": {
-									"$ref": "#/items/0/$defs/baseConfig"
-								},
-								"classExpressions": {
-									"$ref": "#/items/0/$defs/baseConfig"
-								},
-								"interfaces": {
-									"$ref": "#/items/0/$defs/typesConfig"
-								},
-								"typeLiterals": {
-									"$ref": "#/items/0/$defs/typesConfig"
-								}
+								"default": {},
+								"classes": {},
+								"classExpressions": {},
+								"interfaces": {},
+								"typeLiterals": {}
 							}
 						}
 					]
@@ -12109,11 +11963,7 @@
 								},
 								"hoist": {
 									"type": "string",
-									"enum": [
-										"all",
-										"functions",
-										"never"
-									]
+									"enum": ["all", "functions", "never"]
 								},
 								"allow": {
 									"type": "array",
@@ -12250,36 +12100,28 @@
 							"additionalProperties": false,
 							"properties": {
 								"allowAliases": {
-									"description": "Whether to allow direct one-to-one type aliases.",
-									"$ref": "#/items/0/$defs/expandedOptions"
+									"description": "Whether to allow direct one-to-one type aliases."
 								},
 								"allowCallbacks": {
-									"description": "Whether to allow type aliases for callbacks.",
-									"$ref": "#/items/0/$defs/simpleOptions"
+									"description": "Whether to allow type aliases for callbacks."
 								},
 								"allowConditionalTypes": {
-									"description": "Whether to allow type aliases for conditional types.",
-									"$ref": "#/items/0/$defs/simpleOptions"
+									"description": "Whether to allow type aliases for conditional types."
 								},
 								"allowConstructors": {
-									"description": "Whether to allow type aliases with constructors.",
-									"$ref": "#/items/0/$defs/simpleOptions"
+									"description": "Whether to allow type aliases with constructors."
 								},
 								"allowLiterals": {
-									"description": "Whether to allow type aliases with object literal types.",
-									"$ref": "#/items/0/$defs/expandedOptions"
+									"description": "Whether to allow type aliases with object literal types."
 								},
 								"allowMappedTypes": {
-									"description": "Whether to allow type aliases with mapped types.",
-									"$ref": "#/items/0/$defs/expandedOptions"
+									"description": "Whether to allow type aliases with mapped types."
 								},
 								"allowTupleTypes": {
-									"description": "Whether to allow type aliases with tuple types.",
-									"$ref": "#/items/0/$defs/expandedOptions"
+									"description": "Whether to allow type aliases with tuple types."
 								},
 								"allowGenerics": {
-									"description": "Whether to allow type aliases with generic types.",
-									"$ref": "#/items/0/$defs/simpleOptions"
+									"description": "Whether to allow type aliases with generic types."
 								}
 							}
 						}
@@ -12639,16 +12481,11 @@
 							"properties": {
 								"allow": {
 									"type": "array",
-									"items": {
-										"$ref": "#/items/0/$defs/modifier"
-									}
+									"items": {}
 								},
 								"prefer": {
 									"type": "string",
-									"enum": [
-										"class-property",
-										"parameter-property"
-									]
+									"enum": ["class-property", "parameter-property"]
 								}
 							}
 						}
@@ -12802,9 +12639,7 @@
 										},
 										{
 											"type": "boolean",
-											"enum": [
-												true
-											]
+											"enum": [true]
 										}
 									]
 								},
@@ -12961,9 +12796,7 @@
 												"properties": {
 													"from": {
 														"type": "string",
-														"enum": [
-															"file"
-														]
+														"enum": ["file"]
 													},
 													"name": {
 														"oneOf": [
@@ -12984,10 +12817,7 @@
 														"type": "string"
 													}
 												},
-												"required": [
-													"from",
-													"name"
-												]
+												"required": ["from", "name"]
 											},
 											{
 												"type": "object",
@@ -12995,9 +12825,7 @@
 												"properties": {
 													"from": {
 														"type": "string",
-														"enum": [
-															"lib"
-														]
+														"enum": ["lib"]
 													},
 													"name": {
 														"oneOf": [
@@ -13015,10 +12843,7 @@
 														]
 													}
 												},
-												"required": [
-													"from",
-													"name"
-												]
+												"required": ["from", "name"]
 											},
 											{
 												"type": "object",
@@ -13026,9 +12851,7 @@
 												"properties": {
 													"from": {
 														"type": "string",
-														"enum": [
-															"package"
-														]
+														"enum": ["package"]
 													},
 													"name": {
 														"oneOf": [
@@ -13049,11 +12872,7 @@
 														"type": "string"
 													}
 												},
-												"required": [
-													"from",
-													"name",
-													"package"
-												]
+												"required": ["from", "name", "package"]
 											}
 										]
 									}
@@ -13667,25 +13486,15 @@
 							"properties": {
 								"lib": {
 									"type": "string",
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								},
 								"path": {
 									"type": "string",
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								},
 								"types": {
 									"type": "string",
-									"enum": [
-										"always",
-										"never",
-										"prefer-import"
-									]
+									"enum": ["always", "never", "prefer-import"]
 								}
 							}
 						}
@@ -13730,24 +13539,12 @@
 								"overrides": {
 									"type": "object",
 									"properties": {
-										"colon": {
-											"$ref": "#/items/0/$defs/spacingConfig"
-										},
-										"arrow": {
-											"$ref": "#/items/0/$defs/spacingConfig"
-										},
-										"variable": {
-											"$ref": "#/items/0/$defs/spacingConfig"
-										},
-										"parameter": {
-											"$ref": "#/items/0/$defs/spacingConfig"
-										},
-										"property": {
-											"$ref": "#/items/0/$defs/spacingConfig"
-										},
-										"returnType": {
-											"$ref": "#/items/0/$defs/spacingConfig"
-										}
+										"colon": {},
+										"arrow": {},
+										"variable": {},
+										"parameter": {},
+										"property": {},
+										"returnType": {}
 									},
 									"additionalProperties": false
 								}

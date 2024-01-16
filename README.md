@@ -13,6 +13,7 @@ node index.js
 - TODO: eslint built-in rules
 - Rome/Biome
 - GitHub actions actions.yml
+- VSCode?
 
 ## Unclassified
 
