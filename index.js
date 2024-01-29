@@ -12,7 +12,7 @@ const { values } = parseArgs({
 
 for (const appName of values.extractor
 	? [values.extractor]
-	: ['tslint', 'stylelint', 'eslint']) {
+	: ['babel', 'eslint', 'prettier', 'stylelint', 'tslint']) {
 	const { extractSchema } = await import(
 		path.join(process.cwd(), `lib/extractors/${appName}.js`)
 	)

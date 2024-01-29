@@ -1,0 +1,46 @@
+{
+	"$id": "https://json.schemastore.org/partial-eslint-plugins.json",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"definitions": {},
+	"properties": {
+		"pluginNames": {
+			"type": "array",
+			"items": {
+				"oneOf": [
+					{
+						"enum": [
+							"prettier-plugin-packagejson",
+							"prettier-plugin-organize-imports",
+							"prettier-plugin-jsdoc",
+							"@trivago/prettier-plugin-sort-imports",
+							"prettier-plugin-nginx",
+							"prettier-plugin-tailwindcss",
+							"@svgr/plugin-prettier",
+							"prettier-plugin-svelte",
+							"prettier-plugin-prisma",
+							"@ianvs/prettier-plugin-sort-imports",
+							"prettier-plugin-java",
+							"prettier-plugin-organize-attributes",
+							"prettier-plugin-toml",
+							"prettier-plugin-sh",
+							"prettier-plugin-sort-json",
+							"prettier-plugin-astro",
+							"prettier-plugin-properties",
+							"prettier-plugin-sql",
+							"prettier-plugin-rust",
+							"prettier-plugin-solidity",
+							"prettier-plugin-pkg",
+							"prettier-plugin-go-template",
+							"prettier-plugin-package"
+						]
+					},
+					{
+						"type": "string"
+					}
+				]
+			},
+			"uniqueItems": true
+		}
+	}
+}

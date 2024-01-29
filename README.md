@@ -1,5 +1,9 @@
 # jsonschema-extractor
 
+Extract schemas from your favorite software. Generated schemas are added to [SchemaStore](https://github.com/SchemaStore/schemastore).
+
+## Contributing
+
 ```sh
 git clone https://github.com/fox-projects/jsonschema-extractor
 cd ./jsonschema-extractor
@@ -7,18 +11,7 @@ pnpm i
 node index.js
 ```
 
-## Others
+## Out of Scope
 
-- TODO: add various common configs
-- TODO: eslint built-in rules
-- Rome/Biome
-- GitHub actions actions.yml
-- VSCode?
-
-## Unclassified
-
-Some software has plugin sytems, but extracting the schema is not straightfoward, or there isn't much schema:
-
-- pre-commit
-- Prettier
-- Babel
+- GitHub Actions
+- VSCode

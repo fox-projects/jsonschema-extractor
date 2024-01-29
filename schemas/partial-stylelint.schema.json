@@ -2,7 +2,37 @@
 	"$id": "https://json.schemastore.org/partial-eslint-plugins.json",
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
-	"definitions": {},
+	"definitions": {
+		"pluginNames": {
+			"type": "array",
+			"items": {
+				"anyOf": [
+					{
+						"enum": [
+							"stylelint-order",
+							"stylelint-processor-styled-components",
+							"stylelint-webpack-plugin",
+							"stylelint-scss",
+							"stylelint-prettier",
+							"stylelint-formatter-pretty",
+							"stylelint-no-unsupported-browser-features",
+							"stylelint-declaration-block-no-ignored-properties",
+							"stylelint-declaration-strict-value",
+							"stylelint-value-no-unknown-custom-properties",
+							"stylelint-less",
+							"stylelint-checkstyle-formatter",
+							"stylelint-selector-bem-pattern",
+							"@namics/stylelint-bem"
+						]
+					},
+					{
+						"type": "string"
+					}
+				]
+			},
+			"uniqueItems": true
+		}
+	},
 	"properties": {
 		"order/order": {},
 		"order/properties-order": {},

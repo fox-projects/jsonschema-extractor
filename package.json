@@ -5,11 +5,12 @@
 	"description": "",
 	"author": "Edwin Kofler <edwin@kofler.dev> (https://edwinkofler.com/)",
 	"license": "MPL-2.0",
-	"main": "index.js",
-	"keywords": [],
+	"private": true,
 	"engines": {
 		"node": ">=16.17 >=18.3 >=20"
 	},
+	"main": "index.js",
+	"keywords": [],
 	"scripts": {
 		"start": "node index.js"
 	},
@@ -37,7 +38,6 @@
 		"@hyperupcall/eslint-config": "^0.6.0",
 		"@hyperupcall/markdownlint-config": "^0.3.1",
 		"@hyperupcall/prettier-config": "^0.7.0",
-		"cheerio": "1.0.0-rc.12",
 		"eslint": "^8.54.0",
 		"eslint-config-prettier": "^9.0.0",
 		"markdownlint": "^0.32.1",
