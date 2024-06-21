@@ -7,32 +7,24 @@
 		"pluginNames": {
 			"type": "array",
 			"items": {
-				"oneOf": [
+				"anyOf": [
 					{
 						"enum": [
-							"prettier-plugin-packagejson",
-							"prettier-plugin-organize-imports",
-							"prettier-plugin-jsdoc",
 							"@trivago/prettier-plugin-sort-imports",
-							"prettier-plugin-nginx",
-							"prettier-plugin-tailwindcss",
-							"@svgr/plugin-prettier",
+							"prettier-plugin-packagejson",
+							"prettier-plugin-jsdoc",
+							"prettier-plugin-organize-imports",
 							"prettier-plugin-svelte",
-							"prettier-plugin-prisma",
 							"@ianvs/prettier-plugin-sort-imports",
+							"prettier-plugin-tailwindcss",
 							"prettier-plugin-java",
-							"prettier-plugin-organize-attributes",
-							"prettier-plugin-toml",
-							"prettier-plugin-sh",
+							"@svgr/plugin-prettier",
 							"prettier-plugin-sort-json",
-							"prettier-plugin-astro",
-							"prettier-plugin-properties",
-							"prettier-plugin-sql",
-							"prettier-plugin-rust",
 							"prettier-plugin-solidity",
-							"prettier-plugin-pkg",
-							"prettier-plugin-go-template",
-							"prettier-plugin-package"
+							"prettier-plugin-sh",
+							"prettier-plugin-astro",
+							"prettier-plugin-sql",
+							"prettier-plugin-organize-attributes"
 						]
 					},
 					{
