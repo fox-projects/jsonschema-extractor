@@ -3,7 +3,7 @@
 		"strict": true,
 		"allowJs": true,
 		"checkJs": true,
-		"target": "ES2021",
-		"module": "Node16"
+		"target": "es2021",
+		"module": "node16"
 	}
 }

@@ -3,7 +3,6 @@
 	"version": "0.1.0",
 	"type": "module",
 	"description": "",
-	"author": "Edwin Kofler <edwin@kofler.dev> (https://edwinkofler.com/)",
 	"license": "MPL-2.0",
 	"private": true,
 	"engines": {
@@ -12,7 +11,8 @@
 	"main": "index.js",
 	"keywords": [],
 	"scripts": {
-		"start": "node index.js"
+		"format": "hyperupcall-scripts-nodejs format",
+		"lint": "hyperupcall-scripts-nodejs lint"
 	},
 	"dependencies": {
 		"@angular-eslint/eslint-plugin": "^18.0.1",
@@ -28,20 +28,21 @@
 		"stylelint-no-unsupported-browser-features": "^8.0.1",
 		"stylelint-order": "^6.0.4",
 		"stylelint-plugin-defensive-css": "^1.0.4",
-		"stylelint-prettier": "^5.0.0",
 		"stylelint-react-native": "^2.7.0",
 		"stylelint-scss": "^6.3.2",
 		"stylelint-selector-bem-pattern": "^4.0.0",
 		"tslint": "^6.1.3"
 	},
 	"devDependencies": {
-		"@hyperupcall/eslint-config": "^0.11.0",
+		"@hyperupcall/eslint-config": "link:/home/edwin/Documents/eslint-config-hyperupcall",
 		"@hyperupcall/markdownlint-config": "^0.3.2",
-		"@hyperupcall/prettier-config": "^0.7.0",
+		"@hyperupcall/scripts-nodejs": "0.2.3",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
-		"markdownlint": "^0.34.0",
-		"prettier": "^3.3.2",
-		"prettier-plugin-pkg": "^0.18.1"
-	}
+		"markdownlint": "^0.34.0"
+	},
+	"markdownlint-cli2": {
+		"extends": "./node_modules/@hyperupcall/markdownlint-config/.markdownlint.json"
+	},
+	"prettier": "@hyperupcall/scripts-nodejs/config-prettier.js"
 }

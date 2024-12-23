@@ -11,14 +11,7 @@
 			"$comment": "Value 'warn' is UNDOCUMENTED.",
 			"description": "Severity level. Level \"error\" will cause exit code 2.",
 			"type": "string",
-			"enum": [
-				"default",
-				"error",
-				"warning",
-				"warn",
-				"off",
-				"none"
-			],
+			"enum": ["default", "error", "warning", "warn", "off", "none"],
 			"default": "default"
 		}
 	},
@@ -81,13 +74,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"arguments",
-							"elements",
-							"members",
-							"parameters",
-							"statements"
-						]
+						"enum": ["arguments", "elements", "members", "parameters", "statements"]
 					},
 					"minLength": 1,
 					"maxLength": 5
@@ -107,13 +94,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"arguments",
-									"elements",
-									"members",
-									"parameters",
-									"statements"
-								]
+								"enum": ["arguments", "elements", "members", "parameters", "statements"]
 							},
 							"minLength": 1,
 							"maxLength": 5
@@ -124,13 +105,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"arguments",
-							"elements",
-							"members",
-							"parameters",
-							"statements"
-						]
+						"enum": ["arguments", "elements", "members", "parameters", "statements"]
 					},
 					"minLength": 1,
 					"maxLength": 5
@@ -145,11 +120,7 @@
 				},
 				{
 					"type": "string",
-					"enum": [
-						"array",
-						"generic",
-						"array-simple"
-					]
+					"enum": ["array", "generic", "array-simple"]
 				},
 				{
 					"$ref": "#/definitions/ruleBoolean"
@@ -164,21 +135,13 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"array",
-								"generic",
-								"array-simple"
-							]
+							"enum": ["array", "generic", "array-simple"]
 						}
 					]
 				},
 				{
 					"type": "string",
-					"enum": [
-						"array",
-						"generic",
-						"array-simple"
-					]
+					"enum": ["array", "generic", "array-simple"]
 				}
 			]
 		},
@@ -190,9 +153,7 @@
 				},
 				{
 					"type": "string",
-					"enum": [
-						"ban-single-arg-parens"
-					]
+					"enum": ["ban-single-arg-parens"]
 				},
 				{
 					"$ref": "#/definitions/ruleBoolean"
@@ -207,17 +168,13 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"ban-single-arg-parens"
-							]
+							"enum": ["ban-single-arg-parens"]
 						}
 					]
 				},
 				{
 					"type": "string",
-					"enum": [
-						"ban-single-arg-parens"
-					]
+					"enum": ["ban-single-arg-parens"]
 				}
 			]
 		},
@@ -229,9 +186,7 @@
 				},
 				{
 					"type": "string",
-					"enum": [
-						"multiline"
-					]
+					"enum": ["multiline"]
 				},
 				{
 					"$ref": "#/definitions/ruleBoolean"
@@ -246,17 +201,13 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"multiline"
-							]
+							"enum": ["multiline"]
 						}
 					]
 				},
 				{
 					"type": "string",
-					"enum": [
-						"multiline"
-					]
+					"enum": ["multiline"]
 				}
 			]
 		},
@@ -374,9 +325,7 @@
 										"type": "string"
 									}
 								},
-								"required": [
-									"name"
-								]
+								"required": ["name"]
 							}
 						]
 					}
@@ -428,9 +377,7 @@
 												"type": "string"
 											}
 										},
-										"required": [
-											"name"
-										]
+										"required": ["name"]
 									}
 								]
 							}
@@ -473,9 +420,7 @@
 										"type": "string"
 									}
 								},
-								"required": [
-									"name"
-								]
+								"required": ["name"]
 							}
 						]
 					}
@@ -765,12 +710,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"singleline",
-							"multiline",
-							"doc",
-							"directive"
-						]
+						"enum": ["singleline", "multiline", "doc", "directive"]
 					},
 					"uniqueItems": true
 				},
@@ -789,12 +729,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"singleline",
-									"multiline",
-									"doc",
-									"directive"
-								]
+								"enum": ["singleline", "multiline", "doc", "directive"]
 							},
 							"uniqueItems": true
 						}
@@ -804,12 +739,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"singleline",
-							"multiline",
-							"doc",
-							"directive"
-						]
+						"enum": ["singleline", "multiline", "doc", "directive"]
 					},
 					"uniqueItems": true
 				}
@@ -861,11 +791,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -890,12 +816,7 @@
 												}
 											},
 											"privacies": {
-												"enum": [
-													"all",
-													"private",
-													"protected",
-													"public"
-												],
+												"enum": ["all", "private", "protected", "public"],
 												"type": "string"
 											},
 											"overloads": {
@@ -923,11 +844,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -952,11 +869,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -981,11 +894,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											},
 											"overloads": {
@@ -1013,11 +922,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -1042,20 +947,11 @@
 												}
 											},
 											"locations": {
-												"enum": [
-													"all",
-													"instance",
-													"static"
-												],
+												"enum": ["all", "instance", "static"],
 												"type": "string"
 											},
 											"privacies": {
-												"enum": [
-													"all",
-													"private",
-													"protected",
-													"public"
-												],
+												"enum": ["all", "private", "protected", "public"],
 												"type": "string"
 											},
 											"overloads": {
@@ -1083,11 +979,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -1112,20 +1004,11 @@
 												}
 											},
 											"locations": {
-												"enum": [
-													"all",
-													"instance",
-													"static"
-												],
+												"enum": ["all", "instance", "static"],
 												"type": "string"
 											},
 											"privacies": {
-												"enum": [
-													"all",
-													"private",
-													"protected",
-													"public"
-												],
+												"enum": ["all", "private", "protected", "public"],
 												"type": "string"
 											}
 										},
@@ -1150,11 +1033,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -1179,11 +1058,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -1245,11 +1120,7 @@
 														}
 													},
 													"visibilities": {
-														"enum": [
-															"all",
-															"exported",
-															"internal"
-														],
+														"enum": ["all", "exported", "internal"],
 														"type": "string"
 													}
 												},
@@ -1274,12 +1145,7 @@
 														}
 													},
 													"privacies": {
-														"enum": [
-															"all",
-															"private",
-															"protected",
-															"public"
-														],
+														"enum": ["all", "private", "protected", "public"],
 														"type": "string"
 													},
 													"overloads": {
@@ -1307,11 +1173,7 @@
 														}
 													},
 													"visibilities": {
-														"enum": [
-															"all",
-															"exported",
-															"internal"
-														],
+														"enum": ["all", "exported", "internal"],
 														"type": "string"
 													}
 												},
@@ -1336,11 +1198,7 @@
 														}
 													},
 													"visibilities": {
-														"enum": [
-															"all",
-															"exported",
-															"internal"
-														],
+														"enum": ["all", "exported", "internal"],
 														"type": "string"
 													}
 												},
@@ -1365,11 +1223,7 @@
 														}
 													},
 													"visibilities": {
-														"enum": [
-															"all",
-															"exported",
-															"internal"
-														],
+														"enum": ["all", "exported", "internal"],
 														"type": "string"
 													},
 													"overloads": {
@@ -1397,11 +1251,7 @@
 														}
 													},
 													"visibilities": {
-														"enum": [
-															"all",
-															"exported",
-															"internal"
-														],
+														"enum": ["all", "exported", "internal"],
 														"type": "string"
 													}
 												},
@@ -1426,20 +1276,11 @@
 														}
 													},
 													"locations": {
-														"enum": [
-															"all",
-															"instance",
-															"static"
-														],
+														"enum": ["all", "instance", "static"],
 														"type": "string"
 													},
 													"privacies": {
-														"enum": [
-															"all",
-															"private",
-															"protected",
-															"public"
-														],
+														"enum": ["all", "private", "protected", "public"],
 														"type": "string"
 													},
 													"overloads": {
@@ -1467,11 +1308,7 @@
 														}
 													},
 													"visibilities": {
-														"enum": [
-															"all",
-															"exported",
-															"internal"
-														],
+														"enum": ["all", "exported", "internal"],
 														"type": "string"
 													}
 												},
@@ -1496,20 +1333,11 @@
 														}
 													},
 													"locations": {
-														"enum": [
-															"all",
-															"instance",
-															"static"
-														],
+														"enum": ["all", "instance", "static"],
 														"type": "string"
 													},
 													"privacies": {
-														"enum": [
-															"all",
-															"private",
-															"protected",
-															"public"
-														],
+														"enum": ["all", "private", "protected", "public"],
 														"type": "string"
 													}
 												},
@@ -1534,11 +1362,7 @@
 														}
 													},
 													"visibilities": {
-														"enum": [
-															"all",
-															"exported",
-															"internal"
-														],
+														"enum": ["all", "exported", "internal"],
 														"type": "string"
 													}
 												},
@@ -1563,11 +1387,7 @@
 														}
 													},
 													"visibilities": {
-														"enum": [
-															"all",
-															"exported",
-															"internal"
-														],
+														"enum": ["all", "exported", "internal"],
 														"type": "string"
 													}
 												},
@@ -1620,11 +1440,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -1649,12 +1465,7 @@
 												}
 											},
 											"privacies": {
-												"enum": [
-													"all",
-													"private",
-													"protected",
-													"public"
-												],
+												"enum": ["all", "private", "protected", "public"],
 												"type": "string"
 											},
 											"overloads": {
@@ -1682,11 +1493,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -1711,11 +1518,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -1740,11 +1543,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											},
 											"overloads": {
@@ -1772,11 +1571,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -1801,20 +1596,11 @@
 												}
 											},
 											"locations": {
-												"enum": [
-													"all",
-													"instance",
-													"static"
-												],
+												"enum": ["all", "instance", "static"],
 												"type": "string"
 											},
 											"privacies": {
-												"enum": [
-													"all",
-													"private",
-													"protected",
-													"public"
-												],
+												"enum": ["all", "private", "protected", "public"],
 												"type": "string"
 											},
 											"overloads": {
@@ -1842,11 +1628,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -1871,20 +1653,11 @@
 												}
 											},
 											"locations": {
-												"enum": [
-													"all",
-													"instance",
-													"static"
-												],
+												"enum": ["all", "instance", "static"],
 												"type": "string"
 											},
 											"privacies": {
-												"enum": [
-													"all",
-													"private",
-													"protected",
-													"public"
-												],
+												"enum": ["all", "private", "protected", "public"],
 												"type": "string"
 											}
 										},
@@ -1909,11 +1682,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -1938,11 +1707,7 @@
 												}
 											},
 											"visibilities": {
-												"enum": [
-													"all",
-													"exported",
-													"internal"
-												],
+												"enum": ["all", "exported", "internal"],
 												"type": "string"
 											}
 										},
@@ -1965,10 +1730,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"as-needed",
-							"ignore-same-line"
-						]
+						"enum": ["as-needed", "ignore-same-line"]
 					}
 				},
 				{
@@ -1986,10 +1748,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"as-needed",
-									"ignore-same-line"
-								]
+								"enum": ["as-needed", "ignore-same-line"]
 							}
 						}
 					]
@@ -1998,10 +1757,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"as-needed",
-							"ignore-same-line"
-						]
+						"enum": ["as-needed", "ignore-same-line"]
 					}
 				}
 			]
@@ -2575,9 +2331,7 @@
 				},
 				{
 					"items": {
-						"enum": [
-							"allow-post"
-						],
+						"enum": ["allow-post"],
 						"type": "string"
 					},
 					"maxLength": 1,
@@ -2597,9 +2351,7 @@
 						},
 						{
 							"items": {
-								"enum": [
-									"allow-post"
-								],
+								"enum": ["allow-post"],
 								"type": "string"
 							},
 							"maxLength": 1,
@@ -2610,9 +2362,7 @@
 				},
 				{
 					"items": {
-						"enum": [
-							"allow-post"
-						],
+						"enum": ["allow-post"],
 						"type": "string"
 					},
 					"maxLength": 1,
@@ -2632,17 +2382,11 @@
 					"items": [
 						{
 							"type": "string",
-							"enum": [
-								"tabs",
-								"spaces"
-							]
+							"enum": ["tabs", "spaces"]
 						},
 						{
 							"type": "number",
-							"enum": [
-								2,
-								4
-							]
+							"enum": [2, 4]
 						}
 					],
 					"minLength": 0,
@@ -2664,17 +2408,11 @@
 							"items": [
 								{
 									"type": "string",
-									"enum": [
-										"tabs",
-										"spaces"
-									]
+									"enum": ["tabs", "spaces"]
 								},
 								{
 									"type": "number",
-									"enum": [
-										2,
-										4
-									]
+									"enum": [2, 4]
 								}
 							],
 							"minLength": 0,
@@ -2687,17 +2425,11 @@
 					"items": [
 						{
 							"type": "string",
-							"enum": [
-								"tabs",
-								"spaces"
-							]
+							"enum": ["tabs", "spaces"]
 						},
 						{
 							"type": "number",
-							"enum": [
-								2,
-								4
-							]
+							"enum": [2, 4]
 						}
 					],
 					"minLength": 0,
@@ -2713,10 +2445,7 @@
 				},
 				{
 					"type": "string",
-					"enum": [
-						"always-prefix",
-						"never-prefix"
-					]
+					"enum": ["always-prefix", "never-prefix"]
 				},
 				{
 					"$ref": "#/definitions/ruleBoolean"
@@ -2731,19 +2460,13 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"always-prefix",
-								"never-prefix"
-							]
+							"enum": ["always-prefix", "never-prefix"]
 						}
 					]
 				},
 				{
 					"type": "string",
-					"enum": [
-						"always-prefix",
-						"never-prefix"
-					]
+					"enum": ["always-prefix", "never-prefix"]
 				}
 			]
 		},
@@ -2864,9 +2587,7 @@
 					"maxItems": 1,
 					"items": {
 						"type": "string",
-						"enum": [
-							"check-multiline-start"
-						]
+						"enum": ["check-multiline-start"]
 					}
 				},
 				{
@@ -2886,9 +2607,7 @@
 							"maxItems": 1,
 							"items": {
 								"type": "string",
-								"enum": [
-									"check-multiline-start"
-								]
+								"enum": ["check-multiline-start"]
 							}
 						}
 					]
@@ -2899,9 +2618,7 @@
 					"maxItems": 1,
 					"items": {
 						"type": "string",
-						"enum": [
-							"check-multiline-start"
-						]
+						"enum": ["check-multiline-start"]
 					}
 				}
 			]
@@ -2938,10 +2655,7 @@
 				},
 				{
 					"type": "string",
-					"enum": [
-						"LF",
-						"CRLF"
-					]
+					"enum": ["LF", "CRLF"]
 				},
 				{
 					"$ref": "#/definitions/ruleBoolean"
@@ -2956,19 +2670,13 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"LF",
-								"CRLF"
-							]
+							"enum": ["LF", "CRLF"]
 						}
 					]
 				},
 				{
 					"type": "string",
-					"enum": [
-						"LF",
-						"CRLF"
-					]
+					"enum": ["LF", "CRLF"]
 				}
 			]
 		},
@@ -3011,9 +2719,7 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"exclude-class-expressions"
-							]
+							"enum": ["exclude-class-expressions"]
 						}
 					],
 					"additionalItems": false,
@@ -3040,9 +2746,7 @@
 								},
 								{
 									"type": "string",
-									"enum": [
-										"exclude-class-expressions"
-									]
+									"enum": ["exclude-class-expressions"]
 								}
 							],
 							"additionalItems": false,
@@ -3060,9 +2764,7 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"exclude-class-expressions"
-							]
+							"enum": ["exclude-class-expressions"]
 						}
 					],
 					"additionalItems": false,
@@ -3294,11 +2996,7 @@
 							"oneOf": [
 								{
 									"type": "string",
-									"enum": [
-										"fields-first",
-										"instance-sandwich",
-										"statics-first"
-									]
+									"enum": ["fields-first", "instance-sandwich", "statics-first"]
 								},
 								{
 									"type": "array",
@@ -3356,11 +3054,7 @@
 									"oneOf": [
 										{
 											"type": "string",
-											"enum": [
-												"fields-first",
-												"instance-sandwich",
-												"statics-first"
-											]
+											"enum": ["fields-first", "instance-sandwich", "statics-first"]
 										},
 										{
 											"type": "array",
@@ -3409,11 +3103,7 @@
 							"oneOf": [
 								{
 									"type": "string",
-									"enum": [
-										"fields-first",
-										"instance-sandwich",
-										"statics-first"
-									]
+									"enum": ["fields-first", "instance-sandwich", "statics-first"]
 								},
 								{
 									"type": "array",
@@ -3872,9 +3562,7 @@
 								"type": "string"
 							}
 						},
-						"required": [
-							"fromModules"
-						]
+						"required": ["fromModules"]
 					}
 				},
 				{
@@ -3897,9 +3585,7 @@
 										"type": "string"
 									}
 								},
-								"required": [
-									"fromModules"
-								]
+								"required": ["fromModules"]
 							}
 						}
 					]
@@ -3913,9 +3599,7 @@
 								"type": "string"
 							}
 						},
-						"required": [
-							"fromModules"
-						]
+						"required": ["fromModules"]
 					}
 				}
 			]
@@ -4021,9 +3705,7 @@
 				},
 				{
 					"type": "string",
-					"enum": [
-						"check-parameters"
-					]
+					"enum": ["check-parameters"]
 				},
 				{
 					"$ref": "#/definitions/ruleBoolean"
@@ -4038,17 +3720,13 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"check-parameters"
-							]
+							"enum": ["check-parameters"]
 						}
 					]
 				},
 				{
 					"type": "string",
-					"enum": [
-						"check-parameters"
-					]
+					"enum": ["check-parameters"]
 				}
 			]
 		},
@@ -4112,15 +3790,11 @@
 						"anyOf": [
 							{
 								"type": "string",
-								"enum": [
-									"allow-empty-catch"
-								]
+								"enum": ["allow-empty-catch"]
 							},
 							{
 								"type": "string",
-								"enum": [
-									"allow-empty-functions"
-								]
+								"enum": ["allow-empty-functions"]
 							}
 						]
 					}
@@ -4142,15 +3816,11 @@
 								"anyOf": [
 									{
 										"type": "string",
-										"enum": [
-											"allow-empty-catch"
-										]
+										"enum": ["allow-empty-catch"]
 									},
 									{
 										"type": "string",
-										"enum": [
-											"allow-empty-functions"
-										]
+										"enum": ["allow-empty-functions"]
 									}
 								]
 							}
@@ -4163,15 +3833,11 @@
 						"anyOf": [
 							{
 								"type": "string",
-								"enum": [
-									"allow-empty-catch"
-								]
+								"enum": ["allow-empty-catch"]
 							},
 							{
 								"type": "string",
-								"enum": [
-									"allow-empty-functions"
-								]
+								"enum": ["allow-empty-functions"]
 							}
 						]
 					}
@@ -4309,10 +3975,7 @@
 					"items": [
 						{
 							"type": "string",
-							"enum": [
-								"dev",
-								"optional"
-							]
+							"enum": ["dev", "optional"]
 						},
 						{
 							"type": "array"
@@ -4337,10 +4000,7 @@
 							"items": [
 								{
 									"type": "string",
-									"enum": [
-										"dev",
-										"optional"
-									]
+									"enum": ["dev", "optional"]
 								},
 								{
 									"type": "array"
@@ -4356,10 +4016,7 @@
 					"items": [
 						{
 							"type": "string",
-							"enum": [
-								"dev",
-								"optional"
-							]
+							"enum": ["dev", "optional"]
 						},
 						{
 							"type": "array"
@@ -4440,10 +4097,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"ignore-params",
-							"ignore-properties"
-						]
+						"enum": ["ignore-params", "ignore-properties"]
 					},
 					"minLength": 0,
 					"maxLength": 2
@@ -4463,10 +4117,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"ignore-params",
-									"ignore-properties"
-								]
+								"enum": ["ignore-params", "ignore-properties"]
 							},
 							"minLength": 0,
 							"maxLength": 2
@@ -4477,10 +4128,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"ignore-params",
-							"ignore-properties"
-						]
+						"enum": ["ignore-params", "ignore-properties"]
 					},
 					"minLength": 0,
 					"maxLength": 2
@@ -4569,9 +4217,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"check-function-in-method"
-						]
+						"enum": ["check-function-in-method"]
 					},
 					"minLength": 0,
 					"maxLength": 1
@@ -4591,9 +4237,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"check-function-in-method"
-								]
+								"enum": ["check-function-in-method"]
 							},
 							"minLength": 0,
 							"maxLength": 1
@@ -4604,9 +4248,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"check-function-in-method"
-						]
+						"enum": ["check-function-in-method"]
 					},
 					"minLength": 0,
 					"maxLength": 1
@@ -4764,9 +4406,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"allow-declarations"
-						]
+						"enum": ["allow-declarations"]
 					},
 					"minLength": 0,
 					"maxLength": 1
@@ -4786,9 +4426,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"allow-declarations"
-								]
+								"enum": ["allow-declarations"]
 							},
 							"minLength": 0,
 							"maxLength": 1
@@ -4799,9 +4437,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"allow-declarations"
-						]
+						"enum": ["allow-declarations"]
 					},
 					"minLength": 0,
 					"maxLength": 1
@@ -5601,9 +5237,7 @@
 					"anyOf": [
 						{
 							"type": "string",
-							"enum": [
-								"ignore-static"
-							]
+							"enum": ["ignore-static"]
 						},
 						{
 							"type": "object",
@@ -5643,9 +5277,7 @@
 							"anyOf": [
 								{
 									"type": "string",
-									"enum": [
-										"ignore-static"
-									]
+									"enum": ["ignore-static"]
 								},
 								{
 									"type": "object",
@@ -5676,9 +5308,7 @@
 					"anyOf": [
 						{
 							"type": "string",
-							"enum": [
-								"ignore-static"
-							]
+							"enum": ["ignore-static"]
 						},
 						{
 							"type": "object",
@@ -5928,11 +5558,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"allow-fast-null-checks",
-							"allow-new",
-							"allow-tagged-template"
-						]
+						"enum": ["allow-fast-null-checks", "allow-new", "allow-tagged-template"]
 					},
 					"minLength": 0,
 					"maxLength": 3
@@ -5952,11 +5578,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"allow-fast-null-checks",
-									"allow-new",
-									"allow-tagged-template"
-								]
+								"enum": ["allow-fast-null-checks", "allow-new", "allow-tagged-template"]
 							},
 							"minLength": 0,
 							"maxLength": 3
@@ -5967,11 +5589,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"allow-fast-null-checks",
-							"allow-new",
-							"allow-tagged-template"
-						]
+						"enum": ["allow-fast-null-checks", "allow-new", "allow-tagged-template"]
 					},
 					"minLength": 0,
 					"maxLength": 3
@@ -5990,9 +5608,7 @@
 						"oneOf": [
 							{
 								"type": "string",
-								"enum": [
-									"check-parameters"
-								]
+								"enum": ["check-parameters"]
 							},
 							{
 								"type": "object",
@@ -6025,9 +5641,7 @@
 								"oneOf": [
 									{
 										"type": "string",
-										"enum": [
-											"check-parameters"
-										]
+										"enum": ["check-parameters"]
 									},
 									{
 										"type": "object",
@@ -6051,9 +5665,7 @@
 						"oneOf": [
 							{
 								"type": "string",
-								"enum": [
-									"check-parameters"
-								]
+								"enum": ["check-parameters"]
 							},
 							{
 								"type": "object",
@@ -6153,9 +5765,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"ignore-arrow-function-shorthand"
-						]
+						"enum": ["ignore-arrow-function-shorthand"]
 					},
 					"minLength": 0,
 					"maxLength": 1
@@ -6175,9 +5785,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"ignore-arrow-function-shorthand"
-								]
+								"enum": ["ignore-arrow-function-shorthand"]
 							},
 							"minLength": 0,
 							"maxLength": 1
@@ -6188,9 +5796,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"ignore-arrow-function-shorthand"
-						]
+						"enum": ["ignore-arrow-function-shorthand"]
 					},
 					"minLength": 0,
 					"maxLength": 1
@@ -6229,12 +5835,7 @@
 				},
 				{
 					"type": "string",
-					"enum": [
-						"always",
-						"as-needed",
-						"consistent",
-						"consistent-as-needed"
-					]
+					"enum": ["always", "as-needed", "consistent", "consistent-as-needed"]
 				},
 				{
 					"$ref": "#/definitions/ruleBoolean"
@@ -6249,23 +5850,13 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"always",
-								"as-needed",
-								"consistent",
-								"consistent-as-needed"
-							]
+							"enum": ["always", "as-needed", "consistent", "consistent-as-needed"]
 						}
 					]
 				},
 				{
 					"type": "string",
-					"enum": [
-						"always",
-						"as-needed",
-						"consistent",
-						"consistent-as-needed"
-					]
+					"enum": ["always", "as-needed", "consistent", "consistent-as-needed"]
 				}
 			]
 		},
@@ -6279,24 +5870,18 @@
 					"oneOf": [
 						{
 							"type": "string",
-							"enum": [
-								"never"
-							]
+							"enum": ["never"]
 						},
 						{
 							"type": "object",
 							"properties": {
 								"property": {
 									"type": "string",
-									"enum": [
-										"never"
-									]
+									"enum": ["never"]
 								},
 								"method": {
 									"type": "string",
-									"enum": [
-										"never"
-									]
+									"enum": ["never"]
 								}
 							},
 							"minProperties": 1,
@@ -6319,24 +5904,18 @@
 							"oneOf": [
 								{
 									"type": "string",
-									"enum": [
-										"never"
-									]
+									"enum": ["never"]
 								},
 								{
 									"type": "object",
 									"properties": {
 										"property": {
 											"type": "string",
-											"enum": [
-												"never"
-											]
+											"enum": ["never"]
 										},
 										"method": {
 											"type": "string",
-											"enum": [
-												"never"
-											]
+											"enum": ["never"]
 										}
 									},
 									"minProperties": 1,
@@ -6350,24 +5929,18 @@
 					"oneOf": [
 						{
 							"type": "string",
-							"enum": [
-								"never"
-							]
+							"enum": ["never"]
 						},
 						{
 							"type": "object",
 							"properties": {
 								"property": {
 									"type": "string",
-									"enum": [
-										"never"
-									]
+									"enum": ["never"]
 								},
 								"method": {
 									"type": "string",
-									"enum": [
-										"never"
-									]
+									"enum": ["never"]
 								}
 							},
 							"minProperties": 1,
@@ -6507,9 +6080,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"ignore-for-loop"
-						]
+						"enum": ["ignore-for-loop"]
 					},
 					"minLength": 0,
 					"maxLength": 1
@@ -6529,9 +6100,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"ignore-for-loop"
-								]
+								"enum": ["ignore-for-loop"]
 							},
 							"minLength": 0,
 							"maxLength": 1
@@ -6542,9 +6111,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"ignore-for-loop"
-						]
+						"enum": ["ignore-for-loop"]
 					},
 					"minLength": 0,
 					"maxLength": 1
@@ -6561,10 +6128,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"allow-declarations",
-							"allow-named-functions"
-						]
+						"enum": ["allow-declarations", "allow-named-functions"]
 					},
 					"minLength": 0,
 					"maxLength": 1
@@ -6584,10 +6148,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"allow-declarations",
-									"allow-named-functions"
-								]
+								"enum": ["allow-declarations", "allow-named-functions"]
 							},
 							"minLength": 0,
 							"maxLength": 1
@@ -6598,10 +6159,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"allow-declarations",
-							"allow-named-functions"
-						]
+						"enum": ["allow-declarations", "allow-named-functions"]
 					},
 					"minLength": 0,
 					"maxLength": 1
@@ -6640,10 +6198,7 @@
 												"type": "number"
 											}
 										},
-										"required": [
-											"match",
-											"order"
-										]
+										"required": ["match", "order"]
 									}
 								]
 							}
@@ -6670,10 +6225,7 @@
 						},
 						"module-source-path": {
 							"type": "string",
-							"enum": [
-								"full",
-								"basename"
-							]
+							"enum": ["full", "basename"]
 						}
 					},
 					"additionalProperties": false
@@ -6715,10 +6267,7 @@
 														"type": "number"
 													}
 												},
-												"required": [
-													"match",
-													"order"
-												]
+												"required": ["match", "order"]
 											}
 										]
 									}
@@ -6745,10 +6294,7 @@
 								},
 								"module-source-path": {
 									"type": "string",
-									"enum": [
-										"full",
-										"basename"
-									]
+									"enum": ["full", "basename"]
 								}
 							},
 							"additionalProperties": false
@@ -6781,10 +6327,7 @@
 												"type": "number"
 											}
 										},
-										"required": [
-											"match",
-											"order"
-										]
+										"required": ["match", "order"]
 									}
 								]
 							}
@@ -6811,10 +6354,7 @@
 						},
 						"module-source-path": {
 							"type": "string",
-							"enum": [
-								"full",
-								"basename"
-							]
+							"enum": ["full", "basename"]
 						}
 					},
 					"additionalProperties": false
@@ -6829,9 +6369,7 @@
 				},
 				{
 					"type": "string",
-					"enum": [
-						"check-else-if"
-					]
+					"enum": ["check-else-if"]
 				},
 				{
 					"$ref": "#/definitions/ruleBoolean"
@@ -6846,17 +6384,13 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"check-else-if"
-							]
+							"enum": ["check-else-if"]
 						}
 					]
 				},
 				{
 					"type": "string",
-					"enum": [
-						"check-else-if"
-					]
+					"enum": ["check-else-if"]
 				}
 			]
 		},
@@ -6871,10 +6405,7 @@
 					"properties": {
 						"destructuring": {
 							"type": "string",
-							"enum": [
-								"all",
-								"any"
-							]
+							"enum": ["all", "any"]
 						}
 					}
 				},
@@ -6894,10 +6425,7 @@
 							"properties": {
 								"destructuring": {
 									"type": "string",
-									"enum": [
-										"all",
-										"any"
-									]
+									"enum": ["all", "any"]
 								}
 							}
 						}
@@ -6908,10 +6436,7 @@
 					"properties": {
 						"destructuring": {
 							"type": "string",
-							"enum": [
-								"all",
-								"any"
-							]
+							"enum": ["all", "any"]
 						}
 					}
 				}
@@ -6949,10 +6474,7 @@
 				},
 				{
 					"type": "string",
-					"enum": [
-						"allow-public",
-						"allow-protected"
-					]
+					"enum": ["allow-public", "allow-protected"]
 				},
 				{
 					"$ref": "#/definitions/ruleBoolean"
@@ -6967,19 +6489,13 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"allow-public",
-								"allow-protected"
-							]
+							"enum": ["allow-public", "allow-protected"]
 						}
 					]
 				},
 				{
 					"type": "string",
-					"enum": [
-						"allow-public",
-						"allow-protected"
-					]
+					"enum": ["allow-public", "allow-protected"]
 				}
 			]
 		},
@@ -7038,9 +6554,7 @@
 					"$ref": "#/definitions/ruleString"
 				},
 				{
-					"enum": [
-						"only-inline-lambdas"
-					],
+					"enum": ["only-inline-lambdas"],
 					"type": "string"
 				},
 				{
@@ -7055,17 +6569,13 @@
 							"$ref": "#/definitions/ruleBoolean"
 						},
 						{
-							"enum": [
-								"only-inline-lambdas"
-							],
+							"enum": ["only-inline-lambdas"],
 							"type": "string"
 						}
 					]
 				},
 				{
-					"enum": [
-						"only-inline-lambdas"
-					],
+					"enum": ["only-inline-lambdas"],
 					"type": "string"
 				}
 			]
@@ -7123,9 +6633,7 @@
 				},
 				{
 					"type": "string",
-					"enum": [
-						"allow-single-concat"
-					]
+					"enum": ["allow-single-concat"]
 				},
 				{
 					"$ref": "#/definitions/ruleBoolean"
@@ -7140,17 +6648,13 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"allow-single-concat"
-							]
+							"enum": ["allow-single-concat"]
 						}
 					]
 				},
 				{
 					"type": "string",
-					"enum": [
-						"allow-single-concat"
-					]
+					"enum": ["allow-single-concat"]
 				}
 			]
 		},
@@ -7396,16 +6900,11 @@
 					"items": [
 						{
 							"type": "string",
-							"enum": [
-								"always",
-								"never"
-							]
+							"enum": ["always", "never"]
 						},
 						{
 							"type": "string",
-							"enum": [
-								"ignore-interfaces"
-							]
+							"enum": ["ignore-interfaces"]
 						}
 					],
 					"additionalItems": false
@@ -7426,16 +6925,11 @@
 							"items": [
 								{
 									"type": "string",
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								},
 								{
 									"type": "string",
-									"enum": [
-										"ignore-interfaces"
-									]
+									"enum": ["ignore-interfaces"]
 								}
 							],
 							"additionalItems": false
@@ -7447,16 +6941,11 @@
 					"items": [
 						{
 							"type": "string",
-							"enum": [
-								"always",
-								"never"
-							]
+							"enum": ["always", "never"]
 						},
 						{
 							"type": "string",
-							"enum": [
-								"ignore-interfaces"
-							]
+							"enum": ["ignore-interfaces"]
 						}
 					],
 					"additionalItems": false
@@ -7472,38 +6961,23 @@
 				{
 					"properties": {
 						"anonymous": {
-							"enum": [
-								"always",
-								"never"
-							],
+							"enum": ["always", "never"],
 							"type": "string"
 						},
 						"asyncArrow": {
-							"enum": [
-								"always",
-								"never"
-							],
+							"enum": ["always", "never"],
 							"type": "string"
 						},
 						"constructor": {
-							"enum": [
-								"always",
-								"never"
-							],
+							"enum": ["always", "never"],
 							"type": "string"
 						},
 						"method": {
-							"enum": [
-								"always",
-								"never"
-							],
+							"enum": ["always", "never"],
 							"type": "string"
 						},
 						"named": {
-							"enum": [
-								"always",
-								"never"
-							],
+							"enum": ["always", "never"],
 							"type": "string"
 						}
 					},
@@ -7523,38 +6997,23 @@
 						{
 							"properties": {
 								"anonymous": {
-									"enum": [
-										"always",
-										"never"
-									],
+									"enum": ["always", "never"],
 									"type": "string"
 								},
 								"asyncArrow": {
-									"enum": [
-										"always",
-										"never"
-									],
+									"enum": ["always", "never"],
 									"type": "string"
 								},
 								"constructor": {
-									"enum": [
-										"always",
-										"never"
-									],
+									"enum": ["always", "never"],
 									"type": "string"
 								},
 								"method": {
-									"enum": [
-										"always",
-										"never"
-									],
+									"enum": ["always", "never"],
 									"type": "string"
 								},
 								"named": {
-									"enum": [
-										"always",
-										"never"
-									],
+									"enum": ["always", "never"],
 									"type": "string"
 								}
 							},
@@ -7565,38 +7024,23 @@
 				{
 					"properties": {
 						"anonymous": {
-							"enum": [
-								"always",
-								"never"
-							],
+							"enum": ["always", "never"],
 							"type": "string"
 						},
 						"asyncArrow": {
-							"enum": [
-								"always",
-								"never"
-							],
+							"enum": ["always", "never"],
 							"type": "string"
 						},
 						"constructor": {
-							"enum": [
-								"always",
-								"never"
-							],
+							"enum": ["always", "never"],
 							"type": "string"
 						},
 						"method": {
-							"enum": [
-								"always",
-								"never"
-							],
+							"enum": ["always", "never"],
 							"type": "string"
 						},
 						"named": {
-							"enum": [
-								"always",
-								"never"
-							],
+							"enum": ["always", "never"],
 							"type": "string"
 						}
 					},
@@ -7888,9 +7332,7 @@
 				},
 				{
 					"type": "string",
-					"enum": [
-						"always"
-					]
+					"enum": ["always"]
 				},
 				{
 					"$ref": "#/definitions/ruleBoolean"
@@ -7905,17 +7347,13 @@
 						},
 						{
 							"type": "string",
-							"enum": [
-								"always"
-							]
+							"enum": ["always"]
 						}
 					]
 				},
 				{
 					"type": "string",
-					"enum": [
-						"always"
-					]
+					"enum": ["always"]
 				}
 			]
 		},
@@ -7932,61 +7370,34 @@
 							"anyOf": [
 								{
 									"type": "string",
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								},
 								{
 									"type": "object",
 									"properties": {
 										"arrays": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"exports": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"functions": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"imports": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"objects": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"typeLiterals": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										}
 									}
 								}
@@ -7996,61 +7407,34 @@
 							"anyOf": [
 								{
 									"type": "string",
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								},
 								{
 									"type": "object",
 									"properties": {
 										"arrays": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"exports": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"functions": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"imports": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"objects": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"typeLiterals": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										}
 									}
 								}
@@ -8080,61 +7464,34 @@
 									"anyOf": [
 										{
 											"type": "string",
-											"enum": [
-												"always",
-												"never"
-											]
+											"enum": ["always", "never"]
 										},
 										{
 											"type": "object",
 											"properties": {
 												"arrays": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												},
 												"exports": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												},
 												"functions": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												},
 												"imports": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												},
 												"objects": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												},
 												"typeLiterals": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												}
 											}
 										}
@@ -8144,61 +7501,34 @@
 									"anyOf": [
 										{
 											"type": "string",
-											"enum": [
-												"always",
-												"never"
-											]
+											"enum": ["always", "never"]
 										},
 										{
 											"type": "object",
 											"properties": {
 												"arrays": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												},
 												"exports": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												},
 												"functions": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												},
 												"imports": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												},
 												"objects": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												},
 												"typeLiterals": {
 													"type": "string",
-													"enum": [
-														"always",
-														"never",
-														"ignore"
-													]
+													"enum": ["always", "never", "ignore"]
 												}
 											}
 										}
@@ -8219,61 +7549,34 @@
 							"anyOf": [
 								{
 									"type": "string",
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								},
 								{
 									"type": "object",
 									"properties": {
 										"arrays": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"exports": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"functions": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"imports": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"objects": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"typeLiterals": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										}
 									}
 								}
@@ -8283,61 +7586,34 @@
 							"anyOf": [
 								{
 									"type": "string",
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								},
 								{
 									"type": "object",
 									"properties": {
 										"arrays": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"exports": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"functions": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"imports": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"objects": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										},
 										"typeLiterals": {
 											"type": "string",
-											"enum": [
-												"always",
-												"never",
-												"ignore"
-											]
+											"enum": ["always", "never", "ignore"]
 										}
 									}
 								}
@@ -8361,10 +7637,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"allow-null-check",
-							"allow-undefined-check"
-						]
+						"enum": ["allow-null-check", "allow-undefined-check"]
 					},
 					"minLength": 0,
 					"maxLength": 2
@@ -8384,10 +7657,7 @@
 							"type": "array",
 							"items": {
 								"type": "string",
-								"enum": [
-									"allow-null-check",
-									"allow-undefined-check"
-								]
+								"enum": ["allow-null-check", "allow-undefined-check"]
 							},
 							"minLength": 0,
 							"maxLength": 2
@@ -8398,10 +7668,7 @@
 					"type": "array",
 					"items": {
 						"type": "string",
-						"enum": [
-							"allow-null-check",
-							"allow-undefined-check"
-						]
+						"enum": ["allow-null-check", "allow-undefined-check"]
 					},
 					"minLength": 0,
 					"maxLength": 2
@@ -8419,10 +7686,7 @@
 					"properties": {
 						"singleLine": {
 							"type": "string",
-							"enum": [
-								"always",
-								"never"
-							]
+							"enum": ["always", "never"]
 						}
 					}
 				},
@@ -8442,10 +7706,7 @@
 							"properties": {
 								"singleLine": {
 									"type": "string",
-									"enum": [
-										"always",
-										"never"
-									]
+									"enum": ["always", "never"]
 								}
 							}
 						}
@@ -8456,10 +7717,7 @@
 					"properties": {
 						"singleLine": {
 							"type": "string",
-							"enum": [
-								"always",
-								"never"
-							]
+							"enum": ["always", "never"]
 						}
 					}
 				}
@@ -8560,43 +7818,23 @@
 							"properties": {
 								"call-signature": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"index-signature": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"parameter": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"property-declaration": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"variable-declaration": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								}
 							},
 							"additionalProperties": false
@@ -8606,43 +7844,23 @@
 							"properties": {
 								"call-signature": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"index-signature": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"parameter": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"property-declaration": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"variable-declaration": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								}
 							},
 							"additionalProperties": false
@@ -8669,43 +7887,23 @@
 									"properties": {
 										"call-signature": {
 											"type": "string",
-											"enum": [
-												"nospace",
-												"onespace",
-												"space"
-											]
+											"enum": ["nospace", "onespace", "space"]
 										},
 										"index-signature": {
 											"type": "string",
-											"enum": [
-												"nospace",
-												"onespace",
-												"space"
-											]
+											"enum": ["nospace", "onespace", "space"]
 										},
 										"parameter": {
 											"type": "string",
-											"enum": [
-												"nospace",
-												"onespace",
-												"space"
-											]
+											"enum": ["nospace", "onespace", "space"]
 										},
 										"property-declaration": {
 											"type": "string",
-											"enum": [
-												"nospace",
-												"onespace",
-												"space"
-											]
+											"enum": ["nospace", "onespace", "space"]
 										},
 										"variable-declaration": {
 											"type": "string",
-											"enum": [
-												"nospace",
-												"onespace",
-												"space"
-											]
+											"enum": ["nospace", "onespace", "space"]
 										}
 									},
 									"additionalProperties": false
@@ -8715,43 +7913,23 @@
 									"properties": {
 										"call-signature": {
 											"type": "string",
-											"enum": [
-												"nospace",
-												"onespace",
-												"space"
-											]
+											"enum": ["nospace", "onespace", "space"]
 										},
 										"index-signature": {
 											"type": "string",
-											"enum": [
-												"nospace",
-												"onespace",
-												"space"
-											]
+											"enum": ["nospace", "onespace", "space"]
 										},
 										"parameter": {
 											"type": "string",
-											"enum": [
-												"nospace",
-												"onespace",
-												"space"
-											]
+											"enum": ["nospace", "onespace", "space"]
 										},
 										"property-declaration": {
 											"type": "string",
-											"enum": [
-												"nospace",
-												"onespace",
-												"space"
-											]
+											"enum": ["nospace", "onespace", "space"]
 										},
 										"variable-declaration": {
 											"type": "string",
-											"enum": [
-												"nospace",
-												"onespace",
-												"space"
-											]
+											"enum": ["nospace", "onespace", "space"]
 										}
 									},
 									"additionalProperties": false
@@ -8769,43 +7947,23 @@
 							"properties": {
 								"call-signature": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"index-signature": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"parameter": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"property-declaration": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"variable-declaration": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								}
 							},
 							"additionalProperties": false
@@ -8815,43 +7973,23 @@
 							"properties": {
 								"call-signature": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"index-signature": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"parameter": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"property-declaration": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								},
 								"variable-declaration": {
 									"type": "string",
-									"enum": [
-										"nospace",
-										"onespace",
-										"space"
-									]
+									"enum": ["nospace", "onespace", "space"]
 								}
 							},
 							"additionalProperties": false
